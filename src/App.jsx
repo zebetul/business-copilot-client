@@ -1,28 +1,31 @@
-import { createBrowserRouter } from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Home from "./pages/home/Home";
+import Chat from "./pages/chat/Chat";
+import InternalDocuments from "./pages/internalDocuments/InternalDocuments";
+import AppLayout from "./ui/AppLayout";
 
-createBrowserRouter([
+const router = createBrowserRouter([
   {
-    path: "/",
-    component: App,
-    routes: [
+    element: <AppLayout />,
+    children: [
       {
-        path: "/about",
-        component: About,
+        path: "/",
+        element: <Home />,
       },
       {
-        path: "/contact",
-        component: Contact,
+        path: "/chat",
+        element: <Chat />,
+      },
+      {
+        path: "/internal-documents",
+        element: <InternalDocuments />,
       },
     ],
   },
 ]);
 
 function App() {
-  return (
-    <>
-      <h1>Hello, world!</h1>
-    </>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
