@@ -1,7 +1,9 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Home from "./pages/home/Home";
 import Chat from "./pages/chat/Chat";
-import InternalDocuments from "./pages/internalDocuments/InternalDocuments";
+import Documents, {
+  loader as documentsLoader,
+} from "./pages/documents/Documents";
 import AppLayout from "./ui/AppLayout";
 
 const router = createBrowserRouter([
@@ -17,8 +19,9 @@ const router = createBrowserRouter([
         element: <Chat />,
       },
       {
-        path: "/internal-documents",
-        element: <InternalDocuments />,
+        path: "/documents",
+        element: <Documents />,
+        loader: documentsLoader,
       },
     ],
   },
