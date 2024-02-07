@@ -21,7 +21,7 @@ function Documents() {
   };
 
   return (
-    <div>
+    <>
       <h1>Internal Documents</h1>
 
       <input
@@ -33,7 +33,7 @@ function Documents() {
         // multiple
         onChange={(event) => handleDocumentUpload(event)}
       />
-    </div>
+    </>
   );
 }
 

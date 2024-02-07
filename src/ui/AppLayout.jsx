@@ -1,17 +1,17 @@
 import { Outlet } from "react-router-dom";
-import Footer from "./Footer";
-import Header from "./Header";
+// import Footer from "./Footer";
+import SideBar from "./SideBar";
 
 function AppLayout() {
   return (
-    <div>
-      <Header />
+    <div className="h-screen py-5 pe-5 flex bg-bodyColor text-textColor">
+      <SideBar />
 
-      <main>
+      <main className="w-full p-5 bg-white rounded-md">
         <Outlet />
       </main>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
