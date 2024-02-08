@@ -1,26 +1,7 @@
-import { useLoaderData } from "react-router-dom";
-import { getDocuments, uploadDocument } from "../../services/apiDocuments";
-import DocumentRow from "../../ui/DocumentRow";
+import { uploadDocument } from "../../services/apiDocuments";
+import DocumentsTable from "../../ui/DocumentsTable";
 
 function Documents() {
-  // const documents = useLoaderData();
-  const documents = [
-    {
-      id: 1,
-      title: "Document 1",
-      description: "This is the first document.",
-      type: "pdf",
-    },
-    {
-      id: 2,
-      title: "Document 2",
-      description: "This is the second document.",
-      type: "pdf",
-    },
-  ];
-
-  console.log(documents);
-
   const handleDocumentUpload = async (event) => {
     const file = event.target.files[0];
 
@@ -50,20 +31,9 @@ function Documents() {
         onChange={(event) => handleDocumentUpload(event)}
       />
 
-      <div className="documents_container flex flex-col gap-5">
-        {documents.map((document) => (
-          <DocumentRow key={document.id} document={document} />
-        ))}
-      </div>
+      <DocumentsTable />
     </>
   );
-}
-
-export async function loader() {
-  // const documents = await getDocuments();
-  // return documents;
-
-  return "This is a placeholder for the documents.";
 }
 
 export default Documents;

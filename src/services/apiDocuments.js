@@ -12,10 +12,6 @@ export async function uploadDocument(file) {
       credentials: "include",
     });
 
-    if (!response.ok) {
-      throw new Error("Failed uploading the document");
-    }
-
     const data = await response.json();
 
     return data;
@@ -26,25 +22,27 @@ export async function uploadDocument(file) {
 }
 
 export async function getDocuments() {
-  const response = await fetch(`${API_URL}/documents`);
+  try {
+    const response = await fetch(`${API_URL}/documents`);
 
-  if (!response.ok) {
+    const data = await response.json();
+
+    return data;
+  } catch (error) {
+    console.error(error);
     throw new Error("Failed fetching the documents");
   }
-
-  const { data } = await response.json();
-
-  return data;
 }
 
 export async function getDocument(id) {
-  const response = await fetch(`${API_URL}/documents/${id}`);
+  try {
+    const response = await fetch(`${API_URL}/documents/${id}`);
 
-  if (!response.ok) {
+    const data = await response.json();
+
+    return data;
+  } catch (error) {
+    console.error(error);
     throw new Error("Failed fetching the document");
   }
-
-  const { data } = await response.json();
-
-  return data;
 }

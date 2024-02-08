@@ -2,7 +2,7 @@ import { useState } from "react";
 import PromptInput from "../../ui/PromptInput";
 import { sendPrompt } from "../../services/apiAssistant";
 
-function Chat() {
+function Assistant() {
   const [userPrompt, setUserPrompt] = useState("");
   const [copilotResponse, setCopilotResponse] = useState("");
 
@@ -24,7 +24,7 @@ function Chat() {
   return (
     <div className="flex flex-row">
       <section className="section_left h-full w-2/3 max-w-2xl">
-        <h1 className="mb-10 text-center">Chat</h1>
+        <h1 className="mb-10 text-center">Assistant</h1>
 
         <p>{copilotResponse}</p>
 
@@ -42,4 +42,4 @@ function Chat() {
   );
 }
 
-export default Chat;
+export default Assistant;

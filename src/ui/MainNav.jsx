@@ -18,10 +18,10 @@ function MainNav() {
         </li>
 
         <li>
-          <NavLink to="/chat">
+          <NavLink to="/assistant">
             <ChatBubbleBottomCenterTextIcon className="h-6 w-6" />
 
-            <span className="ml-2">Chat</span>
+            <span className="ml-2">Assistant</span>
           </NavLink>
         </li>
 

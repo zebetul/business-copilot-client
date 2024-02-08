@@ -3,7 +3,7 @@ import { API_URL } from "../config/config.js";
 // /chat
 export async function sendPrompt(prompt) {
   try {
-    const response = await fetch(`${API_URL}/chat`, {
+    const response = await fetch(`${API_URL}/assistant`, {
       method: "POST",
       credentials: "include",
       headers: {
