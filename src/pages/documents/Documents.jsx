@@ -1,11 +1,23 @@
 import { useLoaderData } from "react-router-dom";
-import {
-  getDocuments,
-  uploadDocument,
-} from "../../services/apiBusinessCopilot";
+import { getDocuments, uploadDocument } from "../../services/apiDocuments";
+import DocumentRow from "../../ui/DocumentRow";
 
 function Documents() {
-  const documents = useLoaderData();
+  // const documents = useLoaderData();
+  const documents = [
+    {
+      id: 1,
+      title: "Document 1",
+      description: "This is the first document.",
+      type: "pdf",
+    },
+    {
+      id: 2,
+      title: "Document 2",
+      description: "This is the second document.",
+      type: "pdf",
+    },
+  ];
 
   console.log(documents);
 
@@ -27,17 +39,22 @@ function Documents() {
 
   return (
     <>
-      <h1>Internal Documents</h1>
+      <h1 className="mb-10 font-semibold">Processed Documents</h1>
 
       <input
-        className="document_upload_button"
+        className="document_upload_button mb-10"
         name="file"
         id="file"
         type="file"
         aria-label="File browser"
-        // multiple
         onChange={(event) => handleDocumentUpload(event)}
       />
+
+      <div className="documents_container flex flex-col gap-5">
+        {documents.map((document) => (
+          <DocumentRow key={document.id} document={document} />
+        ))}
+      </div>
     </>
   );
 }

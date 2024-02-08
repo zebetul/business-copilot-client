@@ -1,6 +1,6 @@
 import { useState } from "react";
-import InputBox from "../../ui/InputBox";
-import { sendPrompt } from "../../services/apiBusinessCopilot";
+import PromptInput from "../../ui/PromptInput";
+import { sendPrompt } from "../../services/apiAssistant";
 
 function Chat() {
   const [userPrompt, setUserPrompt] = useState("");
@@ -9,6 +9,8 @@ function Chat() {
   const handleUserPrompt = async () => {
     // Input validation
     if (userPrompt === "") return console.log("Empty input");
+
+    setCopilotResponse("Loading...");
 
     try {
       // Send userPrompt to backend
@@ -26,7 +28,7 @@ function Chat() {
 
         <p>{copilotResponse}</p>
 
-        <InputBox
+        <PromptInput
           userPrompt={userPrompt}
           setUserPrompt={setUserPrompt}
           handleUserPrompt={handleUserPrompt}
