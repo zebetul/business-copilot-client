@@ -15,9 +15,14 @@ function Documents() {
     // Data validation
     if (!file) return console.log("No file selected.");
 
-    const response = await uploadDocument(file);
+    try {
+      // Send file to backend
+      const response = await uploadDocument(file);
 
-    console.log(response.message);
+      console.log(response.message);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (

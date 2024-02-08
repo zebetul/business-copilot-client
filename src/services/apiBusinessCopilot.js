@@ -1,6 +1,6 @@
 const API_URL = "http://localhost:5000";
 
-// /memory
+// /documents
 export async function uploadDocument(file) {
   try {
     const formData = new FormData();
@@ -49,24 +49,30 @@ export async function getDocument(id) {
   return data;
 }
 
-// /home
+// /chat
 export async function sendPrompt(prompt) {
-  const response = await fetch(`${API_URL}/home`, {
-    method: "POST",
-    credentials: "include",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      prompt,
-    }),
-  });
+  try {
+    const response = await fetch(`${API_URL}/chat`, {
+      method: "POST",
+      credentials: "include",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        prompt,
+      }),
+    });
 
-  if (!response.ok) {
-    throw new Error("Failed sending the prompt");
+    if (!response.ok) {
+      throw new Error("Failed sending the prompt");
+    }
+
+    const data = await response.json();
+
+    return data;
+  } catch (error) {
+    console.error("Error sending prompt:", error);
+
+    throw error;
   }
-
-  const { data } = await response.json();
-
-  return data;
 }
