@@ -1,6 +1,6 @@
 import { API_URL } from "../config/config.js";
+import supabase from "./supabase.js";
 
-// /documents
 export async function uploadDocument(file) {
   try {
     const formData = new FormData();
@@ -21,17 +21,16 @@ export async function uploadDocument(file) {
   }
 }
 
+// Get documents from supabase
 export async function getDocuments() {
-  try {
-    const response = await fetch(`${API_URL}/documents`);
+  const { data, error } = await supabase.from("documents").select("*");
 
-    const data = await response.json();
-
-    return data;
-  } catch (error) {
-    console.error(error);
+  if (error) {
+    console.log(error);
     throw new Error("Failed fetching the documents");
   }
+
+  return data;
 }
 
 export async function getDocument(id) {
