@@ -1,4 +1,4 @@
-import useUploadDocument from "./useUploadDocument";
+import { useUploadDocument } from "./useUploadDocument";
 
 function FileInput() {
   const { isUploading, uploadDocument } = useUploadDocument();

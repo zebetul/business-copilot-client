@@ -1,16 +1,8 @@
-import { useQuery } from "@tanstack/react-query";
 import DocumentRow from "./DocumentRow";
-import { getDocuments } from "../../services/apiDocuments";
+import { useDocuments } from "./useDocuments";
 
 function DocumentsTable() {
-  const {
-    isLoading,
-    data: documents,
-    error,
-  } = useQuery({
-    queryKey: ["documents"],
-    queryFn: getDocuments,
-  });
+  const { documents, isLoading, error } = useDocuments();
 
   if (isLoading) return <p>Loading...</p>;
 

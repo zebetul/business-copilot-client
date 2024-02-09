@@ -1,6 +1,19 @@
 import { API_URL } from "../config/config.js";
 import supabase from "./supabase.js";
 
+// Get documents from supabase
+export async function apiGetDocuments() {
+  const { data, error } = await supabase.from("documents").select("*");
+
+  if (error) {
+    console.log(error);
+    throw new Error("Failed fetching the documents");
+  }
+
+  return data;
+}
+
+// Upload document to API to be processed before saving it to supabase
 export async function apiUploadDocument(file) {
   try {
     // Data validation
@@ -21,27 +34,13 @@ export async function apiUploadDocument(file) {
   }
 }
 
-// Get documents from supabase
-export async function getDocuments() {
-  const { data, error } = await supabase.from("documents").select("*");
+// Delete document from supabase
+export async function apiDeleteDocument(id) {
+  const { error } = await supabase.from("documents").delete().match({ id });
 
   if (error) {
     console.log(error);
-    throw new Error("Failed fetching the documents");
-  }
 
-  return data;
-}
-
-export async function getDocument(id) {
-  try {
-    const response = await fetch(`${API_URL}/documents/${id}`);
-
-    const data = await response.json();
-
-    return data;
-  } catch (error) {
-    console.error(error);
-    throw new Error("Failed fetching the document");
+    throw new Error("Failed deleting the document");
   }
 }
