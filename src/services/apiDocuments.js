@@ -3,6 +3,9 @@ import supabase from "./supabase.js";
 
 export async function uploadDocument(file) {
   try {
+    // Data validation
+    if (!file) return console.log("No file selected.");
+
     const formData = new FormData();
     formData.append("file", file);
 
@@ -12,12 +15,9 @@ export async function uploadDocument(file) {
       credentials: "include",
     });
 
-    const data = await response.json();
-
-    return data;
+    await response.json();
   } catch (error) {
     console.error(error);
-    throw new Error("Failed uploading the document");
   }
 }
 

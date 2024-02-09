@@ -12,8 +12,6 @@ function DocumentRow({ document }) {
 
       <h2 className="">{document.title}</h2>
 
-      <p className="">{document.description}</p>
-
       <p className="">{document.type}</p>
     </div>
   );
