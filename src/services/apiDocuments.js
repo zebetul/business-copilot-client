@@ -1,7 +1,7 @@
 import { API_URL } from "../config/config.js";
 import supabase from "./supabase.js";
 
-export async function uploadDocument(file) {
+export async function apiUploadDocument(file) {
   try {
     // Data validation
     if (!file) return console.log("No file selected.");

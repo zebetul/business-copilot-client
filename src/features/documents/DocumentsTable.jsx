@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import DocumentRow from "./DocumentRow";
-import { getDocuments } from "../services/apiDocuments";
+import { getDocuments } from "../../services/apiDocuments";
 
 function DocumentsTable() {
   const {

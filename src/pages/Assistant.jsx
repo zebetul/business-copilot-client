@@ -1,6 +1,6 @@
 import { useState } from "react";
-import PromptInput from "../../ui/PromptInput";
-import { sendPrompt } from "../../services/apiAssistant";
+import PromptInput from "../features/assistant/PromptInput";
+import { sendPrompt } from "../services/apiAssistant";
 
 function Assistant() {
   const [userPrompt, setUserPrompt] = useState("");
@@ -15,6 +15,7 @@ function Assistant() {
     try {
       // Send userPrompt to backend
       const { response } = await sendPrompt(userPrompt);
+
       setCopilotResponse(response);
     } catch (error) {
       console.error(error);

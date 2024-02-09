@@ -14,10 +14,6 @@ export async function sendPrompt(prompt) {
       }),
     });
 
-    if (!response.ok) {
-      throw new Error("Failed sending the prompt");
-    }
-
     const data = await response.json();
 
     return data;

@@ -1,5 +1,5 @@
-import DocumentsTable from "../../ui/DocumentsTable";
-import FileInput from "../../ui/FileInput";
+import DocumentsTable from "../features/documents/DocumentsTable";
+import FileInput from "../features/documents/FileInput";
 
 function Documents() {
   return (
