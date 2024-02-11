@@ -1,12 +1,11 @@
 import DocumentsTable from "../features/documents/DocumentsTable";
-import FileInput from "../features/documents/FileInput";
 
 function Documents() {
   return (
     <>
-      <h1 className="mb-10 font-semibold">Processed Documents</h1>
-
-      <FileInput />
+      <h1 className="mt-10 mb-20 font-semibold text-center">
+        Processed Documents
+      </h1>
 
       <DocumentsTable />
     </>

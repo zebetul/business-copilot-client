@@ -1,8 +1,9 @@
 import { NavLink } from "react-router-dom";
 import {
-  ArchiveBoxIcon,
   ChatBubbleBottomCenterTextIcon,
+  ClipboardDocumentListIcon,
   HomeIcon,
+  RectangleStackIcon,
 } from "@heroicons/react/24/outline";
 
 function MainNav() {
@@ -26,8 +27,16 @@ function MainNav() {
         </li>
 
         <li>
+          <NavLink to="/history">
+            <RectangleStackIcon className="h-6 w-6" />
+
+            <span className="ml-2">History</span>
+          </NavLink>
+        </li>
+
+        <li>
           <NavLink to="/documents">
-            <ArchiveBoxIcon className="h-6 w-6" />
+            <ClipboardDocumentListIcon className="h-6 w-6" />
 
             <span className="ml-2">Documents</span>
           </NavLink>

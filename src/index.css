@@ -22,9 +22,116 @@ body {
 }
 
 .navigation a:hover {
-  background-color: white;
+  background-color: #d4d6dc;
 }
 
 .navigation a.active {
-  color: #171d28;
+  color: #373943;
+}
+
+/* Markdown styles, to overwrite Tailwind */
+.markdown_content ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.markdown_content ol {
+  list-style-type: decimal;
+  padding-left: 20px;
+}
+
+.markdown_content blockquote {
+  border-left: 5px solid #d4d6dc;
+  padding-left: 20px;
+  margin: 20px 0;
+}
+
+.markdown_content pre {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+.markdown_content pre code {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+}
+
+.markdown_content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.markdown_content table th,
+.markdown_content table td {
+  border: 1px solid #d4d6dc;
+  padding: 10px;
+}
+
+.markdown_content table th {
+  background-color: #f5f5f5;
+}
+
+.markdown_content img {
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
+
+.markdown_content a {
+  color: #1a73e8;
+  text-decoration: underline;
+}
+
+.markdown_content a:hover {
+  color: #0a58ca;
+}
+
+.markdown_content h1 {
+  font-size: 2.5em;
+  margin: 20px 0;
+}
+
+.markdown_content h2 {
+  font-size: 2em;
+  margin: 20px 0;
+}
+
+.markdown_content h3 {
+  font-size: 1.5em;
+  margin: 20px 0;
+}
+
+.markdown_content h4 {
+  font-size: 1.25em;
+  margin: 20px 0;
+}
+
+.markdown_content h5 {
+  font-size: 1em;
+  margin: 20px 0;
+}
+
+.markdown_content h6 {
+  font-size: 0.875em;
+  margin: 20px 0;
+}
+
+.markdown_content p {
+  margin: 20px 0;
+}
+
+.markdown_content ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.markdown_content ol {
+  list-style-type: decimal;
+  padding-left: 20px;
 }

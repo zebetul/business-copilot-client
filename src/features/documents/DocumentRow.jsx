@@ -7,13 +7,13 @@ function DocumentRow({ document }) {
   const { id, title, type } = document;
 
   return (
-    <div key={id} className="grid grid-cols-3 gap-4 text-textColorLight">
+    <div key={id} className="grid grid-cols-3 gap-3 border-0 border-t pt-5">
       <h2 className="">{title}</h2>
 
       <p className="">{type}</p>
 
       <button
-        className="w-6 h-6"
+        className="w-6 h-6 ml-auto"
         onClick={() => deleteDocument(id)}
         disabled={isDeleting}
       >
