@@ -23,6 +23,7 @@ body {
 
 .navigation a:hover {
   background-color: #d4d6dc;
+  transition: background-color 0.3s;
 }
 
 .navigation a.active {

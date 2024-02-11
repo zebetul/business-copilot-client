@@ -10,15 +10,21 @@ function DocumentsTable() {
   if (error) return <p>Error: {error.message}</p>;
 
   return (
-    <div className="documents_table w-full flex flex-col justify-center">
-      <FileInput />
+    <section className="documents_table w-full max-w-2xl mx-auto flex flex-col justify-center">
+      <header className="table_header h-10 border-0 border-b grid grid-cols-3 gap-3 justify-center pb-4 text-sm font-bold text-textColorLight">
+        <p className="my-auto">Title</p>
 
-      <div className="documents_container flex flex-col gap-5">
+        <p className="my-auto">Type</p>
+
+        <FileInput />
+      </header>
+
+      <div className="documents_container flex flex-col">
         {documents.map((document) => (
           <DocumentRow key={document.id} document={document} />
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 
