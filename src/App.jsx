@@ -11,7 +11,7 @@ import Documents from "./pages/Documents";
 import History from "./pages/History";
 
 function App() {
-  const [copilotResponse, setCopilotResponse] = useState("");
+  const [assistantResponse, setAssistantResponse] = useState("");
 
   const queryClient = new QueryClient({
     defaultOptions: {
@@ -34,8 +34,8 @@ function App() {
           path: "/assistant",
           element: (
             <Assistant
-              setCopilotResponse={setCopilotResponse}
-              copilotResponse={copilotResponse}
+              setAssistantResponse={setAssistantResponse}
+              assistantResponse={assistantResponse}
             />
           ),
         },

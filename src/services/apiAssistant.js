@@ -1,7 +1,7 @@
 import { API_URL } from "../config/config.js";
 
 // /chat
-export async function sendPrompt(prompt) {
+export async function sendRequest(userRequest) {
   try {
     const response = await fetch(`${API_URL}/assistant`, {
       method: "POST",
@@ -10,7 +10,7 @@ export async function sendPrompt(prompt) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        prompt,
+        userRequest,
       }),
     });
 
