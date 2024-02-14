@@ -1,8 +1,11 @@
 import { API_URL } from "../config/config.js";
+import supabase from "./supabase.js";
 
-// /chat
-export async function sendRequest(userRequest) {
+export async function apiSendRequest(userRequest) {
   try {
+     // Input validation
+     if (userRequest === "") return console.log("Empty input");
+
     const response = await fetch(`${API_URL}/assistant`, {
       method: "POST",
       credentials: "include",
@@ -22,4 +25,35 @@ export async function sendRequest(userRequest) {
 
     throw error;
   }
+}
+
+// Get the title and id columns from history supabaseClient table and arrange in descending order
+export async function apiGetHistory() {
+  const { data, error } = await supabase
+    .from("history")
+    .select("title, id")
+    .order("id", { ascending: false });
+
+  if (error) {
+    console.log(error);
+    throw new Error("Failed fetching the documents");
+  }
+
+  return data;
+}
+
+// Get a row with a specific id form the history supabaseClient table
+export async function apiGetHistoryById(id) {
+  const { data, error } = await supabase
+    .from("history")
+    .select("*")
+    .eq("id", id)
+    .single();
+
+  if (error) {
+    console.log(error);
+    throw new Error("Failed fetching the document");
+  }
+
+  return data;
 }

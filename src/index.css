@@ -14,11 +14,19 @@ body {
   min-height: 100%;
 }
 
+/* I want the suspension points on the end of the text inside a tag */
 .navigation a {
-  width: 200px;
   display: flex;
-  padding: 10px 20px;
+  padding: 10px 10px;
   border-radius: 5px;
+  white-space: nowrap;
+}
+
+.history_list a {
+  display: flex;
+  padding: 6px 6px;
+  border-radius: 5px;
+  white-space: nowrap;
 }
 
 .navigation a:hover {
@@ -30,7 +38,7 @@ body {
   color: #373943;
 }
 
-/* Markdown styles, to overwrite Tailwind */
+/* ------ MARKDOWN STYLES ------- */
 .markdown_content ul {
   list-style-type: disc;
   padding-left: 20px;

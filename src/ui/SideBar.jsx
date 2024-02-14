@@ -2,8 +2,8 @@ import MainNav from "./MainNav";
 
 function SideBar() {
   return (
-    <div className="px-3">
-      <h1 className="mt-5 mb-20 text-md font-semibold text-center">
+    <div className="w-60">
+      <h1 className="mt-5 mb-20 pl-5 text-md font-semibold">
         BUSINESS COPILOT
       </h1>
 

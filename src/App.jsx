@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
@@ -9,10 +8,9 @@ import Home from "./pages/Home";
 import Assistant from "./pages/Assistant";
 import Documents from "./pages/Documents";
 import History from "./pages/History";
+import InteractionRecord from "./pages/InteractionRecord";
 
 function App() {
-  const [assistantResponse, setAssistantResponse] = useState("");
-
   const queryClient = new QueryClient({
     defaultOptions: {
       queries: {
@@ -32,12 +30,7 @@ function App() {
         },
         {
           path: "/assistant",
-          element: (
-            <Assistant
-              setAssistantResponse={setAssistantResponse}
-              assistantResponse={assistantResponse}
-            />
-          ),
+          element: <Assistant />,
         },
         {
           path: "/documents",
@@ -46,6 +39,10 @@ function App() {
         {
           path: "/history",
           element: <History />,
+        },
+        {
+          path: "/history/:id",
+          element: <InteractionRecord />,
         },
       ],
     },
