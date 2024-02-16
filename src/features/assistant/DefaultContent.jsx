@@ -24,7 +24,7 @@ function DefaultContent({ sendRequest }) {
   return (
     <div className="w-full h-full flex flex-col items-center">
       <h1 className="mt-40 mb-3 text-6xl font-bold text-textColorLight text-center">
-        Make a request
+        Make your request
       </h1>
 
       <p className="mb-7 font-bold text-textColorLight">

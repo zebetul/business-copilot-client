@@ -27,7 +27,7 @@ export async function apiSendRequest(userRequest) {
   }
 }
 
-// Get the title and id columns from history supabaseClient table and arrange in descending order
+// Get the history supabaseClient table and arrange in descending order
 export async function apiGetHistory() {
   const { data, error } = await supabase
     .from("history")

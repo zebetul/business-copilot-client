@@ -12,7 +12,7 @@ function FileInput() {
       >
         <PlusIcon className="h-5 w-5" />
 
-        <span className="text-sm">Insert</span>
+        <span className="text-sm text-nowrap">Add new</span>
 
         <input
           className="sr-only"
