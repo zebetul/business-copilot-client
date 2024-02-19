@@ -20,7 +20,7 @@ function InteractionRecord() {
     <>
       <section className="chat_section max-w-2xl mx-auto">
         <Markdown
-          className="markdown_content mb-40 text-textColorLight"
+          className="markdown_content pb-40 text-textColorLight"
           remarkPlugins={[remarkGfm]}
         >
           {interactionRecord.assistantResponse}
