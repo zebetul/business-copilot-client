@@ -5,9 +5,7 @@ import Button from "../../ui/Button";
 function DefaultContent({ sendRequest }) {
   return (
     <div className="w-full h-full flex flex-col items-center">
-      <h1 className="mt-40 mb-3 text-6xl text-textColor text-center">
-        Make your request
-      </h1>
+      <h1 className="mt-40 mb-3 text-6xl text-center">Make your request</h1>
 
       <h2 className="mb-7 text-lg font-bold text-textColorLight">
         Choose a request from below or type your own request.

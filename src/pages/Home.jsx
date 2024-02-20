@@ -1,9 +1,7 @@
 function Home() {
   return (
     <>
-      <h1 className="text-6xl mt-40 text-center text-textColor">
-        BUSINESS COPILOT
-      </h1>
+      <h1 className="text-6xl mt-40 text-center">BUSINESS COPILOT</h1>
 
       <p className="mb-10 text-lg text-center font-bold text-textColorLight">
         Automating business planning with the power of AI

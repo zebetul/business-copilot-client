@@ -1,24 +1,20 @@
 import PromptInput from "../features/assistant/PromptInput";
-import Markdown from "react-markdown";
-import remarkGfm from "remark-gfm";
+
 import useSendRequest from "../features/assistant/useSendRequest";
 import DefaultContent from "../features/assistant/DefaultContent";
+import Loading from "../ui/Loading";
+import MarkdownContainer from "../ui/MarkdownContainer";
 
 function Assistant() {
   const { isSending, sendRequest, assistantResponse } = useSendRequest();
 
   return (
     <>
-      <section className="assistant_content max-w-2xl h-full mx-auto">
-        {isSending && <div>Loading...</div>}
+      <section className="assistant_response_container max-w-2xl h-full mx-auto">
+        {isSending && <Loading />}
 
         {assistantResponse && (
-          <Markdown
-            className="markdown_content pb-40 text-textColorLight"
-            remarkPlugins={[remarkGfm]}
-          >
-            {assistantResponse}
-          </Markdown>
+          <MarkdownContainer>{assistantResponse}</MarkdownContainer>
         )}
 
         {!isSending && !assistantResponse && (

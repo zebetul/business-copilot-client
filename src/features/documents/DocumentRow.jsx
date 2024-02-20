@@ -7,22 +7,22 @@ function DocumentRow({ document }) {
   const { id, title, type } = document;
 
   return (
-    <div
+    <li
       key={id}
       className="grid grid-cols-3 gap-3 border-bgColorDark border-b py-5 text-textColorLight"
     >
-      <h2 className="">{title}</h2>
+      <p>{title}</p>
 
-      <p className="">{type}</p>
+      <p>{type}</p>
 
       <button
-        className="w-5 h-5 ml-auto hover:text-textColor transition-colors"
+        className="ml-auto hover:text-textColor transition-colors"
         onClick={() => deleteDocument(id)}
         disabled={isDeleting}
       >
-        <TrashIcon />
+        <TrashIcon className="w-6 h-6" />
       </button>
-    </div>
+    </li>
   );
 }
 

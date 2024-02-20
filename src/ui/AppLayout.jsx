@@ -1,5 +1,4 @@
 import { Outlet } from "react-router-dom";
-// import Footer from "./Footer";
 import SideBar from "./SideBar";
 
 function AppLayout() {
@@ -7,11 +6,9 @@ function AppLayout() {
     <div className="h-screen py-3 pe-3 flex bg-bgColor text-textColor">
       <SideBar />
 
-      <main className="page_content w-full h-full pt-10 bg-bgColorLight rounded-md overflow-y-scroll">
+      <main className="main w-full h-full pt-10 bg-bgColorLight rounded-md overflow-y-scroll">
         <Outlet />
       </main>
-
-      {/* <Footer /> */}
     </div>
   );
 }

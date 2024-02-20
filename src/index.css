@@ -22,15 +22,15 @@
 }
 
 /* ------ SCROLLBAR STYLES ------- */
-.page_content::-webkit-scrollbar {
+.main::-webkit-scrollbar {
   width: 0.5em;
 }
 
-.page_content::-webkit-scrollbar-track {
+.main::-webkit-scrollbar-track {
   background-color: rgb(var(--bgColorLight));
 }
 
-.page_content::-webkit-scrollbar-thumb {
+.main::-webkit-scrollbar-thumb {
   background-color: rgb(var(--bgColorDark));
   border-radius: 0.5em;
 }

@@ -1,30 +1,22 @@
 import { useParams } from "react-router-dom";
 import { useGetHistoryById } from "../features/assistant/useGetHistoryById";
-import Markdown from "react-markdown";
-import remarkGfm from "remark-gfm";
+import Loading from "../ui/Loading";
+import Error from "../ui/Error";
+import MarkdownContainer from "../ui/MarkdownContainer";
 
 function InteractionRecord() {
   const { id } = useParams();
-
   const { interactionRecord, isLoading, error } = useGetHistoryById(id);
+  const assistantResponse = interactionRecord?.assistantResponse;
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
+  if (isLoading) return <Loading />;
 
-  if (error) {
-    return <div>Error: {error.message}</div>;
-  }
+  if (error) return <Error />;
 
   return (
     <>
-      <section className="chat_section max-w-2xl mx-auto">
-        <Markdown
-          className="markdown_content pb-40 text-textColorLight"
-          remarkPlugins={[remarkGfm]}
-        >
-          {interactionRecord.assistantResponse}
-        </Markdown>
+      <section className="max-w-2xl mx-auto">
+        <MarkdownContainer>{assistantResponse}</MarkdownContainer>
       </section>
     </>
   );

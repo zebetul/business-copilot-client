@@ -5,11 +5,9 @@ import {
   HomeIcon,
   RectangleStackIcon,
 } from "@heroicons/react/24/outline";
-import { useHistory } from "../features/assistant/useHistory";
+import HistoryNav from "./HistoryNav";
 
 function MainNav() {
-  const { history, isLoading, error } = useHistory();
-
   return (
     <nav className="navigation text-textColorLight text-md font-semibold">
       <ul className="nav_links flex flex-col px-3 gap-1">
@@ -44,23 +42,7 @@ function MainNav() {
             <span className="ml-2">History</span>
           </NavLink>
 
-          {isLoading && <span>Loading...</span>}
-
-          {error && <span>Error: {error.message}</span>}
-
-          {history && (
-            <ul className="history_list pl-5 flex flex-col gap-1">
-              {history.map((item) => (
-                <li key={item.id} className="text-xs">
-                  <NavLink to={`/history/${item.id}`}>
-                    <p className="overflow-hidden text-ellipsis">
-                      {item.title}
-                    </p>
-                  </NavLink>
-                </li>
-              ))}
-            </ul>
-          )}
+          <HistoryNav />
         </li>
       </ul>
     </nav>
