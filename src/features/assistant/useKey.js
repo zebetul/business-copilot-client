@@ -9,6 +9,7 @@ function useKey(key, callback) {
     }
 
     window.addEventListener("keydown", handle);
+
     return () => window.removeEventListener("keydown", handle);
   }, [key, callback]);
 }

@@ -8,7 +8,7 @@ function FileInput() {
     <div className="file_input-container relative ml-auto">
       <label
         htmlFor="file"
-        className="absolute top-0 right-0 h-full cursor-pointer flex gap-2 border rounded-md px-4 py-3 items-center justify-center hover:bg-bgColor transition-colors"
+        className="absolute top-0 right-0 h-full cursor-pointer flex gap-2 border rounded-md px-4 py-3 items-center justify-center hover:bg-bgColor dark:hover:bg-bgColorDark transition-colors"
       >
         <PlusIcon className="h-5 w-5" />
 

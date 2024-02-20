@@ -11,7 +11,7 @@ function MainNav() {
   const { history, isLoading, error } = useHistory();
 
   return (
-    <nav className="navigation text-textColorLight text-md font-semibold">
+    <nav className="navigation text-textColorLight dark:text-textColor text-md font-semibold">
       <ul className="nav_links flex flex-col px-3 gap-1">
         <li>
           <NavLink exact="true" to="/">

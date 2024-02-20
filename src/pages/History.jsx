@@ -11,7 +11,7 @@ function History() {
 
   return (
     <>
-      <h1 className="max-w-3xl mx-auto mb-20 flex gap-2 text-4xl font-bold text-textColorLight">
+      <h1 className="max-w-3xl mx-auto mb-20 flex gap-2 text-4xl font-bold text-textColorLight dark:text-textColor">
         <RectangleStackIcon className="h-10 w-10 my-auto" />
 
         <span className="ml-2">History</span>

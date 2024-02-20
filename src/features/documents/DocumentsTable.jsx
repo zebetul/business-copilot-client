@@ -11,7 +11,7 @@ function DocumentsTable() {
 
   return (
     <section className="documents_table w-full max-w-3xl mx-auto flex flex-col justify-center">
-      <header className="table_header h-10 border-0 border-b grid grid-cols-3 gap-3 justify-center pb-4 text-sm font-bold text-textColorLight">
+      <header className="table_header h-10 border-0 border-b grid grid-cols-3 gap-3 justify-center pb-4 text-sm font-bold text-textColorLight dark:text-textColor">
         <p className="my-auto">Title</p>
 
         <p className="my-auto">Type</p>
