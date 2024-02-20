@@ -14,10 +14,10 @@ function DarkModeProvider({ children }) {
   useEffect(() => {
     if (isDarkMode) {
       document.documentElement.classList.add("dark");
-      document.documentElement.classList.remove("lightMode");
+      document.documentElement.classList.remove("light");
     } else {
       document.documentElement.classList.remove("dark");
-      document.documentElement.classList.add("lightMode");
+      document.documentElement.classList.add("light");
     }
   }, [isDarkMode]);
 

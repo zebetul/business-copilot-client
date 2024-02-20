@@ -14,7 +14,7 @@ function Assistant() {
 
         {assistantResponse && (
           <Markdown
-            className="markdown_content pb-40 text-textColorLight dark:text-textColor"
+            className="markdown_content pb-40 text-textColorLight"
             remarkPlugins={[remarkGfm]}
           >
             {assistantResponse}

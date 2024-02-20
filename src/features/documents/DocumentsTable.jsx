@@ -10,11 +10,11 @@ function DocumentsTable() {
   if (error) return <p>Error: {error.message}</p>;
 
   return (
-    <section className="documents_table w-full max-w-3xl mx-auto flex flex-col justify-center">
-      <header className="table_header h-10 border-0 border-b grid grid-cols-3 gap-3 justify-center pb-4 text-sm font-bold text-textColorLight dark:text-textColor">
-        <p className="my-auto">Title</p>
+    <section className="documents_table w-full flex flex-col justify-center">
+      <header className="table_header h-10 border-bgColorDark border-b grid grid-cols-3 gap-3 justify-center pb-4 text-sm font-bold">
+        <p className="my-auto text-textColor">Title</p>
 
-        <p className="my-auto">Type</p>
+        <p className="my-auto text-textColor">Type</p>
 
         <FileInput />
       </header>

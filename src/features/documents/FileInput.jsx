@@ -5,26 +5,22 @@ function FileInput() {
   const { isUploading, uploadDocument } = useUploadDocument();
 
   return (
-    <div className="file_input-container relative ml-auto">
-      <label
-        htmlFor="file"
-        className="absolute top-0 right-0 h-full cursor-pointer flex gap-2 border rounded-md px-4 py-3 items-center justify-center hover:bg-bgColor dark:hover:bg-bgColorDark transition-colors"
-      >
-        <PlusIcon className="h-5 w-5" />
+    <label
+      htmlFor="file"
+      className="w-min h-min ms-auto border border-bgColorDark rounded-md p-1 flex flex-row gap-2 items-center justify-center text-textColorLight hover:text-textColor text-sm transition-colors text-nowrap cursor-pointer"
+    >
+      <PlusIcon className="h-5 w-5" />
 
-        <span className="text-sm text-nowrap">Add new</span>
-
-        <input
-          className="sr-only"
-          name="file"
-          id="file"
-          type="file"
-          aria-label="File browser"
-          onChange={(event) => uploadDocument(event.target.files[0])}
-          disabled={isUploading}
-        />
-      </label>
-    </div>
+      <input
+        className="sr-only"
+        name="file"
+        id="file"
+        type="file"
+        aria-label="File browser"
+        onChange={(event) => uploadDocument(event.target.files[0])}
+        disabled={isUploading}
+      />
+    </label>
   );
 }
 

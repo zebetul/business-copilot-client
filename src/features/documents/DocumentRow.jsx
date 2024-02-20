@@ -9,14 +9,14 @@ function DocumentRow({ document }) {
   return (
     <div
       key={id}
-      className="grid grid-cols-3 gap-3 border-0 border-b py-5 text-textColorLight dark:text-textColor"
+      className="grid grid-cols-3 gap-3 border-bgColorDark border-b py-5 text-textColorLight"
     >
       <h2 className="">{title}</h2>
 
       <p className="">{type}</p>
 
       <button
-        className="w-5 h-5 ml-auto hover:text-textColor hover:text-textColorLight transition-colors"
+        className="w-5 h-5 ml-auto hover:text-textColor transition-colors"
         onClick={() => deleteDocument(id)}
         disabled={isDeleting}
       >

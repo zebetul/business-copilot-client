@@ -11,14 +11,14 @@ function History() {
 
   return (
     <>
-      <h1 className="max-w-3xl mx-auto mb-20 flex gap-2 text-4xl font-bold text-textColorLight dark:text-textColor">
+      <h1 className="max-w-3xl mx-auto mb-20 flex gap-2 text-4xl text-textColor">
         <RectangleStackIcon className="h-10 w-10 my-auto" />
 
         <span className="ml-2">History</span>
       </h1>
 
       {history && (
-        <ul className="history_page_list flex flex-col max-w-3xl mx-auto border-t">
+        <ul className="history_page_list flex flex-col max-w-3xl mx-auto border-t border-bgColorDark">
           {history.map((item) => (
             <InteractionComponent key={item.id} item={item} />
           ))}

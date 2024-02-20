@@ -4,11 +4,12 @@ const config = {
   theme: {
     extend: {
       colors: {
-        bgColor: "#E4E5E9", // light gray
-        bgColorLight: "#F3F4F5", // very light gray
-        bgColorDark: "#D4D6DC", // gray
-        textColor: "#373943", // Dark blue
-        textColorLight: "#676C7E", // Light gray
+        bgColor: "rgb(var(--bgColor))",
+        bgColorLight: "rgb(var(--bgColorLight))",
+        bgColorDark: "rgb(var(--bgColorDark))",
+
+        textColor: "rgb(var(--textColor))",
+        textColorLight: "rgb(var(--textColorLight))",
       },
 
       fontFamily: {

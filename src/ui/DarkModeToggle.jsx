@@ -6,13 +6,13 @@ function DarkModeToggle() {
 
   return (
     <button
-      className="rounded-full ms-5 mt-auto h-10 w-10 hover:bg-bgColorDark dark:hover:bg-bgColorLight flex justify-center items-center"
+      className="rounded-full ms-5 mt-auto h-10 w-10 hover:bg-bgColorDark flex justify-center items-center"
       onClick={toggleDarkMode}
     >
       {isDarkMode ? (
-        <MoonIcon className="h-6 w-6" />
-      ) : (
         <SunIcon className="h-6 w-6" />
+      ) : (
+        <MoonIcon className="h-6 w-6" />
       )}
     </button>
   );
