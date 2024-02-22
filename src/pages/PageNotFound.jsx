@@ -1,4 +1,4 @@
-function ErrorPage() {
+function PageNotFound() {
   return (
     <div>
       <h1>404</h1>
@@ -8,4 +8,4 @@ function ErrorPage() {
   );
 }
 
-export default ErrorPage;
+export default PageNotFound;

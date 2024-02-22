@@ -7,7 +7,7 @@ function InteractionComponent({ item }) {
   return (
     <li className="history_item">
       <NavLink
-        to={`/history/${id}`}
+        to={`${id}`}
         className="history_item_text text-sm text-textColorLight hover:text-textColor transition-colors"
       >
         <p className="history_item_title py-5 border-b border-bgColorDark">

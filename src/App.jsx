@@ -1,16 +1,18 @@
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
-
+import { DarkModeProvider } from "./context/DarkModeContext";
+import { AuthProvider } from "./context/AuthContext";
+import ProtectedRoute from "./pages/ProtectedRoute";
 import AppLayout from "./ui/AppLayout";
-
+import PageNotFound from "./pages/PageNotFound";
 import Home from "./pages/Home";
 import Assistant from "./pages/Assistant";
 import Documents from "./pages/Documents";
 import History from "./pages/History";
 import InteractionRecord from "./pages/InteractionRecord";
-import { DarkModeProvider } from "./context/DarkModeContext";
+import Login from "./pages/Login";
 
 function App() {
   const queryClient = new QueryClient({
@@ -24,12 +26,12 @@ function App() {
 
   const router = createBrowserRouter([
     {
-      element: <AppLayout />,
+      element: (
+        <ProtectedRoute>
+          <AppLayout />
+        </ProtectedRoute>
+      ),
       children: [
-        {
-          path: "/",
-          element: <Home />,
-        },
         {
           path: "/assistant",
           element: <Assistant />,
@@ -48,15 +50,29 @@ function App() {
         },
       ],
     },
+    {
+      path: "/",
+      element: <Home />,
+    },
+    {
+      path: "/login",
+      element: <Login />,
+    },
+    {
+      path: "*",
+      element: <PageNotFound />,
+    },
   ]);
 
   return (
     <DarkModeProvider>
-      <QueryClientProvider client={queryClient}>
-        <ReactQueryDevtools />
+      <AuthProvider>
+        <QueryClientProvider client={queryClient}>
+          <ReactQueryDevtools />
 
-        <RouterProvider router={router} />
-      </QueryClientProvider>
+          <RouterProvider router={router} />
+        </QueryClientProvider>
+      </AuthProvider>
     </DarkModeProvider>
   );
 }

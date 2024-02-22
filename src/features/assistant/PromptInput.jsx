@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import PropTypes from "prop-types";
 import { ArrowUpIcon } from "@heroicons/react/24/outline";
+
 import useKey from "../../hooks/useKey";
 
 function PromptInput({ sendRequest, isSending }) {

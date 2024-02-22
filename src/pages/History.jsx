@@ -1,6 +1,7 @@
+import { RectangleStackIcon } from "@heroicons/react/24/outline";
+
 import { useHistory } from "../features/assistant/useHistory";
 import InteractionComponent from "../features/assistant/InteractionComponent";
-import { RectangleStackIcon } from "@heroicons/react/24/outline";
 import Loading from "../ui/Loading";
 import Error from "../ui/Error";
 

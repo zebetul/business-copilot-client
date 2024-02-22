@@ -6,7 +6,7 @@ function DarkModeToggle() {
 
   return (
     <button
-      className="rounded-full ms-5 mt-auto h-10 w-10 hover:bg-bgColorDark flex justify-center items-center"
+      className="rounded-full h-10 w-10 hover:bg-bgColorDark flex justify-center items-center"
       onClick={toggleDarkMode}
     >
       {isDarkMode ? (
