@@ -1,18 +1,26 @@
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../context/AuthContext";
 import { useEffect } from "react";
 import PropTypes from "prop-types";
 
-function ProtectedRoute({ children }) {
-  const { isAuthenticated } = useAuth();
+import useUser from "../features/authentication/useUser";
+import Loading from "../ui/Loading";
 
+function ProtectedRoute({ children }) {
   const navigate = useNavigate();
 
-  useEffect(() => {
-    if (!isAuthenticated) return navigate("/login");
-  }, [isAuthenticated, navigate]);
+  // 1. Load the authenticated user
+  const { isLoading, isAuthenticated } = useUser();
 
-  return isAuthenticated ? children : null;
+  // 2. Redirect to login if not authenticated
+  useEffect(() => {
+    if (!isAuthenticated && !isLoading) return navigate("/login");
+  }, [isAuthenticated, navigate, isLoading]);
+
+  // 3. Render Loading if loading
+  if (isLoading) return <Loading />;
+
+  // 4. Render the children if authenticated
+  if (isAuthenticated) return children;
 }
 
 ProtectedRoute.propTypes = {

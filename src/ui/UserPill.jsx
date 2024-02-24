@@ -1,16 +1,16 @@
 import { useNavigate } from "react-router-dom";
 
-import { useAuth } from "../context/AuthContext";
 import Button from "./Button";
+import useUser from "../features/authentication/useUser";
+import useLogout from "../features/authentication/useLogout";
 
 function UserPill() {
-  const { user, logout } = useAuth();
+  const { user } = useUser();
   const navigate = useNavigate();
+  const { logout, isPending } = useLogout();
 
   const handleLogout = () => {
     logout();
-
-    navigate("/login");
   };
 
   return (

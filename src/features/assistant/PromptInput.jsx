@@ -23,7 +23,7 @@ function PromptInput({ sendRequest, isSending }) {
   });
 
   return (
-    <div className="absolute bottom-20 w-full max-w-2xl p-2 pl-5 flex flex-row border-2 border-textColorLight rounded-full bg-bgColorLight">
+    <div className="absolute bottom-20 w-full max-w-2xl p-2 pl-5 flex flex-row border border-textColorLight rounded-full bg-bgColorLight">
       <input
         type="text"
         placeholder="Input your request here..."

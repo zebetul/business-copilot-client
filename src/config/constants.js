@@ -22,10 +22,3 @@ export const DEFAULT_REQUESTS = [
       "Cauta pe internet informatii relevante despre Samsung S24 si iPhone 15 si fa-mi un raport comparativ.",
   },
 ];
-
-export const FAKE_USER = {
-  name: "Zebe",
-  email: "sebenicristi@gmail.com",
-  password: "1234",
-  avatar: "https://avatars.githubusercontent.com/u/192781?v=4",
-};
