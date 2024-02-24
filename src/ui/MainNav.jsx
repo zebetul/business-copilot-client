@@ -2,7 +2,6 @@ import { NavLink } from "react-router-dom";
 import {
   ChatBubbleBottomCenterTextIcon,
   ClipboardDocumentListIcon,
-  // HomeIcon,
   RectangleStackIcon,
 } from "@heroicons/react/24/outline";
 
@@ -12,14 +11,6 @@ function MainNav() {
   return (
     <nav className="navigation text-textColorLight text-md font-semibold">
       <ul className="nav_links flex flex-col gap-1">
-        {/* <li>
-          <NavLink exact="true" to="/">
-            <HomeIcon className="h-6 w-6" />
-
-            <span className="ml-2">Home</span>
-          </NavLink>
-        </li> */}
-
         <li>
           <NavLink to="/assistant">
             <ChatBubbleBottomCenterTextIcon className="h-6 w-6" />
@@ -42,10 +33,10 @@ function MainNav() {
 
             <span className="ml-2">History</span>
           </NavLink>
-
-          <HistoryNav />
         </li>
       </ul>
+
+      <HistoryNav />
     </nav>
   );
 }

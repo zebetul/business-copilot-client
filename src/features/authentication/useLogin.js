@@ -9,7 +9,10 @@ export function useLogin() {
   const { isPending, mutate: login } = useMutation({
     mutationFn: ({ email, password }) => apiLogin({ email, password }),
     onSuccess: (user) => {
+      // Store the user in the cache
       queryClient.setQueryData(["user"], user.user);
+
+      // Redirect to the assistant page and replace the current history entry
       navigate("/assistant", { replace: true });
     },
     onError: (error) => {

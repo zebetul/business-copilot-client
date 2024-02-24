@@ -7,7 +7,7 @@ function FileInput() {
   return (
     <label
       htmlFor="file"
-      className="w-min h-min ms-auto border border-bgColorDark rounded-md p-1 flex flex-row gap-2 items-center justify-center text-textColorLight hover:text-textColor text-sm transition-colors text-nowrap cursor-pointer"
+      className="ms-auto w-min h-min rounded-md p-2 flex flex-col items-center justify-center text-textColorLight hover:bg-bgColorDark text-sm transition-colors cursor-pointer"
     >
       <PlusIcon className="h-5 w-5" />
 

@@ -11,7 +11,6 @@ import Documents from "./pages/Documents";
 import History from "./pages/History";
 import InteractionRecord from "./pages/InteractionRecord";
 import Login from "./pages/Login";
-// import Home from "./pages/Home";
 
 function App() {
   const queryClient = new QueryClient({
@@ -25,16 +24,20 @@ function App() {
 
   const router = createBrowserRouter([
     {
+      path: "/login",
+      element: <Login />,
+    },
+    {
+      path: "/",
+      element: <Login />,
+    },
+    {
       element: (
         <ProtectedRoute>
           <AppLayout />
         </ProtectedRoute>
       ),
       children: [
-        {
-          path: "/",
-          element: <Assistant />,
-        },
         {
           path: "/assistant",
           element: <Assistant />,
@@ -52,10 +55,6 @@ function App() {
           element: <InteractionRecord />,
         },
       ],
-    },
-    {
-      path: "/login",
-      element: <Login />,
     },
     {
       path: "*",

@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 import Loading from "./Loading";
 import Error from "./Error";
-import { useHistory } from "../features/assistant/useHistory";
+import { useHistory } from "../features/history/useHistory";
 
 function HistoryNav() {
   const { history, isLoading, error } = useHistory();

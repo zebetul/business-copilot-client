@@ -9,8 +9,8 @@ function useLogout() {
   const { mutate: logout, isPending } = useMutation({
     mutationFn: apiLogout,
     onSuccess: () => {
-      navigate("/login", { replace: true });
       queryClient.removeQueries();
+      navigate("/login", { replace: true });
     },
     onError: (error) => {
       console.log(error.message);

@@ -1,7 +1,7 @@
 import { RectangleStackIcon } from "@heroicons/react/24/outline";
 
-import { useHistory } from "../features/assistant/useHistory";
-import InteractionComponent from "../features/assistant/InteractionComponent";
+import { useHistory } from "../features/history/useHistory";
+import InteractionComponent from "../features/history/InteractionComponent";
 import Loading from "../ui/Loading";
 import Error from "../ui/Error";
 
@@ -23,7 +23,9 @@ function History() {
       {history && (
         <ul className="history_page_list flex flex-col max-w-3xl mx-auto border-t border-bgColorDark">
           {history.map((item) => (
-            <InteractionComponent key={item.id} item={item} />
+            <li className="history_item" key={item.id}>
+              <InteractionComponent item={item} />
+            </li>
           ))}
         </ul>
       )}

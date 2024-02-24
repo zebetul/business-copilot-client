@@ -4,7 +4,7 @@ import supabase from "./supabase.js";
 export async function apiSendRequest(userRequest) {
   try {
     // Input validation
-    if (userRequest === "") return console.log("Empty input");
+    if (userRequest === "") return console.log("No user request provided");
 
     const response = await fetch(`${API_URL}/assistant`, {
       method: "POST",

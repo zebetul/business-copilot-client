@@ -17,7 +17,7 @@ export async function apiGetDocuments() {
 export async function apiUploadDocument(file) {
   try {
     // Data validation
-    if (!file) return console.log("No file selected.");
+    if (!file) return console.log("No file provided");
 
     const formData = new FormData();
     formData.append("file", file);
@@ -28,9 +28,16 @@ export async function apiUploadDocument(file) {
       credentials: "include",
     });
 
-    await response.json();
+    // Check if the request was successful
+    if (!response.ok) {
+      throw new Error("Failed to upload document");
+    }
+
+    return await response.json();
   } catch (error) {
     console.error(error);
+
+    throw new Error("Failed to upload document");
   }
 }
 

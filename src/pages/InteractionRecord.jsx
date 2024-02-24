@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { useGetHistoryById } from "../features/assistant/useGetHistoryById";
+import { useGetHistoryById } from "../features/history/useGetHistoryById";
 import Loading from "../ui/Loading";
 import Error from "../ui/Error";
 import MarkdownContainer from "../ui/MarkdownContainer";

@@ -14,6 +14,7 @@ function LoginForm() {
     // Input validation
     if (!email || !password) return;
 
+    // login being a mutation function we can use onSettled to clear the form, which is a property of the useMutation hook
     login(
       { email, password },
       {

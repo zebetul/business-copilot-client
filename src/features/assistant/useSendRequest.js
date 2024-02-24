@@ -10,13 +10,11 @@ function useSendRequest() {
     data: assistantResponse,
   } = useMutation({
     mutationFn: apiSendRequest,
-
     onSuccess: () => {
       queryClient.invalidateQueries({
         queryKey: ["history"],
       });
     },
-
     onError: (error) => alert(error.message),
   });
 

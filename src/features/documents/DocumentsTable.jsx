@@ -1,8 +1,9 @@
+import { useDocuments } from "./useDocuments";
+
 import Error from "../../ui/Error";
 import Loading from "../../ui/Loading";
 import DocumentRow from "./DocumentRow";
 import FileInput from "./FileInput";
-import { useDocuments } from "./useDocuments";
 
 function DocumentsTable() {
   const { documents, isLoading, error } = useDocuments();
