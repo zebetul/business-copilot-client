@@ -4,160 +4,142 @@
 
 /* ------ COLOR VARIABLES ------- */
 .light {
-  --bgColor: 228, 229, 233;
-  --bgColorLight: 243, 244, 245;
-  --bgColorDark: 212, 214, 220;
+	--bgColor: 228, 229, 233;
+	--bgColorLight: 243, 244, 245;
+	--bgColorDark: 212, 214, 220;
 
-  --textColor: 55, 57, 67;
-  --textColorLight: 103, 108, 126;
+	--textColor: 55, 57, 67;
+	--textColorLight: 103, 108, 126;
 }
 
 .dark {
-  --bgColor: 50, 49, 51;
-  --bgColorLight: 59, 58, 60;
-  --bgColorDark: 69, 68, 70;
+	--bgColor: 50, 49, 51;
+	--bgColorLight: 59, 58, 60;
+	--bgColorDark: 69, 68, 70;
 
-  --textColorLight: 122, 127, 145;
-  --textColor: 171, 177, 196;
+	--textColorLight: 122, 127, 145;
+	--textColor: 171, 177, 196;
 }
 
 /* ------ SCROLLBAR STYLES ------- */
 .main::-webkit-scrollbar {
-  width: 0.5em;
+	width: 0.5em;
 }
 
 .main::-webkit-scrollbar-track {
-  background-color: rgb(var(--bgColorLight));
+	background-color: rgb(var(--bgColorLight));
 }
 
 .main::-webkit-scrollbar-thumb {
-  background-color: rgb(var(--bgColorDark));
-  border-radius: 0.5em;
+	background-color: rgb(var(--bgColorDark));
+	border-radius: 0.5em;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  letter-spacing: 0.05em;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	letter-spacing: 0.05em;
 }
 
 /* ------ GLOBAL STYLES ------- */
 html,
 body {
-  min-height: 100%;
+	min-height: 100%;
 }
 
-.navigation a {
-  display: flex;
-  padding: 10px 10px;
-  border-radius: 5px;
-  white-space: nowrap;
-}
-
-.history_list a {
-  display: flex;
-  padding: 6px 6px;
-  border-radius: 5px;
-  white-space: nowrap;
-}
-
-.navigation a:hover {
-  background-color: rgb(var(--bgColorDark));
-  transition: background-color 0.3s;
-}
-
+/* Active class for CustoNavLink */
 .navigation a.active {
-  color: rgb(var(--textColor));
+	color: rgb(var(--textColor));
 }
 
 /* ------ MARKDOWN STYLES ------- */
 .markdown_content ul {
-  list-style-type: disc;
-  padding-left: 20px;
+	list-style-type: disc;
+	padding-left: 20px;
 }
 
 .markdown_content ol {
-  list-style-type: decimal;
-  padding-left: 20px;
+	list-style-type: decimal;
+	padding-left: 20px;
 }
 
 .markdown_content blockquote {
-  border-left: 5px solid #d4d6dc;
-  padding-left: 20px;
-  margin: 20px 0;
+	border-left: 5px solid #d4d6dc;
+	padding-left: 20px;
+	margin: 20px 0;
 }
 
 .markdown_content pre {
-  padding: 20px;
-  border-radius: 5px;
-  margin: 20px 0;
+	padding: 20px;
+	border-radius: 5px;
+	margin: 20px 0;
 }
 
 .markdown_content pre code {
-  padding: 0;
-  margin: 0;
-  border-radius: 0;
+	padding: 0;
+	margin: 0;
+	border-radius: 0;
 }
 
 .markdown_content table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
+	width: 100%;
+	border-collapse: collapse;
+	margin: 20px 0;
 }
 
 .markdown_content table th,
 .markdown_content table td {
-  border: 1px solid #d4d6dc;
-  padding: 10px;
+	border: 1px solid #d4d6dc;
+	padding: 10px;
 }
 
 .markdown_content table th {
 }
 
 .markdown_content img {
-  max-width: 100%;
-  height: auto;
-  margin: 20px 0;
+	max-width: 100%;
+	height: auto;
+	margin: 20px 0;
 }
 
 .markdown_content a {
-  color: #1a73e8;
-  text-decoration: underline;
+	color: #1a73e8;
+	text-decoration: underline;
 }
 
 .markdown_content a:hover {
-  color: #0a58ca;
+	color: #0a58ca;
 }
 
 .markdown_content h1 {
-  font-size: 2em;
-  margin: 20px 0;
-  /* font-weight: bold; */
+	font-size: 2em;
+	margin: 20px 0;
+	/* font-weight: bold; */
 }
 
 .markdown_content h2 {
-  font-size: 1.125em;
-  margin: 20px 0;
-  font-weight: bold;
+	font-size: 1.125em;
+	margin: 20px 0;
+	font-weight: bold;
 }
 
 .markdown_content h3 {
-  font-size: 1em;
-  margin: 20px 0;
-  font-weight: bold;
+	font-size: 1em;
+	margin: 20px 0;
+	font-weight: bold;
 }
 
 .markdown_content p {
-  margin: 20px 0;
+	margin: 20px 0;
 }
 
 .markdown_content ul {
-  list-style-type: disc;
-  padding-left: 20px;
+	list-style-type: disc;
+	padding-left: 20px;
 }
 
 .markdown_content ol {
-  list-style-type: decimal;
-  padding-left: 20px;
+	list-style-type: decimal;
+	padding-left: 20px;
 }
