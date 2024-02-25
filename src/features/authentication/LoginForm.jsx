@@ -42,7 +42,7 @@ function LoginForm() {
           type="email"
           id="email"
           placeholder="Email"
-          className="shadow appearance-none mb-5 border border-textColorLight rounded w-full py-2 px-3 text-textColorLight bg-bgColorLight leading-tight focus:outline-none focus:shadow-outline"
+          className="shadow appearance-none mb-5 border border-textColorLight rounded w-full py-2 px-3 text-textColorLight bg-bgColor leading-tight focus:outline-none focus:shadow-outline"
           value={email}
           onChange={(e) => {
             setEmail(e.target.value);
@@ -61,7 +61,7 @@ function LoginForm() {
           type="password"
           id="password"
           placeholder="Password"
-          className="shadow appearance-none mb-5 border border-textColorLight rounded w-full py-2 px-3 text-textColorLight bg-bgColorLight leading-tight focus:outline-none focus:shadow-outline"
+          className="shadow appearance-none mb-5 border border-textColorLight rounded w-full py-2 px-3 text-textColorLight bg-bgColor leading-tight focus:outline-none focus:shadow-outline"
           value={password}
           onChange={(e) => {
             setPassword(e.target.value);

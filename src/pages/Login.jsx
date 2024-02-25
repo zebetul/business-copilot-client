@@ -2,7 +2,7 @@ import LoginForm from "../features/authentication/LoginForm";
 
 function Login() {
   return (
-    <main className="w-screen h-screen flex flex-col items-center justify-center bg-bgColorLight text-textColor">
+    <main className="w-screen h-screen flex flex-col items-center justify-center">
       <h1 className="text-6xl text-center">BUSINESS COPILOT</h1>
 
       <h2 className="mb-20 text-lg text-center font-bold text-textColorLight">

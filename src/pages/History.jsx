@@ -14,7 +14,7 @@ function History() {
 
   return (
     <>
-      <h1 className="max-w-3xl mx-auto mb-20 flex gap-2 text-4xl">
+      <h1 className="max-w-3xl mx-auto mb-20 mt-10 flex gap-2 text-4xl">
         <RectangleStackIcon className="h-10 w-10 my-auto" />
 
         <span className="ml-2">History</span>

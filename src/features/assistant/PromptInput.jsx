@@ -28,7 +28,7 @@ function PromptInput({ sendRequest, isSending }) {
         type="text"
         placeholder="Input your request here..."
         autoComplete="off"
-        className="outline-none bg-bgColorLight text-textColor font-sans w-5/6"
+        className="outline-none bg-bgColorLight text-textColor font-sans w-5/6 placeholder:text-textColorLight"
         value={userRequest}
         onChange={(e) => setUserRequest(e.target.value)}
         ref={inputEl}
