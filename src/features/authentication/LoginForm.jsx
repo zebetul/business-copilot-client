@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import Button from "../../ui/Button";
 import useLogin from "./useLogin";
+import Loader from "../../ui/Loader";
 
 function LoginForm() {
   const [email, setEmail] = useState("sebenicristi@gmail.com");
@@ -64,7 +65,7 @@ function LoginForm() {
       />
 
       <Button className="mt-5 w-full" type="submit" disabled={isPending}>
-        Log In
+        {isPending ? <Loader /> : "Log In"}
       </Button>
     </form>
   );

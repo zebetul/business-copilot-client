@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import Button from "../../ui/Button";
 import Input from "../../ui/Input";
 import useSignUp from "./useSignUp";
+import Loader from "../../ui/Loader";
 
 function SignUpForm() {
   const { signUp, isPending } = useSignUp();
@@ -84,7 +85,7 @@ function SignUpForm() {
       />
 
       <Button className="mt-5 w-full" type="submit" disabled={isPending}>
-        {`${isPending ? "..." : "Sign Up"}`}
+        {isPending ? <Loader /> : "Sign Up"}
       </Button>
     </form>
   );

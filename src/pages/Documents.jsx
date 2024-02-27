@@ -3,9 +3,9 @@ import DocumentsTable from "../features/documents/DocumentsTable";
 
 function Documents() {
   return (
-    <div className="max-w-3xl mx-auto pt-10">
+    <div className="mx-auto max-w-3xl pt-10">
       <h1 className="mb-20 flex gap-2 text-4xl">
-        <ClipboardDocumentListIcon className="h-10 w-10 my-auto" />
+        <ClipboardDocumentListIcon className="my-auto h-10 w-10" />
 
         <span className="ml-2">Documents</span>
       </h1>

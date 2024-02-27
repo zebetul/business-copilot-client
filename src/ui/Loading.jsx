@@ -1,7 +1,9 @@
+import Loader from "./Loader";
+
 function Loading() {
   return (
-    <div className="w-full h-full flex flex-col justify-center items-center">
-      Loading...
+    <div className="flex h-full w-full flex-col items-center justify-center p-2">
+      <Loader />
     </div>
   );
 }

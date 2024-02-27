@@ -17,7 +17,7 @@ function Input({
         className="mb-2 block text-sm font-bold text-textColorLight"
       >
         {label}
-        {required && <span className="text-red-500">*</span>}
+        {required && <span className="text-red-500"> *</span>}
       </label>
 
       <input
