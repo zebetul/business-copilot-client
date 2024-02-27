@@ -2,13 +2,20 @@ import { useForm } from "react-hook-form";
 
 import Button from "../../ui/Button";
 import Input from "../../ui/Input";
+import useSignUp from "./useSignUp";
 
 function SignUpForm() {
-  const { register, formState, getValues, handleSubmit } = useForm();
+  const { signUp, isPending } = useSignUp();
+  const { register, formState, getValues, handleSubmit, reset } = useForm();
   const { errors } = formState;
 
-  const handleSignUp = (data) => {
-    console.log(data);
+  const handleSignUp = ({ userName, email, password }) => {
+    signUp(
+      { userName, email, password },
+
+      // Reset the fields
+      { onSettled: reset },
+    );
   };
 
   return (
@@ -17,13 +24,14 @@ function SignUpForm() {
       onSubmit={handleSubmit(handleSignUp)}
     >
       <Input
-        name="name"
+        name="userName"
         label="Name"
         register={register}
-        error={errors?.name}
+        error={errors?.userName}
         required={true}
         type="text"
         validationSchema={{ required: "Name is required" }}
+        disabled={isPending}
       />
 
       <Input
@@ -40,6 +48,7 @@ function SignUpForm() {
             message: "Please provide a valid email address",
           },
         }}
+        disabled={isPending}
       />
 
       <Input
@@ -56,6 +65,7 @@ function SignUpForm() {
             message: "Password must be at least 6 characters long",
           },
         }}
+        disabled={isPending}
       />
 
       <Input
@@ -70,10 +80,11 @@ function SignUpForm() {
           validate: (value) =>
             value === getValues().password || "The passwords need to match",
         }}
+        disabled={isPending}
       />
 
-      <Button className="mt-5" type="submit" disabled={false}>
-        Sign Up
+      <Button className="mt-5 w-full" type="submit" disabled={isPending}>
+        {`${isPending ? "..." : "Sign Up"}`}
       </Button>
     </form>
   );

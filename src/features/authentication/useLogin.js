@@ -17,7 +17,7 @@ export function useLogin() {
     },
     onError: (error) => {
       console.log(error.message);
-      alert("Provided email or password are incorrect");
+      alert(error.message);
     },
   });
 

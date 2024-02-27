@@ -8,6 +8,7 @@ function Input({
   required,
   type,
   validationSchema,
+  disabled,
 }) {
   return (
     <div className="mb-5 w-full">
@@ -25,6 +26,7 @@ function Input({
         id={name}
         autoComplete={name}
         {...register(name, validationSchema)}
+        disabled={disabled}
       />
 
       {error && (
@@ -42,6 +44,7 @@ Input.propTypes = {
   type: PropTypes.string,
   validationSchema: PropTypes.object,
   name: PropTypes.string,
+  disabled: PropTypes.bool,
 };
 
 export default Input;
