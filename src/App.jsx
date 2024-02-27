@@ -11,6 +11,7 @@ import Documents from "./pages/Documents";
 import History from "./pages/History";
 import InteractionRecord from "./pages/InteractionRecord";
 import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
 
 function App() {
   const queryClient = new QueryClient({
@@ -24,12 +25,16 @@ function App() {
 
   const router = createBrowserRouter([
     {
+      path: "/",
+      element: <Login />,
+    },
+    {
       path: "/login",
       element: <Login />,
     },
     {
-      path: "/",
-      element: <Login />,
+      path: "/signup",
+      element: <SignUp />,
     },
     {
       element: (

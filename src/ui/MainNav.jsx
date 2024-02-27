@@ -14,7 +14,7 @@ function MainNav() {
 				<li>
 					<CustomNavLink
 						to="/assistant"
-						className="p-2"
+						type="primary"
 					>
 						<ChatBubbleBottomCenterTextIcon className="h-6 w-6" />
 
@@ -25,7 +25,7 @@ function MainNav() {
 				<li>
 					<CustomNavLink
 						to="/documents"
-						className="p-2"
+						type="primary"
 					>
 						<ClipboardDocumentListIcon className="h-6 w-6" />
 
@@ -36,7 +36,7 @@ function MainNav() {
 				<li>
 					<CustomNavLink
 						to="/history"
-						className="p-2"
+						type="primary"
 					>
 						<RectangleStackIcon className="h-6 w-6" />
 

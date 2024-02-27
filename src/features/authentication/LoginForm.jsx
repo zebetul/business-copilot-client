@@ -22,56 +22,48 @@ function LoginForm() {
           setEmail("");
           setPassword("");
         },
-      }
+      },
     );
   };
 
   return (
     <form
-      className="max-w-sm mx-auto flex flex-col items-center"
+      className="mx-auto flex w-full max-w-sm flex-col items-center"
       onSubmit={handleLogin}
     >
-      <div className="mb-5">
-        <label
-          htmlFor="email"
-          className="block text-textColorLight text-sm font-bold mb-2"
-        >
-          Email
-        </label>
-        <input
-          type="email"
-          id="email"
-          placeholder="Email"
-          className="shadow appearance-none mb-5 border border-textColorLight rounded w-full py-2 px-3 text-textColorLight bg-bgColor leading-tight focus:outline-none focus:shadow-outline"
-          value={email}
-          onChange={(e) => {
-            setEmail(e.target.value);
-          }}
-          autoComplete="username"
-          disabled={isPending}
-        />
+      <label className="mb-2" htmlFor="email">
+        Email
+      </label>
+      <input
+        className="mb-5 w-full rounded-lg border bg-bgColorLight px-3 py-2 text-textColor transition-all duration-300 placeholder:text-textColorLight focus:outline-none focus:ring-2 focus:ring-bgColor"
+        type="email"
+        id="email"
+        autoComplete="email"
+        label="Email"
+        value={email}
+        onChange={(e) => {
+          setEmail(e.target.value);
+        }}
+        disabled={isPending}
+      />
 
-        <label
-          htmlFor="password"
-          className="block text-textColorLight text-sm font-bold mb-2"
-        >
-          Password
-        </label>
-        <input
-          type="password"
-          id="password"
-          placeholder="Password"
-          className="shadow appearance-none mb-5 border border-textColorLight rounded w-full py-2 px-3 text-textColorLight bg-bgColor leading-tight focus:outline-none focus:shadow-outline"
-          value={password}
-          onChange={(e) => {
-            setPassword(e.target.value);
-          }}
-          autoComplete="current-password"
-          disabled={isPending}
-        />
-      </div>
+      <label className="mb-2" htmlFor="password">
+        Password
+      </label>
+      <input
+        className="mb-5 w-full rounded-lg border bg-bgColorLight px-3 py-2 text-textColor transition-all duration-300 placeholder:text-textColorLight focus:outline-none focus:ring-2 focus:ring-bgColor"
+        type="password"
+        id="password"
+        autoComplete="current-password"
+        label="Password"
+        value={password}
+        onChange={(e) => {
+          setPassword(e.target.value);
+        }}
+        disabled={isPending}
+      />
 
-      <Button type="submit" disabled={isPending}>
+      <Button type="submit" disabled={isPending} className="mt-5">
         Log In
       </Button>
     </form>

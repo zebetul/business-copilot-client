@@ -11,15 +11,12 @@ function HistoryNav() {
 	if (error) return <Error />;
 
 	return (
-		<ul className="history_list pl-5 flex flex-col gap-1 font-normal">
+		<ul className="history_list pl-5 flex flex-col gap-1">
 			{history.map((item) => (
-				<li
-					key={item.id}
-					className="text-xs"
-				>
+				<li key={item.id}>
 					<CustomNavLink
 						to={`/history/${item.id}`}
-						className="py-1 px-2"
+						type="small"
 					>
 						<p className="overflow-hidden text-ellipsis">{item.title}</p>
 					</CustomNavLink>
