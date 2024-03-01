@@ -23,12 +23,12 @@ function PromptInput({ sendRequest, isSending }) {
   });
 
   return (
-    <div className="absolute bottom-20 w-full max-w-2xl p-2 pl-5 flex flex-row border border-textColorLight rounded-full bg-bgColorLight">
+    <div className="absolute bottom-20 flex w-full max-w-2xl flex-row rounded-full border border-textColorLight bg-bgColorLight p-2 pl-5">
       <input
         type="text"
         placeholder="Input your request here..."
         autoComplete="off"
-        className="outline-none bg-bgColorLight text-textColor font-sans w-5/6 placeholder:text-textColorLight"
+        className="w-5/6 bg-bgColorLight font-sans text-textColor outline-none placeholder:text-textColorLight"
         value={userRequest}
         onChange={(e) => setUserRequest(e.target.value)}
         ref={inputEl}
@@ -36,7 +36,7 @@ function PromptInput({ sendRequest, isSending }) {
       />
 
       <button
-        className="ms-auto p-2 rounded-full bg-bgColorDark text-textColorLight"
+        className="ms-auto rounded-full bg-bgColorDark p-2 text-textColorLight"
         onClick={handleRequest}
         disabled={isSending}
       >

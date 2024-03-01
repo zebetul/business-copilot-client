@@ -16,7 +16,7 @@ function DocumentsTable() {
   if (error) return <Error />;
 
   return (
-    <table className="h-full w-full">
+    <div className="h-full w-full">
       <header className="table_header grid h-10 grid-cols-3 items-center justify-center gap-3 border-b border-bgColorDark pb-4 text-sm font-bold">
         <p>Title</p>
 
@@ -52,7 +52,7 @@ function DocumentsTable() {
           )}
         </ul>
       )}
-    </table>
+    </div>
   );
 }
 

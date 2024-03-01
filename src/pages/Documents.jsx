@@ -3,7 +3,7 @@ import DocumentsTable from "../features/documents/DocumentsTable";
 
 function Documents() {
   return (
-    <div className="mx-auto max-w-3xl pt-10">
+    <div className="mx-auto h-max max-w-3xl pt-10">
       <h1 className="mb-20 flex gap-2 text-4xl">
         <ClipboardDocumentListIcon className="my-auto h-10 w-10" />
 

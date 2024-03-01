@@ -47,4 +47,5 @@ DarkModeProvider.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
+// eslint-disable-next-line
 export { DarkModeProvider, useDarkMode };

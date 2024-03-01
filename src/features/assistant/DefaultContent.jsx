@@ -5,14 +5,14 @@ import Button from "../../ui/Button";
 
 function DefaultContent({ sendRequest }) {
   return (
-    <div className="w-full h-full pb-28 flex flex-col items-center justify-center">
-      <h1 className="mb-3 text-6xl text-center">Make your request</h1>
+    <div className="flex h-full w-full flex-col items-center justify-center pb-28">
+      <h1 className="text-center text-6xl">Make your request</h1>
 
-      <h2 className="mb-7 text-lg font-bold text-textColorLight">
+      <h2 className="mb-10 text-lg font-bold text-textColorLight">
         Choose a request from below or type your own request.
       </h2>
 
-      <ul className="requests_container flex flex-row gap-2 flex-wrap justify-center font-bold text-lg">
+      <ul className="requests_container flex flex-row flex-wrap justify-center gap-2 text-lg font-bold">
         {DEFAULT_REQUESTS.map((request, index) => (
           <li key={index}>
             <Button onClick={() => sendRequest(request.description)}>
