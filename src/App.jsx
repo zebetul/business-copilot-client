@@ -1,17 +1,20 @@
+import { Suspense, lazy } from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 import { DarkModeProvider } from "./context/DarkModeContext";
 import ProtectedRoute from "./pages/ProtectedRoute";
-import AppLayout from "./ui/AppLayout";
-import PageNotFound from "./pages/PageNotFound";
-import Assistant from "./pages/Assistant";
-import Documents from "./pages/Documents";
-import History from "./pages/History";
-import InteractionRecord from "./pages/InteractionRecord";
-import Login from "./pages/Login";
-import SignUp from "./pages/SignUp";
+import Loading from "./ui/Loading";
+
+const AppLayout = lazy(() => import("./ui/AppLayout"));
+const Login = lazy(() => import("./pages/Login"));
+const SignUp = lazy(() => import("./pages/SignUp"));
+const Assistant = lazy(() => import("./pages/Assistant"));
+const Documents = lazy(() => import("./pages/Documents"));
+const History = lazy(() => import("./pages/History"));
+const InteractionRecord = lazy(() => import("./pages/InteractionRecord"));
+const PageNotFound = lazy(() => import("./pages/PageNotFound"));
 
 function App() {
   const queryClient = new QueryClient({
@@ -72,7 +75,9 @@ function App() {
       <QueryClientProvider client={queryClient}>
         <ReactQueryDevtools />
 
-        <RouterProvider router={router} />
+        <Suspense fallback={<Loading />}>
+          <RouterProvider router={router} />
+        </Suspense>
       </QueryClientProvider>
     </DarkModeProvider>
   );
