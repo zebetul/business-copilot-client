@@ -10,7 +10,7 @@ function Assistant() {
 
   return (
     <>
-      <section className="assistant_response_container max-w-2xl h-full mx-auto">
+      <section className="assistant_container mx-auto h-full max-w-2xl">
         {isSending && <Loading />}
 
         {assistantResponse && (

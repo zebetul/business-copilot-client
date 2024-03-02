@@ -1,11 +1,12 @@
 import { Suspense, lazy } from "react";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 import { DarkModeProvider } from "./context/DarkModeContext";
 import ProtectedRoute from "./pages/ProtectedRoute";
 import Loading from "./ui/Loading";
+import ErrorBoundaryLayout from "./ui/ErrorBoundaryLayout";
 
 const AppLayout = lazy(() => import("./ui/AppLayout"));
 const Login = lazy(() => import("./pages/Login"));
@@ -28,45 +29,54 @@ function App() {
 
   const router = createBrowserRouter([
     {
-      path: "/",
-      element: <Login />,
-    },
-    {
-      path: "/login",
-      element: <Login />,
-    },
-    {
-      path: "/signup",
-      element: <SignUp />,
-    },
-    {
       element: (
-        <ProtectedRoute>
-          <AppLayout />
-        </ProtectedRoute>
+        <ErrorBoundaryLayout>
+          <Outlet />
+        </ErrorBoundaryLayout>
       ),
       children: [
         {
-          path: "/assistant",
-          element: <Assistant />,
+          path: "/login",
+          element: <Login />,
         },
         {
-          path: "/documents",
-          element: <Documents />,
+          path: "/signup",
+          element: <SignUp />,
         },
         {
-          path: "/history",
-          element: <History />,
+          element: (
+            <ProtectedRoute>
+              <AppLayout />
+            </ProtectedRoute>
+          ),
+          children: [
+            {
+              path: "/",
+              element: <Assistant />,
+            },
+            {
+              path: "/assistant",
+              element: <Assistant />,
+            },
+            {
+              path: "/documents",
+              element: <Documents />,
+            },
+            {
+              path: "/history",
+              element: <History />,
+            },
+            {
+              path: "/history/:id",
+              element: <InteractionRecord />,
+            },
+          ],
         },
         {
-          path: "/history/:id",
-          element: <InteractionRecord />,
+          path: "*",
+          element: <PageNotFound />,
         },
       ],
-    },
-    {
-      path: "*",
-      element: <PageNotFound />,
     },
   ]);
 

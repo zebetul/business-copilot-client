@@ -7,7 +7,6 @@ import MarkdownContainer from "../ui/MarkdownContainer";
 function InteractionRecord() {
   const { id } = useParams();
   const { interactionRecord, isLoading, error } = useGetHistoryById(id);
-  const assistantResponse = interactionRecord?.assistantResponse;
 
   if (isLoading) return <Loading />;
 
@@ -15,8 +14,10 @@ function InteractionRecord() {
 
   return (
     <>
-      <section className="max-w-2xl mx-auto pt-10">
-        <MarkdownContainer>{assistantResponse}</MarkdownContainer>
+      <section className="mx-auto max-w-2xl pt-10">
+        <MarkdownContainer>
+          {interactionRecord.assistantResponse}
+        </MarkdownContainer>
       </section>
     </>
   );

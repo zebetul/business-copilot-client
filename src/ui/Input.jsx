@@ -29,9 +29,11 @@ function Input({
         disabled={disabled}
       />
 
-      {error && (
-        <p className="mt-1 text-xs italic text-red-500">{error.message}</p>
-      )}
+      <div className="mt-1 h-4">
+        {error && (
+          <p className="text-xs italic text-red-500">{error.message}</p>
+        )}
+      </div>
     </div>
   );
 }

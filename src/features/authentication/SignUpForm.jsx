@@ -26,22 +26,22 @@ function SignUpForm() {
     >
       <Input
         name="userName"
+        type="text"
         label="Name"
         register={register}
         error={errors?.userName}
         required={true}
-        type="text"
         validationSchema={{ required: "Name is required" }}
         disabled={isPending}
       />
 
       <Input
         name="email"
+        type="email"
         label="Email"
         register={register}
         error={errors?.email}
         required={true}
-        type="email"
         validationSchema={{
           required: "Email is required",
           pattern: {
@@ -54,11 +54,11 @@ function SignUpForm() {
 
       <Input
         name="password"
+        type="password"
         label="Password"
         register={register}
         error={errors?.password}
         required={true}
-        type="password"
         validationSchema={{
           required: "Password is required",
           minLength: {
@@ -71,11 +71,11 @@ function SignUpForm() {
 
       <Input
         name="passwordConfirm"
+        type="password"
         label="Confirm Password"
         register={register}
         error={errors?.passwordConfirm}
         required={true}
-        type="password"
         validationSchema={{
           required: "Password confirmation is required",
           validate: (value) =>
