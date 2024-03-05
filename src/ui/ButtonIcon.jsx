@@ -1,22 +1,38 @@
 import PropTypes from "prop-types";
 
-function ButtonIcon({ children, onClick, disabled, className }) {
-	return (
-		<button
-			className={`w-min h-min rounded-md p-2 flex flex-col items-center justify-center text-textColorLight hover:bg-bgColorDark text-sm transition-colors duration-300 ${className}`}
-			onClick={onClick}
-			disabled={disabled}
-		>
-			{children}
-		</button>
-	);
+function ButtonIcon({
+  children,
+  onClick,
+  disabled,
+  className,
+  type = "primary",
+}) {
+  const baseStyles =
+    "rounded-md flex text-textColorLight transition-colors duration-300";
+
+  const styles = {
+    primary: baseStyles + " w-min p-2 hover:bg-bgColorDark",
+    withText: baseStyles + " text-xs w-full p-2 hover:bg-bgColorDark gap-2",
+    withoutBg: baseStyles + " w-min hover:text-textColor",
+  };
+
+  return (
+    <button
+      className={`${styles[type]} ${className}`}
+      onClick={onClick}
+      disabled={disabled}
+    >
+      {children}
+    </button>
+  );
 }
 
 ButtonIcon.propTypes = {
-	children: PropTypes.node.isRequired,
-	onClick: PropTypes.func,
-	disabled: PropTypes.bool,
-	className: PropTypes.string,
+  children: PropTypes.node.isRequired,
+  onClick: PropTypes.func,
+  disabled: PropTypes.bool,
+  className: PropTypes.string,
+  type: PropTypes.oneOf(["primary", "withoutBg", "withText"]),
 };
 
 export default ButtonIcon;
