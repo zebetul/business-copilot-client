@@ -64,7 +64,7 @@ function LoginForm() {
         disabled={isPending}
       />
 
-      <Button className="mt-5 w-full" type="submit" disabled={isPending}>
+      <Button className="mt-5 w-full" disabled={isPending}>
         {isPending ? <Loader /> : "Log In"}
       </Button>
     </form>

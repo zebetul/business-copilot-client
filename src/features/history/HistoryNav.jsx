@@ -1,8 +1,8 @@
-import { useHistory } from "../features/history/useHistory";
-import Loading from "./Loading";
-import Error from "./Error";
+import { useHistory } from "./useHistory";
+import Loading from "../../ui/Loading";
+import Error from "../../ui/Error";
 import HistoryNavRow from "./HistoryNavRow";
-import Menus from "./Menus";
+import Menus from "../../ui/Menus";
 
 function HistoryNav() {
   const { history, isLoading, error } = useHistory();

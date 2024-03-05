@@ -1,6 +1,6 @@
-import CustomNavLink from "./CustomNavLink";
+import CustomNavLink from "../../ui/CustomNavLink";
 import PropTypes from "prop-types";
-import Menus from "./Menus";
+import Menus from "../../ui/Menus";
 import { PencilIcon, TrashIcon } from "@heroicons/react/24/outline";
 
 function HistoryNavRow({ item }) {

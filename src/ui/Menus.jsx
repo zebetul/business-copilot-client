@@ -3,6 +3,7 @@ import { createPortal } from "react-dom";
 import PropTypes from "prop-types";
 import { EllipsisVerticalIcon } from "@heroicons/react/24/outline";
 import ButtonIcon from "./ButtonIcon";
+import useOutsideClick from "../hooks/useOutsideClick";
 
 const MenusContext = createContext();
 
@@ -53,26 +54,35 @@ function Toggle({ id }) {
 }
 
 function List({ id, children }) {
-  const { openId, position } = useContext(MenusContext);
+  const { openId, position, close } = useContext(MenusContext);
+  const { ref } = useOutsideClick(close);
+
+  if (openId !== id) return null;
 
   // Create a Portal to render the list outside of the current component, on the document body
-  return openId === id
-    ? createPortal(
-        <ul
-          className="fixed flex w-40 flex-col gap-1 rounded-md border border-bgColorLight bg-bgColor p-1 shadow-lg"
-          style={{ top: position.y, left: position.x }}
-        >
-          {children}
-        </ul>,
-        document.body,
-      )
-    : null;
+  return createPortal(
+    <ul
+      className="fixed flex w-40 flex-col gap-2 rounded-md border border-bgColorLight bg-bgColor p-1 shadow-lg"
+      style={{ top: position.y, left: position.x }}
+      ref={ref}
+    >
+      {children}
+    </ul>,
+    document.body,
+  );
 }
 
 function Button({ children, onClick }) {
+  const { close } = useContext(MenusContext);
+
+  const handleClick = () => {
+    onClick();
+    close();
+  };
+
   return (
     <li>
-      <ButtonIcon type="withText" onClick={onClick}>
+      <ButtonIcon type="withText" onClick={handleClick}>
         {children}
       </ButtonIcon>
     </li>
