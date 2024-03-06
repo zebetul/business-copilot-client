@@ -29,7 +29,11 @@ function Menus({ children }) {
 }
 
 function Menu({ children }) {
-  return <div className="flex items-center justify-center">{children}</div>;
+  return (
+    <div className="menus_menu ms-auto flex items-center justify-center">
+      {children}
+    </div>
+  );
 }
 
 function Toggle({ id }) {
@@ -47,7 +51,12 @@ function Toggle({ id }) {
   };
 
   return (
-    <ButtonIcon id={id} type="withoutBg" onClick={handleClick}>
+    <ButtonIcon
+      id={id}
+      type="withoutBg"
+      className="menus_toggle"
+      onClick={handleClick}
+    >
       <EllipsisVerticalIcon className="h-5 w-5" />
     </ButtonIcon>
   );

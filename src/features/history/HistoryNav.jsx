@@ -14,8 +14,8 @@ function HistoryNav() {
   return (
     <Menus>
       <ul className="history_list flex flex-col gap-1 pl-5">
-        {history.map((item) => (
-          <HistoryNavRow key={item.id} item={item} />
+        {history.map((record) => (
+          <HistoryNavRow key={record.id} record={record} />
         ))}
       </ul>
     </Menus>

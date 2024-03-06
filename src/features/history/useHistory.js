@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { apiGetHistory } from "../../services/apiAssistant";
+import { apiGetHistory } from "../../services/apiHistory";
 
 export function useHistory() {
   const {

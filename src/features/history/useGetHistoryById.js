@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 
-import { apiGetHistoryById } from "../../services/apiAssistant";
+import { apiGetHistoryById } from "../../services/apiHistory";
 
 export function useGetHistoryById(id) {
   const {

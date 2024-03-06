@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 
-function InteractionRow({ item }) {
-  const { id, title } = item;
+function RecordRow({ record }) {
+  const { id, title } = record;
 
   return (
     <NavLink
@@ -16,8 +16,8 @@ function InteractionRow({ item }) {
   );
 }
 
-InteractionRow.propTypes = {
-  item: PropTypes.object.isRequired,
+RecordRow.propTypes = {
+  record: PropTypes.object.isRequired,
 };
 
-export default InteractionRow;
+export default RecordRow;

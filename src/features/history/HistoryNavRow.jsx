@@ -1,47 +1,52 @@
-import CustomNavLink from "../../ui/CustomNavLink";
+import { useState } from "react";
 import PropTypes from "prop-types";
-import Menus from "../../ui/Menus";
 import { PencilIcon, TrashIcon } from "@heroicons/react/24/outline";
+
 import useDeleteHistoryItem from "./useDeleteHistoryItem";
 
-function HistoryNavRow({ item }) {
+import RenameRecord from "./RenameRecord";
+import CustomNavLink from "../../ui/CustomNavLink";
+import Menus from "../../ui/Menus";
+
+function HistoryNavRow({ record }) {
   const { isDeleting, deleteItem } = useDeleteHistoryItem();
+  const [isRenameOpen, setIsRenameOpen] = useState(false);
 
-  const handleDelete = () => {
-    deleteItem(item.id);
-  };
-
-  const handleRename = () => {
-    console.log("Edit item", item.id);
-  };
+  const handleDelete = () => deleteItem(record.id);
+  const handleRename = () => setIsRenameOpen(true);
+  const closeRename = () => setIsRenameOpen(false);
 
   return (
     <li>
-      <CustomNavLink to={`/history/${item.id}`} type="small">
-        <p className="overflow-hidden">{item.title}</p>
+      {isRenameOpen ? (
+        <RenameRecord record={record} close={closeRename} />
+      ) : (
+        <CustomNavLink to={`/history/${record.id}`} type="small">
+          <p className="overflow-hidden">{record.title}</p>
 
-        <Menus.Menu>
-          <Menus.Toggle id={item.id} />
+          <Menus.Menu>
+            <Menus.Toggle id={record.id} />
 
-          <Menus.List id={item.id}>
-            <Menus.Button onClick={handleDelete} disabled={isDeleting}>
-              <TrashIcon className="h-4 w-4" />
-              <span>Delete</span>
-            </Menus.Button>
+            <Menus.List id={record.id}>
+              <Menus.Button onClick={handleDelete} disabled={isDeleting}>
+                <TrashIcon className="h-4 w-4" />
+                <span>Delete</span>
+              </Menus.Button>
 
-            <Menus.Button onClick={handleRename}>
-              <PencilIcon className="h-4 w-4" />
-              <span>Rename</span>
-            </Menus.Button>
-          </Menus.List>
-        </Menus.Menu>
-      </CustomNavLink>
+              <Menus.Button onClick={handleRename}>
+                <PencilIcon className="h-4 w-4" />
+                <span>Rename</span>
+              </Menus.Button>
+            </Menus.List>
+          </Menus.Menu>
+        </CustomNavLink>
+      )}
     </li>
   );
 }
 
 HistoryNavRow.propTypes = {
-  item: PropTypes.object.isRequired,
+  record: PropTypes.object.isRequired,
 };
 
 export default HistoryNavRow;
