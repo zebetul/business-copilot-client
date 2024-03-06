@@ -2,10 +2,13 @@ import CustomNavLink from "../../ui/CustomNavLink";
 import PropTypes from "prop-types";
 import Menus from "../../ui/Menus";
 import { PencilIcon, TrashIcon } from "@heroicons/react/24/outline";
+import useDeleteHistoryItem from "./useDeleteHistoryItem";
 
 function HistoryNavRow({ item }) {
+  const { isDeleting, deleteItem } = useDeleteHistoryItem();
+
   const handleDelete = () => {
-    console.log("Delete item", item.id);
+    deleteItem(item.id);
   };
 
   const handleRename = () => {
@@ -21,7 +24,7 @@ function HistoryNavRow({ item }) {
           <Menus.Toggle id={item.id} />
 
           <Menus.List id={item.id}>
-            <Menus.Button onClick={handleDelete}>
+            <Menus.Button onClick={handleDelete} disabled={isDeleting}>
               <TrashIcon className="h-4 w-4" />
               <span>Delete</span>
             </Menus.Button>

@@ -4,8 +4,9 @@ import { apiDeleteDocument } from "../../services/apiDocuments";
 export function useDeleteDocument() {
   const queryClient = useQueryClient();
 
-  const { isLoading: isDeleting, mutate: deleteDocument } = useMutation({
+  const { isPending: isDeleting, mutate: deleteDocument } = useMutation({
     mutationFn: apiDeleteDocument,
+
     onSuccess: () => {
       alert("File deleted successfully");
 
@@ -13,6 +14,7 @@ export function useDeleteDocument() {
         queryKey: ["documents"],
       });
     },
+
     onError: (error) => alert(error.message),
   });
 

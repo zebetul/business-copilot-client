@@ -1,6 +1,6 @@
 import Error from "../../ui/Error";
 import Loading from "../../ui/Loading";
-import InteractionComponent from "./InteractionComponent";
+import InteractionRow from "./InteractionRow";
 import { useHistory } from "./useHistory";
 
 function HistoryList() {
@@ -15,7 +15,7 @@ function HistoryList() {
       <ul className="history_page_list mx-auto flex max-w-3xl flex-col border-t border-bgColorDark">
         {history.map((item) => (
           <li className="history_item" key={item.id}>
-            <InteractionComponent item={item} />
+            <InteractionRow item={item} />
           </li>
         ))}
       </ul>

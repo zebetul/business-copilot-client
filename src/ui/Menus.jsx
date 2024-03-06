@@ -72,7 +72,7 @@ function List({ id, children }) {
   );
 }
 
-function Button({ children, onClick }) {
+function Button({ children, onClick, disabled }) {
   const { close } = useContext(MenusContext);
 
   const handleClick = () => {
@@ -82,7 +82,7 @@ function Button({ children, onClick }) {
 
   return (
     <li>
-      <ButtonIcon type="withText" onClick={handleClick}>
+      <ButtonIcon type="withText" onClick={handleClick} disabled={disabled}>
         {children}
       </ButtonIcon>
     </li>
@@ -110,6 +110,7 @@ List.propTypes = {
 Button.propTypes = {
   children: PropTypes.node.isRequired,
   onClick: PropTypes.func,
+  disabled: PropTypes.bool,
 };
 
 Menus.Menu = Menu;
