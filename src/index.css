@@ -157,7 +157,7 @@ h4,
 h5,
 h6 {
   margin: 20px 0;
-  color: rgb(var(--textColor));
+  /* color: rgb(var(--textColorLight)); */
 }
 
 .markdown_content h1 {
@@ -165,13 +165,15 @@ h6 {
 }
 
 .markdown_content h2 {
-  font-size: 1.125em;
-  font-weight: bold;
+  font-size: 1.6em;
 }
 
 .markdown_content h3 {
-  font-size: 1em;
-  font-weight: bold;
+  font-size: 1.35em;
+}
+
+.markdown_content h4 {
+  font-size: 1.2em;
 }
 
 .markdown_content p {
@@ -186,4 +188,8 @@ h6 {
 .markdown_content ol {
   list-style-type: decimal;
   padding-left: 20px;
+}
+
+.markdown_content strong {
+  font-weight: 500;
 }

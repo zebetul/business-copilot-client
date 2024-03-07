@@ -10,7 +10,7 @@ function useDeleteHistoryItem() {
     mutationFn: apiDeleteHistoryItem,
 
     onSuccess: () => {
-      alert("Item deleted successfully");
+      // alert("Item deleted successfully");
 
       queryClient.invalidateQueries({ queryKey: ["history"] });
 

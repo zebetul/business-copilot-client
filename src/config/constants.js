@@ -1,24 +1,30 @@
 export const DEFAULT_REQUESTS = [
   {
-    title: "Situatie resurse umane",
+    title: "Resurse umane companie",
     description:
-      "Cauta in baza de date si fa-mi un raport cu situatia resurselor umane din firma.",
+      "Caută în baza de date și fă-mi un raport cu situația resurselor umane din firmă.",
   },
 
   {
-    title: "Analiza evolutie domeniu alimentar",
+    title: "Domeniu alimentar România 2023",
     description:
-      "Cauta pe internet informatii relevante despre evolutia domeniului alimentar in Romaina in 2023 si fa-mi un raport detaliat.",
+      "Caută pe internet informații despre evoluția domeniului alimentar în România în 2023 și fă-mi un raport detaliat.",
   },
 
   {
-    title: "Descriere companie",
-    description: "Cauta in baza de date si fa o descriere a companiei.",
+    title: "Prezentare companie",
+    description: "Caută în baza de date și fă o prezentare detaliată a firmei.",
   },
 
   {
-    title: "Samsung S24 vs iPhone 15",
+    title: "Datele firmei",
     description:
-      "Cauta pe internet informatii relevante despre Samsung S24 si iPhone 15 si fa-mi un raport comparativ.",
+      "Caută în baza de date și fă-mi un raport cu datele firmei, inclusiv datele de contact, nume angajați, etc.",
+  },
+
+  {
+    title: "Piața IT România",
+    description:
+      "Caută pe internet informații relevante despre piața de IT din România și fă o prezentare detaliată.",
   },
 ];
