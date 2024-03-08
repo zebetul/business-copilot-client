@@ -7,7 +7,7 @@ export function useUploadDocument() {
   const { isPending: isUploading, mutate: uploadDocument } = useMutation({
     mutationFn: apiUploadDocument,
     onSuccess: () => {
-      alert("File uploaded successfully");
+      // alert("File uploaded successfully");
 
       queryClient.invalidateQueries({
         queryKey: ["documents"],

@@ -27,4 +27,10 @@ export const DEFAULT_REQUESTS = [
     description:
       "Caută pe internet informații relevante despre piața de IT din România și fă o prezentare detaliată.",
   },
+
+  {
+    title: "Informații despre principalul nostru furnizor",
+    description:
+      "Caută în baza de date și pe internet informații despre principalul nostru furnizor și fă-mi un raport detaliat despre acesta.",
+  },
 ];

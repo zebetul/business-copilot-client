@@ -42,11 +42,10 @@ export async function apiDeleteHistoryItem(id) {
 }
 
 // Rename the title in a row with a specific id form the history supabaseClient table
-export async function apiRenameRecord({ id, title }) {
-  const { error } = await supabase
-    .from("history")
-    .update({ title })
-    .eq("id", id);
+export async function apiUpdateHistoryRecord(record) {
+  const { id } = record;
+
+  const { error } = await supabase.from("history").update(record).eq("id", id);
 
   if (error) {
     console.log(error);

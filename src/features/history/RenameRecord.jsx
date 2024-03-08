@@ -1,22 +1,24 @@
 import PropTypes from "prop-types";
-import useRenameRecord from "./useRenameRecord";
+import useUpdateHistoryRecord from "./useUpdateHistoryRecord";
 
 function RenameRecord({ record, close }) {
   const { id, title } = record;
-  const { renameRecord } = useRenameRecord();
+  const { isUpdating: isRenaming, updateRecord } = useUpdateHistoryRecord();
 
   const onRenameRecord = (e) => {
     const newTitle = e.target.value;
 
-    // If title changed dispatch an action to rename the record
-    if (newTitle !== title && newTitle !== "")
-      renameRecord({
+    if (newTitle === title || newTitle === "") return close();
+
+    updateRecord(
+      {
         id,
         title: newTitle,
-      });
-
-    // Close RenameRecord component
-    close();
+      },
+      {
+        onSettled: () => close(),
+      },
+    );
   };
 
   return (
@@ -26,6 +28,7 @@ function RenameRecord({ record, close }) {
       className="w-full rounded-md border bg-bgColorLight p-1 text-xs font-normal text-textColor transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-bgColor"
       autoFocus
       onBlur={onRenameRecord}
+      disabled={isRenaming}
     />
   );
 }

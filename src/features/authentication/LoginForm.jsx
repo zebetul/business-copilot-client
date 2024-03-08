@@ -32,11 +32,14 @@ function LoginForm() {
       className="mx-auto flex w-full max-w-sm flex-col items-center"
       onSubmit={handleLogin}
     >
-      <label className="mb-2" htmlFor="email">
+      <label
+        className="mb-2 me-auto block text-sm font-bold text-textColorLight"
+        htmlFor="email"
+      >
         Email
       </label>
       <input
-        className="mb-5 w-full rounded-lg border bg-bgColorLight px-3 py-2 text-textColor transition-all duration-300 placeholder:text-textColorLight focus:outline-none focus:ring-2 focus:ring-bgColor"
+        className="mb-5 w-full rounded-lg bg-bgColorLight px-3 py-2 text-textColor placeholder:text-textColorLight focus:outline-none focus:ring-2 focus:ring-bgColorLight"
         type="email"
         id="email"
         autoComplete="email"
@@ -48,11 +51,14 @@ function LoginForm() {
         disabled={isPending}
       />
 
-      <label className="mb-2" htmlFor="password">
+      <label
+        className="mb-2 me-auto block text-sm font-bold text-textColorLight"
+        htmlFor="password"
+      >
         Password
       </label>
       <input
-        className="mb-5 w-full rounded-lg border bg-bgColorLight px-3 py-2 text-textColor transition-all duration-300 placeholder:text-textColorLight focus:outline-none focus:ring-2 focus:ring-bgColor"
+        className="mb-5 w-full rounded-lg bg-bgColorLight px-3 py-2 text-textColor placeholder:text-textColorLight focus:outline-none focus:ring-2 focus:ring-bgColorLight"
         type="password"
         id="password"
         autoComplete="current-password"
@@ -65,7 +71,7 @@ function LoginForm() {
       />
 
       <Button className="mt-5 w-full" disabled={isPending}>
-        {isPending ? <Loader /> : "Log In"}
+        {isPending ? <Loader size="small" /> : "Log In"}
       </Button>
     </form>
   );

@@ -21,7 +21,7 @@ function Input({
       </label>
 
       <input
-        className="w-full rounded-lg border bg-bgColorLight px-3 py-2 text-textColor transition-all duration-300 placeholder:text-textColorLight focus:outline-none focus:ring-2 focus:ring-bgColor"
+        className="w-full rounded-lg bg-bgColorLight px-3 py-2 text-textColor placeholder:text-textColorLight focus:outline-none focus:ring-2 focus:ring-bgColorLight"
         type={type}
         id={name}
         autoComplete={name}

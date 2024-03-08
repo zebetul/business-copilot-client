@@ -85,7 +85,7 @@ function SignUpForm() {
       />
 
       <Button className="mt-5 w-full" type="submit" disabled={isPending}>
-        {isPending ? <Loader /> : "Sign Up"}
+        {isPending ? <Loader size="small" /> : "Sign Up"}
       </Button>
     </form>
   );

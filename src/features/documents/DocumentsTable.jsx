@@ -31,27 +31,23 @@ function DocumentsTable() {
         </FileInput>
       </header>
 
-      {isUploading ? (
-        <Loading />
-      ) : (
-        <ul>
-          {documents.length ? (
-            documents.map((document) => (
-              <DocumentRow key={document.id} document={document} />
-            ))
-          ) : (
-            <FileInput
-              onChange={uploadDocument}
-              disabled={isUploading}
-              className="mx-auto mt-5 gap-2"
-            >
-              <PlusIcon className="h-5 w-5" />
+      <ul>
+        {documents.length ? (
+          documents.map((document) => (
+            <DocumentRow key={document.id} document={document} />
+          ))
+        ) : (
+          <FileInput
+            onChange={uploadDocument}
+            disabled={isUploading}
+            className="mx-auto mt-5 gap-2"
+          >
+            <PlusIcon className="h-5 w-5" />
 
-              <span className="text-nowrap">Add a document</span>
-            </FileInput>
-          )}
-        </ul>
-      )}
+            <span className="text-nowrap">Add a document</span>
+          </FileInput>
+        )}
+      </ul>
     </div>
   );
 }

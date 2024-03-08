@@ -12,7 +12,7 @@ function DefaultContent({ sendRequest }) {
         Choose a request from below or type your own request.
       </h2>
 
-      <ul className="requests_container flex flex-row flex-wrap justify-center gap-2 text-lg font-bold">
+      <ul className="requests_container flex flex-row flex-wrap justify-center gap-2 text-lg">
         {DEFAULT_REQUESTS.map((request, index) => (
           <li key={index}>
             <Button onClick={() => sendRequest(request.description)}>

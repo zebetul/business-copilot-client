@@ -3,10 +3,10 @@ import SideBar from "./SideBar";
 
 function AppLayout() {
   return (
-    <div className="h-screen py-3 pe-3 flex">
+    <div className="flex h-screen py-3 pe-3">
       <SideBar />
 
-      <main className="main w-full h-full bg-bgColorLight rounded-md overflow-y-scroll">
+      <main className="main h-full w-full overflow-y-scroll rounded-md bg-bgColorLight">
         <Outlet />
       </main>
     </div>

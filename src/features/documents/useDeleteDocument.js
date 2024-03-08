@@ -8,7 +8,7 @@ export function useDeleteDocument() {
     mutationFn: apiDeleteDocument,
 
     onSuccess: () => {
-      alert("File deleted successfully");
+      // alert("File deleted successfully");
 
       queryClient.invalidateQueries({
         queryKey: ["documents"],

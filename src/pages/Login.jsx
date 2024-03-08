@@ -3,14 +3,14 @@ import CustomNavLink from "../ui/CustomNavLink";
 
 function Login() {
   return (
-    <main className="flex h-screen w-screen flex-col items-center justify-center bg-bgColorLight">
+    <main className="flex h-screen w-screen flex-col items-center justify-center">
       <h1 className="text-center text-6xl">BUSINESS COPILOT</h1>
 
       <h2 className="mb-10 text-center text-lg font-bold text-textColorLight">
         Automating business planning with the power of AI
       </h2>
 
-      <h3 className="mb-10 text-3xl">Log in to your account</h3>
+      <h3 className="mb-10 text-3xl">Log in</h3>
 
       <LoginForm />
 
