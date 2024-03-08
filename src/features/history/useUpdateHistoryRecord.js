@@ -1,5 +1,6 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { apiUpdateHistoryRecord } from "../../services/apiHistory";
+import toast from "react-hot-toast";
 
 function useUpdateHistoryRecord() {
   const queryClient = useQueryClient();
@@ -12,7 +13,7 @@ function useUpdateHistoryRecord() {
     },
 
     onError: (error) => {
-      alert(error);
+      toast.error(error.message);
     },
   });
 

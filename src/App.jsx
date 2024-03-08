@@ -7,6 +7,7 @@ import { DarkModeProvider } from "./context/DarkModeContext";
 import ProtectedRoute from "./pages/ProtectedRoute";
 import Loading from "./ui/Loading";
 import ErrorBoundaryLayout from "./ui/ErrorBoundaryLayout";
+import CustomToaster from "./ui/CustomToaster";
 
 const AppLayout = lazy(() => import("./ui/AppLayout"));
 const Login = lazy(() => import("./pages/Login"));
@@ -87,6 +88,7 @@ function App() {
 
         <Suspense fallback={<Loading />}>
           <RouterProvider router={router} />
+          <CustomToaster />
         </Suspense>
       </QueryClientProvider>
     </DarkModeProvider>

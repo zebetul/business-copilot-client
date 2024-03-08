@@ -10,15 +10,15 @@ import Menus from "../../ui/Menus";
 
 function HistoryNavRow({ record }) {
   const { isDeleting, deleteItem } = useDeleteHistoryItem();
-  const [isRenameOpen, setIsRenameOpen] = useState(false);
+  const [isRenaming, setIsRenaming] = useState(false);
 
   const handleDelete = () => deleteItem(record.id);
-  const handleRename = () => setIsRenameOpen(true);
-  const closeRename = () => setIsRenameOpen(false);
+  const openRename = () => setIsRenaming(true);
+  const closeRename = () => setIsRenaming(false);
 
   return (
     <li>
-      {isRenameOpen ? (
+      {isRenaming ? (
         <RenameRecord record={record} close={closeRename} />
       ) : (
         <CustomNavLink to={`/history/${record.id}`} type="small">
@@ -33,7 +33,7 @@ function HistoryNavRow({ record }) {
                 <span>Delete</span>
               </Menus.Button>
 
-              <Menus.Button onClick={handleRename}>
+              <Menus.Button onClick={openRename}>
                 <PencilIcon className="h-4 w-4" />
                 <span>Rename</span>
               </Menus.Button>

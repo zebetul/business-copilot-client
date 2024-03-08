@@ -14,7 +14,7 @@ function Loader({ size = "medium" }) {
 }
 
 Loader.propTypes = {
-  size: PropTypes.number,
+  size: PropTypes.string,
 };
 
 export default Loader;

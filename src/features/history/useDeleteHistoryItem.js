@@ -1,6 +1,7 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { apiDeleteHistoryItem } from "../../services/apiHistory";
 import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
 function useDeleteHistoryItem() {
   const queryClient = useQueryClient();
@@ -10,7 +11,7 @@ function useDeleteHistoryItem() {
     mutationFn: apiDeleteHistoryItem,
 
     onSuccess: () => {
-      // alert("Item deleted successfully");
+      toast.success("Record deleted successfully");
 
       queryClient.invalidateQueries({ queryKey: ["history"] });
 
@@ -18,7 +19,7 @@ function useDeleteHistoryItem() {
       navigate("/history", { replace: true });
     },
 
-    onError: (error) => alert(error),
+    onError: (error) => toast.error(error.message),
   });
 
   return { isDeleting, deleteItem };

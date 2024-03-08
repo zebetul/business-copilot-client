@@ -1,5 +1,6 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { apiDeleteDocument } from "../../services/apiDocuments";
+import toast from "react-hot-toast";
 
 export function useDeleteDocument() {
   const queryClient = useQueryClient();
@@ -8,14 +9,14 @@ export function useDeleteDocument() {
     mutationFn: apiDeleteDocument,
 
     onSuccess: () => {
-      // alert("File deleted successfully");
+      toast.success("File deleted successfully");
 
       queryClient.invalidateQueries({
         queryKey: ["documents"],
       });
     },
 
-    onError: (error) => alert(error.message),
+    onError: (error) => toast.error(error.message),
   });
 
   return { isDeleting, deleteDocument };

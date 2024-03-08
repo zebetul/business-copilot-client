@@ -1,13 +1,14 @@
 import PropTypes from "prop-types";
 import useUpdateHistoryRecord from "./useUpdateHistoryRecord";
+import useKey from "../../hooks/useKey";
+import { useState } from "react";
 
 function RenameRecord({ record, close }) {
   const { id, title } = record;
+  const [newTitle, setNewTitle] = useState(title);
   const { isUpdating: isRenaming, updateRecord } = useUpdateHistoryRecord();
 
-  const onRenameRecord = (e) => {
-    const newTitle = e.target.value;
-
+  const onRenameRecord = () => {
     if (newTitle === title || newTitle === "") return close();
 
     updateRecord(
@@ -21,9 +22,12 @@ function RenameRecord({ record, close }) {
     );
   };
 
+  useKey("Enter", onRenameRecord);
+
   return (
     <input
-      defaultValue={title}
+      value={newTitle}
+      onChange={(e) => setNewTitle(e.target.value)}
       type="text"
       className="w-full rounded-md border bg-bgColorLight p-1 text-xs font-normal text-textColor transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-bgColor"
       autoFocus

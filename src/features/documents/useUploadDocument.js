@@ -1,5 +1,6 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { apiUploadDocument } from "../../services/apiDocuments";
+import toast from "react-hot-toast";
 
 export function useUploadDocument() {
   const queryClient = useQueryClient();
@@ -7,13 +8,13 @@ export function useUploadDocument() {
   const { isPending: isUploading, mutate: uploadDocument } = useMutation({
     mutationFn: apiUploadDocument,
     onSuccess: () => {
-      // alert("File uploaded successfully");
+      toast.success("File uploaded successfully");
 
       queryClient.invalidateQueries({
         queryKey: ["documents"],
       });
     },
-    onError: (error) => alert(error.message),
+    onError: (error) => toast.error(error.message),
   });
 
   return { isUploading, uploadDocument };
