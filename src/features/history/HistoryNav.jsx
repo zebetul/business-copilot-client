@@ -9,7 +9,7 @@ function HistoryNav() {
 
   if (isLoading) return <Loading />;
 
-  if (error) return <Error />;
+  if (error) return <Error error={error} />;
 
   return (
     <Menus>
