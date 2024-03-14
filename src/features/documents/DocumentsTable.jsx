@@ -11,6 +11,7 @@ function DocumentsTable() {
   const { documents, isLoading, error } = useDocuments();
 
   if (isLoading) return <Loading />;
+
   if (error) return <Error error={error} />;
 
   return (

@@ -16,9 +16,9 @@ export async function apiSendRequest(userRequest) {
       }),
     });
 
-    const data = await response.json();
+    const { assistantResponse } = await response.json();
 
-    return data;
+    return assistantResponse;
   } catch (error) {
     console.error("Error sending prompt:", error);
 

@@ -86,7 +86,7 @@ body {
   }
 }
 
-/* Active class for CustoNavLink */
+/* Active class for CustomNavLink */
 .navigation a.active {
   color: rgb(var(--textColor));
 }
@@ -131,9 +131,6 @@ body {
   border: 1px solid #d4d6dc;
   padding: 10px;
 }
-
-/* .markdown_content table th {
-} */
 
 .markdown_content img {
   max-width: 100%;

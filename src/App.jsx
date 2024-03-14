@@ -1,5 +1,5 @@
 import { Suspense, lazy } from "react";
-import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
@@ -30,11 +30,7 @@ function App() {
 
   const router = createBrowserRouter([
     {
-      element: (
-        <ErrorBoundaryLayout>
-          <Outlet />
-        </ErrorBoundaryLayout>
-      ),
+      element: <ErrorBoundaryLayout />,
       children: [
         {
           path: "/login",

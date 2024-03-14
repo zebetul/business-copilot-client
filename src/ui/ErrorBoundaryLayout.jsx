@@ -1,20 +1,16 @@
-import PropTypes from "prop-types";
 import { ErrorBoundary } from "react-error-boundary";
 import ErrorFallback from "./ErrorFallback";
+import { Outlet } from "react-router-dom";
 
-function ErrorBoundaryLayout({ children }) {
+function ErrorBoundaryLayout() {
   return (
     <ErrorBoundary
       FallbackComponent={ErrorFallback}
       onReset={() => window.location.replace("/")}
     >
-      {children}
+      <Outlet />
     </ErrorBoundary>
   );
 }
-
-ErrorBoundaryLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};
 
 export default ErrorBoundaryLayout;

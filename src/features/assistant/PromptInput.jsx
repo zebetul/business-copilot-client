@@ -36,7 +36,7 @@ function PromptInput({ sendRequest, isSending }) {
       />
 
       <button
-        className="ms-auto rounded-full bg-bgColorDark p-2 text-textColorLight"
+        className="ms-auto rounded-full bg-bgColorDark p-2 text-textColorLight hover:text-textColor"
         onClick={handleRequest}
         disabled={isSending}
       >
