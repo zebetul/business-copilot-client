@@ -1,11 +1,10 @@
-import { API_URL } from "../config/config.js";
 
 export async function apiSendRequest(userRequest) {
   try {
     // Input validation
     if (userRequest === "") return console.log("No user request provided");
 
-    const response = await fetch(`${API_URL}/assistant`, {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/assistant`, {
       method: "POST",
       credentials: "include",
       headers: {

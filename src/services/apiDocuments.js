@@ -1,4 +1,3 @@
-import { API_URL } from "../config/config.js";
 import supabase from "./supabase.js";
 
 // Get documents from supabase
@@ -22,7 +21,7 @@ export async function apiUploadDocument(file) {
     const formData = new FormData();
     formData.append("file", file);
 
-    const response = await fetch(`${API_URL}/documents`, {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/documents`, {
       method: "POST",
       body: formData,
       credentials: "include",

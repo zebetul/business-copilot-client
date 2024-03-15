@@ -1,4 +1,5 @@
-export const API_URL = "http://localhost:5000";
+// export const API_URL = "http://localhost:5000";
+export const API_URL = "https://business-copilot-server.onrender.com";
 
 // Supabase
 export const sbApiKey =
