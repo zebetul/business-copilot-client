@@ -9,7 +9,6 @@ import CustomToaster from "./ui/CustomToaster";
 
 import AppLayout from "./ui/AppLayout";
 import Login from "./pages/Login";
-import SignUp from "./pages/SignUp";
 import Assistant from "./pages/Assistant";
 import Documents from "./pages/Documents";
 import History from "./pages/History";
@@ -33,10 +32,6 @@ function App() {
         {
           path: "/login",
           element: <Login />,
-        },
-        {
-          path: "/signup",
-          element: <SignUp />,
         },
         {
           element: (

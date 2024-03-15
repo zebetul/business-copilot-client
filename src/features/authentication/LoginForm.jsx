@@ -5,8 +5,8 @@ import useLogin from "./useLogin";
 import Loader from "../../ui/Loader";
 
 function LoginForm() {
-  const [email, setEmail] = useState("sebenicristi@gmail.com");
-  const [password, setPassword] = useState("123456");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const { login, isPending } = useLogin();
 
   const handleLogin = async (e) => {
