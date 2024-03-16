@@ -6,7 +6,7 @@ import UserPill from "./UserPill";
 
 function AppLayout() {
   return (
-    <div className="flex h-screen py-3 pe-3">
+    <div className="flex h-screen md:py-3 md:pe-3">
       <SideBar>
         <DarkModeToggle />
 
@@ -21,7 +21,7 @@ function AppLayout() {
         <UserPill />
       </SideBar>
 
-      <main className="main h-full w-full overflow-x-hidden overflow-y-scroll rounded-md bg-bgColorLight">
+      <main className="main flex h-full w-full flex-col overflow-x-hidden overflow-y-scroll bg-bgColorLight px-2 md:rounded-md">
         <Outlet />
       </main>
     </div>

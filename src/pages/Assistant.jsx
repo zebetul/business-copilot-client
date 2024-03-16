@@ -10,7 +10,7 @@ function Assistant() {
 
   return (
     <>
-      <section className="assistant_container mx-auto h-full max-w-2xl">
+      <section className="assistant_container relative mx-auto h-full max-w-2xl">
         {isSending && <Loading />}
 
         {assistantResponse && (
@@ -18,10 +18,12 @@ function Assistant() {
         )}
 
         {!isSending && !assistantResponse && (
-          <DefaultContent sendRequest={sendRequest} />
-        )}
+          <>
+            <DefaultContent sendRequest={sendRequest} />
 
-        <PromptInput sendRequest={sendRequest} isSending={isSending} />
+            <PromptInput sendRequest={sendRequest} isSending={isSending} />
+          </>
+        )}
       </section>
     </>
   );

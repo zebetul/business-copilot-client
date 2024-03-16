@@ -8,10 +8,10 @@ function SideBar({ children }) {
   const toggle = () => setOpen(!open);
 
   return (
-    <div className="relative flex h-full max-w-xs flex-col px-1">
+    <div className="relative flex h-full max-w-xs flex-col md:px-1">
       <ButtonIcon
         onClick={toggle}
-        className={`absolute top-0 ${open ? "right-2" : "-right-10"}`}
+        className={`absolute top-0 z-10 ${open ? "right-2" : "-right-9"}`}
       >
         <Bars3Icon className="h-5 w-5" />
       </ButtonIcon>

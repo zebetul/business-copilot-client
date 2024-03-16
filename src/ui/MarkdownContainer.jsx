@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 function MarkdownContainer({ children }) {
   return (
     <Markdown
-      className="markdown_content pb-40 text-textColor"
+      className="markdown_content pb-40 pt-10 text-textColor"
       remarkPlugins={[remarkGfm]}
     >
       {children}
