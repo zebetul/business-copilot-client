@@ -1,25 +1,28 @@
-import DarkModeToggle from "./DarkModeToggle";
-import MainNav from "./MainNav";
-import UserPill from "./UserPill";
+import PropTypes from "prop-types";
+import { useState } from "react";
+import ButtonIcon from "./ButtonIcon";
+import { Bars3Icon } from "@heroicons/react/24/outline";
 
-function SideBar() {
+function SideBar({ children }) {
+  const [open, setOpen] = useState(false);
+  const toggle = () => setOpen(!open);
+
   return (
-    <div className="flex h-full w-60 flex-col px-3">
-      <DarkModeToggle />
+    <div className="relative flex h-full max-w-xs flex-col px-1">
+      <ButtonIcon
+        onClick={toggle}
+        className={`absolute top-0 ${open ? "right-2" : "-right-10"}`}
+      >
+        <Bars3Icon className="h-5 w-5" />
+      </ButtonIcon>
 
-      <h1 className="mb-20 mt-8 flex flex-col text-center text-2xl font-bold text-textColorLight">
-        {/* <span className="logo mb-2 text-4xl">📈</span> */}
-
-        <span>BUSINESS</span>
-
-        <span>COPILOT</span>
-      </h1>
-
-      <MainNav />
-
-      <UserPill />
+      {open && children}
     </div>
   );
 }
+
+SideBar.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 
 export default SideBar;
