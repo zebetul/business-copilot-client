@@ -4,21 +4,21 @@
 
 /* ------ COLOR VARIABLES ------- */
 .light {
-  --bgColor: 228, 229, 233;
-  --bgColorLight: 243, 244, 245;
-  --bgColorDark: 212, 214, 220;
+  --bgColor: 228, 229, 233; /* #e4e5e9 */
+  --bgColorLight: 243, 244, 245; /* #f3f4f5 */
+  --bgColorDark: 212, 214, 220; /* #d4d6dc */
 
-  --textColor: 55, 57, 67;
-  --textColorLight: 103, 108, 126;
+  --textColor: 55, 57, 67; /* #373943 */
+  --textColorLight: 103, 108, 126; /* #676c7e */
 }
 
 .dark {
-  --bgColor: 50, 49, 51;
-  --bgColorLight: 59, 58, 60;
-  --bgColorDark: 69, 68, 70;
+  --bgColor: 13, 14, 17; /* #0d0e11 */
+  --bgColorLight: 19, 20, 24; /* #131418 */
+  --bgColorDark: 30, 32, 37; /* #1e2025 */
 
-  --textColorLight: 122, 127, 145;
-  --textColor: 171, 177, 196;
+  --textColorLight: 122, 127, 145; /* #7a7f91 */
+  --textColor: 191, 198, 220; /* #bfc6dc */
 }
 
 /* ------ SCROLLBAR STYLES ------- */
@@ -46,6 +46,8 @@
 html,
 body {
   min-height: 100%;
+
+  --accentColor: 10, 88, 202; /* #0a58ca */
 }
 
 .loader {

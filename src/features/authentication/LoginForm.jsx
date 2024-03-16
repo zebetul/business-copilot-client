@@ -29,7 +29,7 @@ function LoginForm() {
 
   return (
     <form
-      className="mx-auto flex w-full max-w-sm flex-col items-center"
+      className="mx-auto flex w-full max-w-sm flex-col items-center px-2"
       onSubmit={handleLogin}
     >
       <label
