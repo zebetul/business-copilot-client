@@ -8,15 +8,19 @@ function SideBar({ children }) {
   const toggle = () => setOpen(!open);
 
   return (
-    <div className="relative flex h-full max-w-xs flex-col md:px-1">
+    <div className="relative flex h-full flex-col md:px-1">
       <ButtonIcon
         onClick={toggle}
-        className={`absolute top-0 z-10 ${open ? "right-2" : "-right-9"}`}
+        className={`absolute top-0 z-10 ${open ? "right-2" : "-right-10"}`}
       >
-        <Bars3Icon className="h-5 w-5" />
+        <Bars3Icon className="h-6 w-6" />
       </ButtonIcon>
 
-      {open && children}
+      {open && (
+        <div className="flex h-full w-80 flex-col overflow-y-auto px-2">
+          {children}
+        </div>
+      )}
     </div>
   );
 }
