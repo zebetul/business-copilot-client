@@ -37,11 +37,17 @@ export async function apiUploadDocument(file) {
   }
 }
 
-// Delete document from supabase
+// Delete document from supabase documents table
 export async function apiDeleteDocument(id) {
   const { error } = await supabase.from("documents").delete().match({ id });
 
-  if (error) {
+  // Delete document chunks related to the document from supabase document_chunks table. The documentId is stored in the document_chunks metadata column
+  const { error: errorChunks } = await supabase
+    .from("document_chunks")
+    .delete()
+    .filter("metadata->documentId", "eq", id);
+
+  if (errorChunks) {
     console.log(error);
 
     throw new Error("Failed deleting the document");
