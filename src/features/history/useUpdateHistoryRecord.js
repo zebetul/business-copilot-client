@@ -10,6 +10,8 @@ function useUpdateHistoryRecord() {
 
     onSuccess: () => {
       queryClient.invalidateQueries("history");
+
+      toast.success("Record updated successfully");
     },
 
     onError: (error) => {

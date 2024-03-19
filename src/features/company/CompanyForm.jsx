@@ -1,12 +1,31 @@
-// import { useForm } from "react-hook-form";
 import Input from "../../ui/Input";
 import useCompanyData from "./useCompanyData";
+import useUpdateCompanyData from "./useUpdateCompanyData";
+import Loading from "../../ui/Loading";
 
 function CompanyForm() {
-  // const { register, formState, handleSubmit } = useForm();
-  const { companyData: { title, caen, eurostat } = {}, isLoading } =
-    useCompanyData();
-  // const { saveCompanyData, isSaving } = useSaveCompanyData();
+  const { companyData = {}, isLoading } = useCompanyData();
+  const { title, caen, eurostat } = companyData;
+
+  const { updateCompanyData, isUpdating } = useUpdateCompanyData();
+
+  function handleUpdate(event, field) {
+    const newValue = event.target.value;
+
+    if (
+      !newValue ||
+      newValue === companyData[field] ||
+      // Needed for the caen field, as it's a number
+      +newValue === companyData[field]
+    )
+      return console.log("Invalid input", newValue);
+
+    updateCompanyData({ [field]: newValue });
+  }
+
+  if (isLoading) {
+    return <Loading />;
+  }
 
   return (
     <form>
@@ -15,7 +34,8 @@ function CompanyForm() {
         type="text"
         label="Nume"
         defaultValue={title}
-        disabled={isLoading}
+        disabled={isUpdating}
+        onBlur={(event) => handleUpdate(event, "title")}
       />
 
       <Input
@@ -23,7 +43,8 @@ function CompanyForm() {
         type="number"
         label="CAEN"
         defaultValue={caen}
-        disabled={isLoading}
+        disabled={isUpdating}
+        onBlur={(event) => handleUpdate(event, "caen")}
       />
 
       <Input
@@ -31,7 +52,8 @@ function CompanyForm() {
         type="text"
         label="EUROSTAT query url"
         defaultValue={eurostat}
-        disabled={isLoading}
+        disabled={isUpdating}
+        onBlur={(event) => handleUpdate(event, "eurostat")}
       />
     </form>
   );

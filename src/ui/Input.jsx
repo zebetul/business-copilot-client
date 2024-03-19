@@ -10,6 +10,7 @@ function Input({
   validationSchema,
   disabled,
   defaultValue,
+  onBlur,
 }) {
   return (
     <div className="mb-5 w-full">
@@ -29,6 +30,7 @@ function Input({
         {...register(name, validationSchema)}
         disabled={disabled}
         defaultValue={defaultValue}
+        onBlur={onBlur}
       />
 
       <div className="mt-1 h-4">
@@ -50,6 +52,7 @@ Input.propTypes = {
   name: PropTypes.string,
   disabled: PropTypes.bool,
   defaultValue: PropTypes.any,
+  onBlur: PropTypes.func,
 };
 
 export default Input;

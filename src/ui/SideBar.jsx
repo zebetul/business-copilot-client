@@ -4,7 +4,7 @@ import ButtonIcon from "./ButtonIcon";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 
 function SideBar({ children }) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const toggle = () => setIsOpen((prev) => !prev);
 
   return (
