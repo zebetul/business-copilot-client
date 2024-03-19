@@ -1,5 +1,6 @@
 import { BuildingOfficeIcon } from "@heroicons/react/24/outline";
 import Header1 from "../ui/Header1";
+import CompanyForm from "../features/company/CompanyForm";
 
 function Company() {
   return (
@@ -10,7 +11,7 @@ function Company() {
         <span className="ml-2">Company</span>
       </Header1>
 
-      {/* <ProfileFrom /> */}
+      <CompanyForm />
     </section>
   );
 }

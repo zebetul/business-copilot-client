@@ -39,7 +39,7 @@ function LoginForm() {
         Email
       </label>
       <input
-        className="mb-5 w-full rounded-lg bg-bgColorLight px-3 py-2 text-textColor placeholder:text-textColorLight focus:outline-none focus:ring-2 focus:ring-bgColorLight"
+        className="w-full rounded-lg bg-bgColorLight px-3 py-2 text-textColor transition duration-300 ease-in-out placeholder:text-textColorLight focus:border-transparent focus:outline-none focus:ring-2 focus:ring-textColor"
         type="email"
         id="email"
         autoComplete="email"
@@ -58,7 +58,7 @@ function LoginForm() {
         Password
       </label>
       <input
-        className="mb-5 w-full rounded-lg bg-bgColorLight px-3 py-2 text-textColor placeholder:text-textColorLight focus:outline-none focus:ring-2 focus:ring-bgColorLight"
+        className="w-full rounded-lg bg-bgColorLight px-3 py-2 text-textColor transition duration-300 ease-in-out placeholder:text-textColorLight focus:border-transparent focus:outline-none focus:ring-2 focus:ring-textColor"
         type="password"
         id="password"
         autoComplete="current-password"
