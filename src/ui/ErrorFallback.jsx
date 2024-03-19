@@ -14,8 +14,8 @@ function ErrorFallback({ error, resetErrorBoundary }) {
 }
 
 ErrorFallback.propTypes = {
-  error: PropTypes.object.isRequired,
-  resetErrorBoundary: PropTypes.func.isRequired,
+  error: PropTypes.object,
+  resetErrorBoundary: PropTypes.func,
 };
 
 export default ErrorFallback;

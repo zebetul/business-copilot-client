@@ -15,7 +15,7 @@ function DefaultContent({ sendRequest }) {
       <ul className="requests_container flex flex-row flex-wrap justify-center gap-2 text-lg">
         {DEFAULT_REQUESTS.map((request, index) => (
           <li key={index}>
-            <Button onClick={() => sendRequest(request.description)}>
+            <Button onClick={() => sendRequest(request.prompt)}>
               {request.title}
             </Button>
           </li>

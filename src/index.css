@@ -13,9 +13,9 @@
 }
 
 .dark {
-  --bgColor: 13, 14, 17; /* #0d0e11 */
-  --bgColorLight: 19, 20, 24; /* #131418 */
-  --bgColorDark: 30, 32, 37; /* #1e2025 */
+  --bgColor: 33, 35, 40; /* #212328 */
+  --bgColorLight: 38, 40, 46; /* #26282e */
+  --bgColorDark: 51, 52, 57; /* #333439 */
 
   --textColorLight: 122, 127, 145; /* #7a7f91 */
   --textColor: 191, 198, 220; /* #bfc6dc */
