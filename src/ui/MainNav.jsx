@@ -1,4 +1,5 @@
 import {
+  BuildingOfficeIcon,
   ChatBubbleBottomCenterTextIcon,
   ClipboardDocumentListIcon,
   RectangleStackIcon,
@@ -24,6 +25,14 @@ function MainNav() {
             <ClipboardDocumentListIcon className="h-6 w-6" />
 
             <span>Documents</span>
+          </CustomNavLink>
+        </li>
+
+        <li>
+          <CustomNavLink to="/company" type="primary">
+            <BuildingOfficeIcon className="h-6 w-6" />
+
+            <span>Company</span>
           </CustomNavLink>
         </li>
 

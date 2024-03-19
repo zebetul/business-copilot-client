@@ -14,6 +14,7 @@ import Documents from "./pages/Documents";
 import History from "./pages/History";
 import InteractionRecord from "./pages/InteractionRecord";
 import PageNotFound from "./pages/PageNotFound";
+import Company from "./pages/Company";
 
 function App() {
   const queryClient = new QueryClient({
@@ -52,6 +53,10 @@ function App() {
             {
               path: "/documents",
               element: <Documents />,
+            },
+            {
+              path: "/company",
+              element: <Company />,
             },
             {
               path: "/history",

@@ -9,23 +9,21 @@ function Assistant() {
   const { isSending, sendRequest, assistantResponse } = useSendRequest();
 
   return (
-    <>
-      <section className="assistant_container relative mx-auto h-full max-w-2xl">
-        {isSending && <Loading />}
+    <section className="relative mx-auto h-full max-w-2xl">
+      {isSending && <Loading />}
 
-        {assistantResponse && (
-          <MarkdownContainer>{assistantResponse}</MarkdownContainer>
-        )}
+      {assistantResponse && (
+        <MarkdownContainer>{assistantResponse}</MarkdownContainer>
+      )}
 
-        {!isSending && !assistantResponse && (
-          <>
-            <DefaultContent sendRequest={sendRequest} />
+      {!isSending && !assistantResponse && (
+        <>
+          <DefaultContent sendRequest={sendRequest} />
 
-            <PromptInput sendRequest={sendRequest} isSending={isSending} />
-          </>
-        )}
-      </section>
-    </>
+          <PromptInput sendRequest={sendRequest} isSending={isSending} />
+        </>
+      )}
+    </section>
   );
 }
 

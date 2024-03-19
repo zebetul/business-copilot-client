@@ -14,7 +14,7 @@ function InteractionRecord() {
 
   return (
     <>
-      <section className="mx-auto max-w-2xl pt-10">
+      <section className="relative mx-auto h-full max-w-2xl">
         <MarkdownContainer>
           {interactionRecord.assistantResponse}
         </MarkdownContainer>
