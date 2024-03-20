@@ -5,7 +5,7 @@ import Loading from "../../ui/Loading";
 
 function CompanyForm() {
   const { companyData = {}, isLoading } = useCompanyData();
-  const { title, caen, eurostat } = companyData;
+  const { title, caen, eurostat, piataTinta } = companyData;
 
   const { updateCompanyData, isUpdating } = useUpdateCompanyData();
 
@@ -54,6 +54,15 @@ function CompanyForm() {
         defaultValue={eurostat}
         disabled={isUpdating}
         onBlur={(event) => handleUpdate(event, "eurostat")}
+      />
+
+      <Input
+        name="piataTinta"
+        type="text"
+        label="Piata tinta"
+        defaultValue={piataTinta}
+        disabled={isUpdating}
+        onBlur={(event) => handleUpdate(event, "piataTinta")}
       />
     </form>
   );

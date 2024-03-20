@@ -1,5 +1,6 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { apiSendRequest } from "../../services/apiAssistant";
+import toast from "react-hot-toast";
 
 function useSendRequest() {
   const queryClient = useQueryClient();
@@ -15,7 +16,10 @@ function useSendRequest() {
         queryKey: ["history"],
       });
     },
-    onError: (error) => alert(error.message),
+    onError: (error) => {
+      console.log(error);
+      toast.error(error.message);
+    },
   });
 
   return { isSending, sendRequest, assistantResponse };
