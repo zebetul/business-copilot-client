@@ -18,7 +18,7 @@ function DocumentsTable() {
     <div className="h-full w-full">
       <DocumentsHeader />
 
-      <ul>
+      <ul className="h-full">
         <>
           {documents.length !== 0 &&
             documents.map((document) => (
@@ -27,10 +27,16 @@ function DocumentsTable() {
         </>
 
         {documents.length === 0 && (
-          <UploadDocument className="mx-auto mt-5">
-            <PlusIcon className="h-5 w-5" />
-            <span className="text-nowrap">Add a document</span>
-          </UploadDocument>
+          <div className="flex flex-col items-center justify-center">
+            <p className="mt-40 text-center text-3xl text-textColorLight">
+              No documents added yet
+            </p>
+
+            <UploadDocument className="mx-auto mt-5 gap-2">
+              <PlusIcon className="h-5 w-5" />
+              <span className="text-nowrap">Add new</span>
+            </UploadDocument>
+          </div>
         )}
       </ul>
     </div>

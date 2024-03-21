@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 function Button({ children, onClick, disabled, className }) {
   return (
     <button
-      className={`hover:bg-bgColorHighlight flex flex-col items-center justify-center text-nowrap rounded-md bg-bgColorDark p-2 text-sm text-textColorLight transition-colors duration-300 hover:text-textColor ${className}`}
+      className={`flex flex-col items-center justify-center text-nowrap rounded-md bg-bgColorDark p-2 text-sm text-textColorLight transition-colors duration-300 hover:bg-bgColorHighlight hover:text-textColor ${className}`}
       onClick={onClick}
       disabled={disabled}
     >

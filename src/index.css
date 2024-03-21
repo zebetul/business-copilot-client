@@ -4,23 +4,23 @@
 
 /* ------ COLOR VARIABLES ------- */
 .light {
-  --bgColor: 228, 229, 233; /* #e4e5e9 */
-  --bgColorLight: 243, 244, 245; /* #f3f4f5 */
-  --bgColorDark: 212, 214, 220; /* #d4d6dc */
-  --bgColorHighlight: 202, 204, 210; /* #caccd2 */
+  --bgColor: 220, 220, 230; /* #dcdce6 */
+  --bgColorLight: 230, 230, 240; /* #e6e6f0 */
+  --bgColorDark: 200, 200, 210; /* #c8c8d2 */
+  --bgColorHighlight: 190, 190, 200; /* #bebec8 */
 
-  --textColor: 55, 57, 67; /* #373943 */
-  --textColorLight: 103, 108, 126; /* #676c7e */
+  --textColor: 0, 0, 5; /* #000000 */
+  --textColorLight: 100, 100, 110; /* #64646e */
 }
 
 .dark {
-  --bgColor: 20, 15, 14; /* #1f0300 */
-  --bgColorLight: 30, 27, 27; /* #26282e */
-  --bgColorDark: 43, 41, 40; /* #333439 */
-  --bgColorHighlight: 53, 51, 50; /* #333439 */
+  --bgColor: 30, 30, 33; /* #1e1e21 */
+  --bgColorLight: 35, 35, 38; /* #232326 */
+  --bgColorDark: 45, 45, 48; /* #2d2d30 */
+  --bgColorHighlight: 55, 55, 58; /* #373739 */
 
-  --textColorLight: 122, 127, 145; /* #7a7f91 */
-  --textColor: 191, 198, 220; /* #bfc6dc */
+  --textColor: 220, 220, 225; /* #ffffff */
+  --textColorLight: 135, 135, 145; /* #87878f */
 }
 
 /* ------ SCROLLBAR STYLES ------- */
@@ -64,7 +64,8 @@ html,
 body {
   min-height: 100%;
 
-  --accentColor: 10, 88, 202; /* #0a58ca */
+  --accentColor: 40, 80, 255; /* #0000d2 */
+  --accentColorLight: 60, 100, 255; /* #0000d233 */
 }
 
 .loader {
@@ -158,12 +159,12 @@ body {
 }
 
 .markdown_content a {
-  color: #1a73e8;
   text-decoration: underline;
+  color: rgb(var(--accentColor));
 }
 
 .markdown_content a:hover {
-  color: #0a58ca;
+  color: rgb(var(--accentColorLight));
 }
 
 .markdown_content h1,

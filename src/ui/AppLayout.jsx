@@ -10,7 +10,7 @@ function AppLayout() {
       <SideBar>
         <DarkModeToggle />
 
-        <h1 className="mb-20 mt-20 flex flex-col text-center text-xl text-accentColor">
+        <h1 className="mb-16 mt-16 flex flex-col text-center text-3xl text-accentColor">
           <span>BUSINESS</span>
 
           <span>COPILOT</span>

@@ -27,7 +27,7 @@ function PromptInput({ sendRequest, isSending }) {
 
   return (
     <div
-      className={`absolute bottom-10 left-1/2 mx-auto flex w-full max-w-md -translate-x-1/2 flex-row rounded-full border border-textColorLight bg-bgColorLight p-2 pl-5 md:bottom-20 md:max-w-2xl ${isFocused ? "border-textColor" : ""} transition-colors duration-300`}
+      className={`absolute bottom-10 left-1/2 mx-auto flex w-full max-w-md -translate-x-1/2 flex-row rounded-full border bg-bgColorLight p-2 pl-5 md:bottom-20 md:max-w-2xl ${isFocused ? "border-textColorLight" : "border-bgColorHighlight"} transition-colors duration-300`}
     >
       <input
         type="text"
@@ -43,7 +43,7 @@ function PromptInput({ sendRequest, isSending }) {
       />
 
       <button
-        className="hover:bg-bgColorHighlight ms-auto rounded-full bg-bgColorDark p-2 text-textColorLight transition-colors duration-300 hover:text-textColor"
+        className="ms-auto rounded-full bg-bgColorDark p-2 text-textColorLight transition-colors duration-300 hover:bg-bgColorHighlight hover:text-textColor"
         onClick={handleRequest}
         disabled={isSending}
       >
