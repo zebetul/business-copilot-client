@@ -13,13 +13,24 @@ function DefaultContent({ sendRequest }) {
       </h2>
 
       <ul className="requests_container flex flex-row flex-wrap justify-center gap-2 text-lg">
-        {DEFAULT_REQUESTS.map((request, index) => (
-          <li key={index}>
-            <Button onClick={() => sendRequest(request.prompt)}>
-              {request.title}
-            </Button>
-          </li>
-        ))}
+        {DEFAULT_REQUESTS.map((request, index) => {
+          const { title, prompt: userRequest } = request;
+
+          return (
+            <li key={index}>
+              <Button
+                onClick={() =>
+                  sendRequest({
+                    title,
+                    userRequest,
+                  })
+                }
+              >
+                {request.title}
+              </Button>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );

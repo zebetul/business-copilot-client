@@ -11,6 +11,8 @@ function Input({
   disabled,
   defaultValue,
   onBlur,
+  value,
+  onChange = () => {},
 }) {
   return (
     <div className="mb-5 w-full">
@@ -31,6 +33,8 @@ function Input({
         disabled={disabled}
         defaultValue={defaultValue}
         onBlur={onBlur}
+        value={value}
+        onChange={onChange}
       />
 
       <div className="mt-1 h-4">
@@ -53,6 +57,8 @@ Input.propTypes = {
   disabled: PropTypes.bool,
   defaultValue: PropTypes.any,
   onBlur: PropTypes.func,
+  onChange: PropTypes.func,
+  value: PropTypes.any,
 };
 
 export default Input;

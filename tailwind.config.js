@@ -7,6 +7,7 @@ const config = {
         bgColor: "rgb(var(--bgColor))",
         bgColorLight: "rgb(var(--bgColorLight))",
         bgColorDark: "rgb(var(--bgColorDark))",
+        bgColorHighlight: "rgb(var(--bgColorHighlight))",
 
         textColor: "rgb(var(--textColor))",
         textColorLight: "rgb(var(--textColorLight))",

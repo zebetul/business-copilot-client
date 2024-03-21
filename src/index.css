@@ -7,15 +7,17 @@
   --bgColor: 228, 229, 233; /* #e4e5e9 */
   --bgColorLight: 243, 244, 245; /* #f3f4f5 */
   --bgColorDark: 212, 214, 220; /* #d4d6dc */
+  --bgColorHighlight: 202, 204, 210; /* #caccd2 */
 
   --textColor: 55, 57, 67; /* #373943 */
   --textColorLight: 103, 108, 126; /* #676c7e */
 }
 
 .dark {
-  --bgColor: 33, 35, 40; /* #212328 */
-  --bgColorLight: 38, 40, 46; /* #26282e */
-  --bgColorDark: 51, 52, 57; /* #333439 */
+  --bgColor: 20, 15, 14; /* #1f0300 */
+  --bgColorLight: 30, 27, 27; /* #26282e */
+  --bgColorDark: 43, 41, 40; /* #333439 */
+  --bgColorHighlight: 53, 51, 50; /* #333439 */
 
   --textColorLight: 122, 127, 145; /* #7a7f91 */
   --textColor: 191, 198, 220; /* #bfc6dc */

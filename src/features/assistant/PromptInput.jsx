@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import PropTypes from "prop-types";
 import { ArrowUpIcon } from "@heroicons/react/24/outline";
 
@@ -7,9 +7,10 @@ import useKey from "../../hooks/useKey";
 function PromptInput({ sendRequest, isSending }) {
   const inputEl = useRef(null);
   const [userRequest, setUserRequest] = useState("");
+  const [isFocused, setIsFocused] = useState(false);
 
   const handleRequest = async () => {
-    sendRequest(userRequest);
+    sendRequest({ title: "Default", userRequest });
 
     setUserRequest("");
   };
@@ -19,11 +20,15 @@ function PromptInput({ sendRequest, isSending }) {
     if (document.activeElement !== inputEl.current)
       return inputEl.current.focus();
 
+    console.log(inputEl);
+
     handleRequest();
   });
 
   return (
-    <div className="absolute bottom-10 left-1/2 mx-auto flex w-full max-w-md -translate-x-1/2 flex-row rounded-full border border-textColorLight bg-bgColorLight p-2 pl-5 md:bottom-20 md:max-w-2xl">
+    <div
+      className={`absolute bottom-10 left-1/2 mx-auto flex w-full max-w-md -translate-x-1/2 flex-row rounded-full border border-textColorLight bg-bgColorLight p-2 pl-5 md:bottom-20 md:max-w-2xl ${isFocused ? "border-textColor" : ""} transition-colors duration-300`}
+    >
       <input
         type="text"
         placeholder="Input your request here..."
@@ -33,10 +38,12 @@ function PromptInput({ sendRequest, isSending }) {
         onChange={(e) => setUserRequest(e.target.value)}
         ref={inputEl}
         disabled={isSending}
+        onFocus={() => setIsFocused(true)}
+        onBlur={() => setIsFocused(false)}
       />
 
       <button
-        className="ms-auto rounded-full bg-bgColorDark p-2 text-textColorLight hover:text-textColor"
+        className="hover:bg-bgColorHighlight ms-auto rounded-full bg-bgColorDark p-2 text-textColorLight transition-colors duration-300 hover:text-textColor"
         onClick={handleRequest}
         disabled={isSending}
       >
