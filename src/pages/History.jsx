@@ -14,7 +14,7 @@ function History() {
       </Header1>
 
       <Header2 className="text-accent-3 text-center text-lg">
-        Your recent interactions
+        Most recent interactions
       </Header2>
 
       <HistoryList />

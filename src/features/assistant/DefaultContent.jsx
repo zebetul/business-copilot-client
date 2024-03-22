@@ -17,7 +17,7 @@ function DefaultContent({ sendRequest }) {
 
       <Header2>Choose a request from below or type one</Header2>
 
-      <div className="flex flex-wrap gap-5">
+      <div className="flex flex-wrap justify-between gap-5">
         {DEFAULT_REQUESTS.map((chapter) => (
           <RequestsList
             key={chapter.title}
