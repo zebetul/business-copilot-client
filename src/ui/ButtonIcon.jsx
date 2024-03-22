@@ -11,7 +11,8 @@ function ButtonIcon({
     "rounded-md flex text-textColorLight transition-colors duration-300";
 
   const styles = {
-    primary: baseStyles + " w-min p-2 hover:bg-bgColorDark",
+    primary:
+      baseStyles + " w-min p-2 hover:bg-bgColorDark hover:text-textColor",
     withText: baseStyles + " text-xs w-full p-2 hover:bg-bgColorDark gap-2",
     withoutBg: baseStyles + " w-min hover:text-textColor",
   };

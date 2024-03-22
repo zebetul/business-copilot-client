@@ -1,38 +1,32 @@
 import PropTypes from "prop-types";
+import { ChatBubbleBottomCenterTextIcon } from "@heroicons/react/24/outline";
 
 import { DEFAULT_REQUESTS } from "../../config/constants";
-import Button from "../../ui/Button";
+import Header1 from "../../ui/Header1";
+import Header2 from "../../ui/Header2";
+import RequestsList from "./RequestsList";
 
 function DefaultContent({ sendRequest }) {
   return (
-    <div className="flex h-full w-full flex-col items-center justify-center pb-28">
-      <h1 className="text-center text-6xl">Make your request</h1>
+    <>
+      <Header1>
+        <ChatBubbleBottomCenterTextIcon className="my-auto h-8 w-8 text-accentColor" />
 
-      <h2 className="mb-10 text-lg font-bold text-textColorLight">
-        Choose a request from below or type your own request.
-      </h2>
+        <span>Assistant</span>
+      </Header1>
 
-      <ul className="requests_container flex flex-row flex-wrap justify-center gap-2 text-lg">
-        {DEFAULT_REQUESTS.map((request, index) => {
-          const { title, prompt: userRequest } = request;
+      <Header2>Choose a request from below or type a new one</Header2>
 
-          return (
-            <li key={index}>
-              <Button
-                onClick={() =>
-                  sendRequest({
-                    title,
-                    userRequest,
-                  })
-                }
-              >
-                {request.title}
-              </Button>
-            </li>
-          );
-        })}
-      </ul>
-    </div>
+      <div className="flex flex-wrap gap-5">
+        {DEFAULT_REQUESTS.map((chapter) => (
+          <RequestsList
+            key={chapter.title}
+            chapter={chapter}
+            sendRequest={sendRequest}
+          />
+        ))}
+      </div>
+    </>
   );
 }
 

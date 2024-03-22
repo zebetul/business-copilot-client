@@ -7,7 +7,7 @@ function DocumentRow({ document }) {
   return (
     <li
       key={id}
-      className="grid grid-cols-3 items-center gap-3 border-b border-bgColorDark py-5 text-textColorLight"
+      className="grid grid-cols-3 items-center gap-3 border-b border-bgColorDark py-5"
     >
       <p>{title}</p>
 

@@ -14,7 +14,7 @@ function MainNav() {
       <ul className="nav_links flex flex-col gap-1">
         <li>
           <CustomNavLink to="/assistant" type="primary">
-            <ChatBubbleBottomCenterTextIcon className="h-6 w-6" />
+            <ChatBubbleBottomCenterTextIcon className="h-5 w-5 text-accentColor" />
 
             <span>Assistant</span>
           </CustomNavLink>
@@ -22,7 +22,7 @@ function MainNav() {
 
         <li>
           <CustomNavLink to="/documents" type="primary">
-            <ClipboardDocumentListIcon className="h-6 w-6" />
+            <ClipboardDocumentListIcon className="h-5 w-5 text-accentColor" />
 
             <span>Documents</span>
           </CustomNavLink>
@@ -30,7 +30,7 @@ function MainNav() {
 
         <li>
           <CustomNavLink to="/company" type="primary">
-            <BuildingOfficeIcon className="h-6 w-6" />
+            <BuildingOfficeIcon className="h-5 w-5 text-accentColor" />
 
             <span>Company</span>
           </CustomNavLink>
@@ -38,7 +38,7 @@ function MainNav() {
 
         <li>
           <CustomNavLink to="/history" type="primary">
-            <RectangleStackIcon className="h-6 w-6" />
+            <RectangleStackIcon className="h-5 w-5 text-accentColor" />
 
             <span>History</span>
           </CustomNavLink>

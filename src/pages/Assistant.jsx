@@ -4,12 +4,13 @@ import useSendRequest from "../features/assistant/useSendRequest";
 import DefaultContent from "../features/assistant/DefaultContent";
 import Loading from "../ui/Loading";
 import MarkdownContainer from "../ui/MarkdownContainer";
+import Section from "../ui/Section";
 
 function Assistant() {
   const { isSending, sendRequest, assistantResponse } = useSendRequest();
 
   return (
-    <section className="relative mx-auto h-full max-w-2xl">
+    <Section>
       {isSending && <Loading />}
 
       {assistantResponse && (
@@ -23,7 +24,7 @@ function Assistant() {
           <PromptInput sendRequest={sendRequest} isSending={isSending} />
         </>
       )}
-    </section>
+    </Section>
   );
 }
 
