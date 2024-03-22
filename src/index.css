@@ -11,6 +11,9 @@
 
   --textColor: 0, 0, 5; /* #000000 */
   --textColorLight: 100, 100, 110; /* #64646e */
+
+  --accentColor: 4, 178, 176; /* #04b2b0 */
+  --accentColorLight: 0, 140, 140; /* #008c8c */
 }
 
 .dark {
@@ -21,6 +24,9 @@
 
   --textColor: 220, 220, 225; /* #ffffff */
   --textColorLight: 135, 135, 145; /* #87878f */
+
+  --accentColor: 0, 254, 251; /* #00fefb */
+  --accentColorLight: 0, 180, 180; /* #00b4b4 */
 }
 
 /* ------ SCROLLBAR STYLES ------- */
@@ -63,9 +69,6 @@
 html,
 body {
   min-height: 100%;
-
-  --accentColor: 40, 80, 255; /* #0000d2 */
-  --accentColorLight: 60, 100, 255; /* #0000d233 */
 }
 
 .loader {

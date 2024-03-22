@@ -51,7 +51,7 @@ function LoginForm() {
         disabled={isPending}
       />
 
-      <Button className="mt-5 w-full" disabled={isPending}>
+      <Button className="mt-5 w-full" disabled={isPending} variant="accent">
         {isPending ? <Loader size="small" /> : "Log In"}
       </Button>
     </form>

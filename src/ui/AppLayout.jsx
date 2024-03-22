@@ -3,6 +3,7 @@ import SideBar from "./SideBar";
 import DarkModeToggle from "./DarkModeToggle";
 import MainNav from "./MainNav";
 import UserPill from "./UserPill";
+import Logo from "../ui/Logo";
 
 function AppLayout() {
   return (
@@ -10,11 +11,9 @@ function AppLayout() {
       <SideBar>
         <DarkModeToggle />
 
-        <h1 className="mb-16 mt-16 flex flex-col text-center text-2xl text-accentColor">
-          <span>BUSINESS</span>
-
-          <span>COPILOT</span>
-        </h1>
+        <div className="my-10 w-full">
+          <Logo />
+        </div>
 
         <MainNav />
 

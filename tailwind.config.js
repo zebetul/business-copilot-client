@@ -13,6 +13,7 @@ const config = {
         textColorLight: "rgb(var(--textColorLight))",
 
         accentColor: "rgb(var(--accentColor))",
+        accentColorLight: "rgb(var(--accentColorLight))",
       },
 
       fontFamily: {

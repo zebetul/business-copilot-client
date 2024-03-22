@@ -15,7 +15,7 @@ function DefaultContent({ sendRequest }) {
         <span>Assistant</span>
       </Header1>
 
-      <Header2>Choose a request from below or type a new one</Header2>
+      <Header2>Choose a request from below or type one</Header2>
 
       <div className="flex flex-wrap gap-5">
         {DEFAULT_REQUESTS.map((chapter) => (
