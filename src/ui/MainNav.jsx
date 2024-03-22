@@ -5,7 +5,6 @@ import {
   RectangleStackIcon,
 } from "@heroicons/react/24/outline";
 
-import HistoryNav from "../features/history/HistoryNav";
 import CustomNavLink from "./CustomNavLink";
 
 function MainNav() {
@@ -44,8 +43,6 @@ function MainNav() {
           </CustomNavLink>
         </li>
       </ul>
-
-      <HistoryNav />
     </nav>
   );
 }

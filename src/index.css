@@ -110,7 +110,7 @@ body {
 }
 
 /* Active class for CustomNavLink */
-.navigation a.active {
+.nav_links a.active {
   color: rgb(var(--textColor));
 }
 

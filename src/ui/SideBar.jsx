@@ -8,7 +8,7 @@ function SideBar({ children }) {
   const toggle = () => setIsOpen((prev) => !prev);
 
   return (
-    <div className="relative flex h-full flex-col md:px-1">
+    <div className="sidebar relative flex h-full flex-col md:px-1">
       <ButtonIcon
         onClick={toggle}
         className={`absolute top-0 z-10 ${isOpen ? "right-2" : "-right-10"}`}
@@ -17,9 +17,7 @@ function SideBar({ children }) {
       </ButtonIcon>
 
       {isOpen && (
-        <div className="flex h-full w-80 flex-col overflow-y-auto px-2">
-          {children}
-        </div>
+        <div className="flex h-full w-80 flex-col px-2">{children}</div>
       )}
     </div>
   );

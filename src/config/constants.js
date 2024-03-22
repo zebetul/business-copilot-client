@@ -34,6 +34,77 @@ export const DEFAULT_REQUESTS = [
   },
 
   {
+    title: "4.1.3. Stadiul actual, nevoi si tendinte",
+    requests: [
+      {
+        title: "Analiza marimea pietei pe CAEN",
+        id: "4.1.3.1",
+        prompt: "",
+      },
+
+      {
+        title: "Principalele nevoi identificate",
+        id: "4.1.3.2",
+        prompt: "",
+      },
+
+      {
+        title: "Principalele tendințe identificate",
+        id: "4.1.3.3",
+        prompt: "",
+      },
+    ],
+  },
+
+  {
+    title: "4.1.4. Analiza potențialului de creştere a pieţei",
+    requests: [
+      {
+        title: "Analiza potential de crestere pe termen scurt, mediu, lung",
+        id: "4.1.4.1",
+        prompt: "",
+      },
+
+      {
+        title: "Tabel Proiectia principalilor indicatori macroeconomici",
+        id: "4.1.4.2",
+        prompt: "",
+      },
+
+      {
+        title: "Principalii vectori care susțin creșterea",
+        id: "4.1.4.3",
+        prompt: "",
+      },
+
+      {
+        title: "Principalele trenduri",
+        id: "4.1.4.4",
+        prompt: "",
+      },
+
+      {
+        title:
+          "Tabele dimensiunea companiei, dimensiunea pietei in Romania si in UE",
+        id: "4.1.4.5",
+        prompt: "",
+      },
+
+      {
+        title: "Tabel + Grafic CAGR",
+        id: "4.1.4.6",
+        prompt: "",
+      },
+
+      {
+        title: "Analiza SWOT",
+        id: "4.1.4.7",
+        prompt: "",
+      },
+    ],
+  },
+
+  {
     title: "0.0.1 - Testing requests",
     requests: [
       {

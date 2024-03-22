@@ -30,11 +30,13 @@ function HistoryNavRow({ record }) {
             <Menus.List id={record.id}>
               <Menus.Button onClick={handleDelete} disabled={isDeleting}>
                 <TrashIcon className="h-4 w-4" />
+
                 <span>Delete</span>
               </Menus.Button>
 
               <Menus.Button onClick={openRename}>
                 <PencilIcon className="h-4 w-4" />
+
                 <span>Rename</span>
               </Menus.Button>
             </Menus.List>
