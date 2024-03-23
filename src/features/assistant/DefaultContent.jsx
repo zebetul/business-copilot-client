@@ -4,7 +4,7 @@ import { ChatBubbleBottomCenterTextIcon } from "@heroicons/react/24/outline";
 import { DEFAULT_REQUESTS } from "../../config/constants";
 import Header1 from "../../ui/Header1";
 import Header2 from "../../ui/Header2";
-import RequestsList from "./RequestsList";
+import Chapter from "./Chapter";
 
 function DefaultContent({ sendRequest }) {
   return (
@@ -17,9 +17,9 @@ function DefaultContent({ sendRequest }) {
 
       <Header2>Choose a request from below or type one</Header2>
 
-      <div className="flex flex-wrap justify-between gap-5">
+      <div className="chapters_container flex flex-wrap justify-center gap-10 pb-32">
         {DEFAULT_REQUESTS.map((chapter) => (
-          <RequestsList
+          <Chapter
             key={chapter.title}
             chapter={chapter}
             sendRequest={sendRequest}

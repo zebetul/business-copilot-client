@@ -15,7 +15,7 @@ function DocumentsTable() {
   if (error) return <Error error={error} />;
 
   return (
-    <div className="h-full w-full">
+    <div className="w-full">
       <DocumentsHeader />
 
       <ul className="h-full">

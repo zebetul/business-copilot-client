@@ -12,7 +12,7 @@ function HistoryList() {
 
   return (
     history && (
-      <ul className="history_page_list mx-auto flex max-w-3xl flex-col overflow-hidden border-t border-bgColorDark">
+      <ul className="history_page_list mx-auto flex flex-col overflow-hidden border-t border-bgColorDark">
         {history.map((record) => (
           <li className="history_item" key={record.id}>
             <RecordRow record={record} />

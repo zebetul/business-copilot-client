@@ -1,6 +1,6 @@
 export const DEFAULT_REQUESTS = [
   {
-    title: "4.1.2 - Dimensiunea pieței țintă",
+    title: "4.1.2 Dimensiunea pieței țintă",
     requests: [
       {
         title: "Mărimea pieței și tendințele de evoluție",
@@ -37,7 +37,7 @@ export const DEFAULT_REQUESTS = [
     title: "4.1.3. Stadiul actual, nevoi si tendinte",
     requests: [
       {
-        title: "Analiza marimea pietei pe CAEN",
+        title: "Analiza mărimea pieței pe CAEN",
         id: "4.1.3.1",
         prompt: "",
       },
@@ -57,16 +57,16 @@ export const DEFAULT_REQUESTS = [
   },
 
   {
-    title: "4.1.4. Analiza potențialului de creştere a pieţei",
+    title: "4.1.4. Analiza potențialului de creștere a pieței",
     requests: [
       {
-        title: "Analiza potential de crestere pe termen scurt, mediu, lung",
+        title: "Analiza potențial de creștere",
         id: "4.1.4.1",
         prompt: "",
       },
 
       {
-        title: "Tabel Proiectia principalilor indicatori macroeconomici",
+        title: "Tabel principalii indicatori macroeconomici",
         id: "4.1.4.2",
         prompt: "",
       },
@@ -84,8 +84,7 @@ export const DEFAULT_REQUESTS = [
       },
 
       {
-        title:
-          "Tabele dimensiunea companiei, dimensiunea pietei in Romania si in UE",
+        title: "Tabele dimensiunea companiei și a pieței",
         id: "4.1.4.5",
         prompt: "",
       },
@@ -105,7 +104,7 @@ export const DEFAULT_REQUESTS = [
   },
 
   {
-    title: "0.0.1 - Testing requests",
+    title: "0.0.1 Testing requests",
     requests: [
       {
         title: "Resurse umane",

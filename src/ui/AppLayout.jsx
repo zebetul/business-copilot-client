@@ -21,7 +21,7 @@ function AppLayout() {
         <UserPill className="mt-auto" />
       </SideBar>
 
-      <main className="main flex h-full w-full flex-col overflow-x-hidden overflow-y-scroll bg-bgColorLight px-2 md:rounded-md">
+      <main className="main relative flex h-full w-full flex-col overflow-y-auto overflow-x-hidden bg-bgColorLight md:rounded-md">
         <Outlet />
       </main>
     </div>

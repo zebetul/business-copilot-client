@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import PropTypes from "prop-types";
 import { ArrowUpIcon } from "@heroicons/react/24/outline";
 
@@ -27,7 +27,7 @@ function PromptInput({ sendRequest, isSending }) {
 
   return (
     <div
-      className={`absolute bottom-10 left-1/2 mx-auto flex w-full max-w-md -translate-x-1/2 flex-row rounded-full border bg-bgColorLight p-2 pl-5 md:bottom-20 md:max-w-2xl ${isFocused ? "border-textColorLight" : "border-bgColorHighlight"} transition-colors duration-300`}
+      className={`absolute bottom-2 left-1/2 flex w-full max-w-md -translate-x-1/2 flex-row rounded-full border bg-bgColorLight p-2 pl-5 md:max-w-2xl ${isFocused ? "border-textColorLight" : "border-bgColorHighlight"} transition-colors duration-300`}
     >
       <input
         type="text"

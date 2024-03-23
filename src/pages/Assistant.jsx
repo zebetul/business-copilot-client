@@ -9,22 +9,25 @@ import Section from "../ui/Section";
 function Assistant() {
   const { isSending, sendRequest, assistantResponse } = useSendRequest();
 
+  if (isSending) return <Loading />;
+
+  if (assistantResponse)
+    return (
+      <Section>
+        <MarkdownContainer>{assistantResponse}</MarkdownContainer>;
+      </Section>
+    );
+
   return (
-    <Section>
-      {isSending && <Loading />}
-
-      {assistantResponse && (
-        <MarkdownContainer>{assistantResponse}</MarkdownContainer>
-      )}
-
-      {!isSending && !assistantResponse && (
-        <>
+    <>
+      <div className="default_content flex flex-col overflow-y-auto">
+        <Section>
           <DefaultContent sendRequest={sendRequest} />
+        </Section>
+      </div>
 
-          <PromptInput sendRequest={sendRequest} isSending={isSending} />
-        </>
-      )}
-    </Section>
+      <PromptInput sendRequest={sendRequest} isSending={isSending} />
+    </>
   );
 }
 
