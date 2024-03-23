@@ -57,7 +57,7 @@ export const DEFAULT_REQUESTS = [
   },
 
   {
-    title: "4.1.4. Analiza potențialului de creștere a pieței",
+    title: "4.1.4. Analiza potențialului de creștere",
     requests: [
       {
         title: "Analiza potențial de creștere",
