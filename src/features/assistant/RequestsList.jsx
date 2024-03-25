@@ -5,18 +5,13 @@ function RequestsList({ requests, sendRequest }) {
   return (
     <ul className="flex flex-col gap-2">
       {requests.map((request) => {
-        const { title, id, prompt: userRequest } = request;
+        const { title, userRequest } = request;
 
         return (
-          <li key={id} className="w-full">
+          <li key={request.title} className="w-full">
             <Button
               className="w-full overflow-hidden"
-              onClick={() =>
-                sendRequest({
-                  title,
-                  userRequest,
-                })
-              }
+              onClick={() => sendRequest(request)}
               disabled={!userRequest}
             >
               {title}

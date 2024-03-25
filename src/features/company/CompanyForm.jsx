@@ -5,7 +5,7 @@ import Loading from "../../ui/Loading";
 
 function CompanyForm() {
   const { companyData = {}, isLoading } = useCompanyData();
-  const { title, caen, eurostat, piataTinta } = companyData;
+  const { title, caen, eurostat, piataTinta, ariaGeografica } = companyData;
 
   const { updateCompanyData, isUpdating } = useUpdateCompanyData();
 
@@ -63,6 +63,15 @@ function CompanyForm() {
         defaultValue={piataTinta}
         disabled={isUpdating}
         onBlur={(event) => handleUpdate(event, "piataTinta")}
+      />
+
+      <Input
+        name="ariaGeografica"
+        type="text"
+        label="Aria geografica de acoperire a pietei tinta"
+        defaultValue={ariaGeografica}
+        disabled={isUpdating}
+        onBlur={(event) => handleUpdate(event, "ariaGeografica")}
       />
     </form>
   );

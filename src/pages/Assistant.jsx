@@ -14,7 +14,7 @@ function Assistant() {
   if (assistantResponse)
     return (
       <Section>
-        <MarkdownContainer>{assistantResponse}</MarkdownContainer>;
+        <MarkdownContainer>{assistantResponse}</MarkdownContainer>
       </Section>
     );
 

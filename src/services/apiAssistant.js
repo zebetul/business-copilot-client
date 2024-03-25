@@ -1,7 +1,7 @@
-export async function apiSendRequest(userRequest) {
+export async function apiSendRequest(request) {
   try {
     // Input validation
-    if (userRequest.userRequest === "")
+    if (request.userRequest === "")
       return console.log("No user request provided");
 
     const response = await fetch(`${import.meta.env.VITE_API_URL}/assistant`, {
@@ -11,7 +11,7 @@ export async function apiSendRequest(userRequest) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        userRequest,
+        request,
       }),
     });
 
