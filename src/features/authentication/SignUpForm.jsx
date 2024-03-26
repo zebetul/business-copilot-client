@@ -21,7 +21,7 @@ function SignUpForm() {
 
   return (
     <form
-      className="mx-auto flex w-full max-w-sm flex-col items-center"
+      className="mx-auto flex w-full max-w-sm flex-col items-center gap-5"
       onSubmit={handleSubmit(handleSignUp)}
     >
       <Input

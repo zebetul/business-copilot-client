@@ -15,7 +15,7 @@ function Input({
   onChange = () => {},
 }) {
   return (
-    <div className="mb-5 w-full">
+    <div className="w-full">
       <label
         htmlFor={name}
         className="mb-2 block text-sm font-bold text-textColorLight"

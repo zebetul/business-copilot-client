@@ -30,7 +30,7 @@ function CompanyForm() {
   }
 
   return (
-    <form className="grid grid-cols-1 gap-4 md:grid-cols-2">
+    <form className="grid grid-cols-1 gap-5 md:grid-cols-2">
       <Input
         name="title"
         type="text"
