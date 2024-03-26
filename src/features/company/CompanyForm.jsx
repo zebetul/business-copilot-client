@@ -2,6 +2,8 @@ import Input from "../../ui/Input";
 import useCompanyData from "./useCompanyData";
 import useUpdateCompanyData from "./useUpdateCompanyData";
 import Loading from "../../ui/Loading";
+import Select from "../../ui/Select";
+import { ARII_GEOGRAFICE } from "../../config/constants";
 
 function CompanyForm() {
   const { companyData = {}, isLoading } = useCompanyData();
@@ -28,7 +30,7 @@ function CompanyForm() {
   }
 
   return (
-    <form>
+    <form className="grid grid-cols-1 gap-4 md:grid-cols-2">
       <Input
         name="title"
         type="text"
@@ -65,10 +67,10 @@ function CompanyForm() {
         onBlur={(event) => handleUpdate(event, "piataTinta")}
       />
 
-      <Input
+      <Select
         name="ariaGeografica"
-        type="text"
         label="Aria geografica de acoperire a pietei tinta"
+        options={ARII_GEOGRAFICE}
         defaultValue={ariaGeografica}
         disabled={isUpdating}
         onBlur={(event) => handleUpdate(event, "ariaGeografica")}

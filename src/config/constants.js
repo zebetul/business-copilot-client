@@ -143,3 +143,14 @@ export const DEFAULT_REQUESTS = [
     ],
   },
 ];
+
+export const ARII_GEOGRAFICE = [
+  "Regiunea Bucuresti",
+  "Regiunea de Centru",
+  "Regiunea de Nord-Est",
+  "Regiunea de Nord-Vest",
+  "Regiunea de Sud-Est",
+  "Regiunea de Sud-Vest Oltenita",
+  "Regiunea de Sud Muntenia",
+  "Regiunea de Vest",
+];
