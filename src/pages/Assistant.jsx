@@ -5,6 +5,7 @@ import DefaultContent from "../features/assistant/DefaultContent";
 import Loading from "../ui/Loading";
 import MarkdownContainer from "../ui/MarkdownContainer";
 import Section from "../ui/Section";
+import ClipboardCopy from "../ui/ClipboardCopy";
 
 function Assistant() {
   const { isSending, sendRequest, assistantResponse } = useSendRequest();
@@ -14,6 +15,8 @@ function Assistant() {
   if (assistantResponse)
     return (
       <Section>
+        <ClipboardCopy text={assistantResponse} />
+
         <MarkdownContainer>{assistantResponse}</MarkdownContainer>
       </Section>
     );

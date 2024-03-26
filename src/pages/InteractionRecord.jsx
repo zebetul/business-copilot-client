@@ -4,6 +4,7 @@ import Loading from "../ui/Loading";
 import Error from "../ui/Error";
 import MarkdownContainer from "../ui/MarkdownContainer";
 import Section from "../ui/Section";
+import ClipboardCopy from "../ui/ClipboardCopy";
 
 function InteractionRecord() {
   const { id } = useParams();
@@ -16,6 +17,8 @@ function InteractionRecord() {
   return (
     <>
       <Section>
+        <ClipboardCopy text={interactionRecord.assistantResponse} />
+
         <MarkdownContainer>
           {interactionRecord.assistantResponse}
         </MarkdownContainer>

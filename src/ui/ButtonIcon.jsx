@@ -13,7 +13,8 @@ function ButtonIcon({
   const styles = {
     primary:
       baseStyles + " w-min p-2 hover:bg-bgColorDark hover:text-textColor",
-    withText: baseStyles + " text-xs w-full p-2 hover:bg-bgColorDark gap-2",
+    withText:
+      baseStyles + " flex items-center text-sm p-2 hover:bg-bgColorDark gap-2",
     withoutBg: baseStyles + " w-min hover:text-textColor",
   };
 
