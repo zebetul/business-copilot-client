@@ -8,7 +8,7 @@ function useSendRequest() {
   const {
     isPending: isSending,
     mutate: sendRequest,
-    data: assistantResponse,
+    data,
   } = useMutation({
     mutationFn: apiSendRequest,
     onSuccess: () => {
@@ -22,7 +22,7 @@ function useSendRequest() {
     },
   });
 
-  return { isSending, sendRequest, assistantResponse };
+  return { isSending, sendRequest, data };
 }
 
 export default useSendRequest;

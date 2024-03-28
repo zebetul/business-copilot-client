@@ -15,7 +15,7 @@ export async function apiSendRequest(request) {
       }),
     });
 
-    const { assistantResponse } = await response.json();
+    const assistantResponse = await response.json();
 
     return assistantResponse;
   } catch (error) {

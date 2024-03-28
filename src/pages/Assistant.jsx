@@ -8,16 +8,16 @@ import Section from "../ui/Section";
 import ClipboardCopy from "../ui/ClipboardCopy";
 
 function Assistant() {
-  const { isSending, sendRequest, assistantResponse } = useSendRequest();
+  const { isSending, sendRequest, data } = useSendRequest();
 
   if (isSending) return <Loading />;
 
-  if (assistantResponse)
+  if (data?.assistantResponse)
     return (
       <Section>
-        <ClipboardCopy text={assistantResponse} />
+        <ClipboardCopy text={data?.assistantResponse} />
 
-        <MarkdownContainer>{assistantResponse}</MarkdownContainer>
+        <MarkdownContainer>{data?.assistantResponse}</MarkdownContainer>
       </Section>
     );
 
