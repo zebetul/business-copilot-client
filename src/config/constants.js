@@ -4,9 +4,17 @@ export const DEFAULT_REQUESTS = [
     requests: [
       {
         title: "Mărimea pieței și tendințele de evoluție",
-        userRequest: `Caută pe internet și fă un raport detaliat despre "Marimea pietei și tendințele de evoluție in ..." PIATA care este sepecificata mai jos.
+        userRequest: `Mai jos vei găsi PIATA ȚINTĂ la care te vei referi în raportul tău. Caută pe internet informații relevante și fă un raport detaliat despre "Mărimea pieței și tendințele de evoluție ale acesteia". Nu omite nici o informatie relevanta din cele gasite prin cautare. Mentioneaza in raport linkurile la surse, in urmatorul format [Named Link](http://www.google.ro/ "Named link title"). Raportul tau va fi detaliat si descriptiv, va fi impartit pe paragrafe. Raportul trebuie să dezvolte următoarele topicuri:
         
-        PIATA:`,
+        Care este mărimea și tendințele pieței. Unde vei discuta despre evaluarea cifrei de afaceri a pieței țintă în contextul economiei românești, analiza creșterii cifrei de afaceri în ultimii ani și perspectivele de dezvoltare pe termen scurt și mediu, tendințe recente în consum pe piața țintă si impactul schimbărilor în comportamentul consumatorilor asupra pieței.
+                            
+        Cine sunt principalii actori și care este distribuția pieței. Aici vei identifica și analiza principalii jucători din piața țintă în România, poti sa continui cu evaluarea poziției de lider a retailerilor și producătorilor în piața țintă, distribuția cifrei de afaceri și a cotei de piață între companiile de top si care sunt tendințele în creșterea și consolidarea pieței.
+                            
+        Comportamentul Consumatorilor și Preferințele. Aici discuti despre eventualele schimbări în preferințele și obiceiurile de consum ale populației românești, faci o analiza a impactului factorilor socio-economici și demografici asupra comportamentului de cumpărare si poti continua cu percepția și importanța prețurilor în deciziile de cumpărare.
+
+        Ultimul topic va fi despre factori externi și perspective de viitor. Aici Discuti despre evaluarea influenței factorilor macroeconomici asupra pieței țintă, despre impactul reglementărilor guvernamentale și a politicilor fiscale asupra pieței, proiecții și previziuni pentru dezvoltarea pieței țintă pe termen lung si perspectivele investiționale și inovațiile tehnologice care pot influența piața țintă.
+    
+        PIATA ȚINTĂ:`,
         resource: "piataTinta",
       },
 
