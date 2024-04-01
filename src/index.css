@@ -202,3 +202,49 @@ h6 {
 .markdown_content strong {
   font-weight: 500;
 }
+
+/* ------ EUROSTAT TABLE STYLES ------- */
+.eurostat-table {
+  width: 100%;
+  border-width: 0 1px 1px 1px;
+  border-color: rgb(var(--bgColorHighlight));
+  border-style: solid;
+}
+.eurostat-table tfoot td {
+  text-align: left;
+  background-color: rgb(var(--bgColorLight));
+}
+.eurostat-table th,
+.eurostat-table td {
+  padding: 6px;
+  text-align: left;
+}
+.eurostat-table caption {
+  background-color: rgb(var(--bgColorLight));
+  font-weight: bold;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 1.2em;
+}
+.eurostat-table tfoot {
+  font-size: 0.9em;
+  color: rgb(var(--textColorLight));
+}
+.eurostat-table td {
+  background-color: rgb(var(--bgColorLight));
+}
+.eurostat-table th {
+  background-color: rgb(var(--bgColorHighlight));
+}
+.eurostat-table tr td {
+  border-width: 1px 1px 1px 1px;
+  border-color: rgb(var(--bgColorHighlight));
+  border-style: solid;
+}
+.eurostat-table tbody tr:hover td {
+  background-color: rgb(var(--bgColorHighlight));
+}
+.eurostat-table th.number,
+.eurostat-table td.number {
+  text-align: right;
+}

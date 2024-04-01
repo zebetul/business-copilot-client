@@ -10,14 +10,20 @@ import ClipboardCopy from "../ui/ClipboardCopy";
 function Assistant() {
   const { isSending, sendRequest, data } = useSendRequest();
 
+  const { assistantResponse, tables } = data || {};
+
   if (isSending) return <Loading />;
 
-  if (data?.assistantResponse)
+  if (assistantResponse)
     return (
       <Section>
-        <ClipboardCopy text={data?.assistantResponse} />
+        {tables && (
+          <div className="pb-10" dangerouslySetInnerHTML={{ __html: tables }} />
+        )}
 
-        <MarkdownContainer>{data?.assistantResponse}</MarkdownContainer>
+        <ClipboardCopy text={assistantResponse} />
+
+        <MarkdownContainer>{assistantResponse}</MarkdownContainer>
       </Section>
     );
 

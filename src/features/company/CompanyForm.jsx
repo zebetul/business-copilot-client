@@ -7,7 +7,8 @@ import { ARII_GEOGRAFICE } from "../../config/constants";
 
 function CompanyForm() {
   const { companyData = {}, isLoading } = useCompanyData();
-  const { title, caen, eurostat, piataTinta, ariaGeografica } = companyData;
+  const { title, caen, eurostat, piataTinta, ariaGeografica, prccode } =
+    companyData;
 
   const { updateCompanyData, isUpdating } = useUpdateCompanyData();
 
@@ -74,6 +75,15 @@ function CompanyForm() {
         defaultValue={ariaGeografica}
         disabled={isUpdating}
         onBlur={(event) => handleUpdate(event, "ariaGeografica")}
+      />
+
+      <Input
+        name="prccode"
+        type="text"
+        label="prccode"
+        defaultValue={prccode}
+        disabled={isUpdating}
+        onBlur={(event) => handleUpdate(event, "prccode")}
       />
     </form>
   );

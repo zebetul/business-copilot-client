@@ -8,7 +8,11 @@ import ClipboardCopy from "../ui/ClipboardCopy";
 
 function InteractionRecord() {
   const { id } = useParams();
-  const { interactionRecord, isLoading, error } = useGetHistoryById(id);
+  const {
+    interactionRecord: { assistantResponse, tables } = {},
+    isLoading,
+    error,
+  } = useGetHistoryById(id);
 
   if (isLoading) return <Loading />;
 
@@ -17,11 +21,13 @@ function InteractionRecord() {
   return (
     <>
       <Section>
-        <ClipboardCopy text={interactionRecord.assistantResponse} />
+        {tables && (
+          <div className="pb-10" dangerouslySetInnerHTML={{ __html: tables }} />
+        )}
 
-        <MarkdownContainer>
-          {interactionRecord.assistantResponse}
-        </MarkdownContainer>
+        <ClipboardCopy text={assistantResponse} />
+
+        <MarkdownContainer>{assistantResponse}</MarkdownContainer>
       </Section>
     </>
   );

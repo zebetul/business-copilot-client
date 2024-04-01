@@ -28,10 +28,10 @@ export const DEFAULT_REQUESTS = [
 
       {
         title: "Analiza Eurostat",
-        userRequest: `Importă datele de pe EUROSTAT utilizând URL-ul de mai jos și creează o analiză detaliată a acestora.
+        userRequest: `Mai jos vei gasi un TABEL. Creează o analiză detaliată a datelor aflate in TABEL. NU accesa nici o unealta, analizeaza doar datele din TABEL.
         
-        URL:`,
-        resource: "eurostat",
+        TABEL:`,
+        resource: "prccode",
       },
 
       {
