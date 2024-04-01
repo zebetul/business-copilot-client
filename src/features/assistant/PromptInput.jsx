@@ -20,8 +20,6 @@ function PromptInput({ sendRequest, isSending }) {
     if (document.activeElement !== inputEl.current)
       return inputEl.current.focus();
 
-    console.log(inputEl);
-
     handleRequest();
   });
 
@@ -29,11 +27,11 @@ function PromptInput({ sendRequest, isSending }) {
     <div
       className={`absolute bottom-2 left-1/2 flex w-full max-w-md -translate-x-1/2 flex-row rounded-full border bg-bgColorLight p-2 pl-5 md:max-w-2xl ${isFocused ? "border-textColorLight" : "border-bgColorHighlight"} transition-colors duration-300`}
     >
-      <input
+      <textarea
         type="text"
         placeholder="Input your request here..."
         autoComplete="off"
-        className="w-5/6 bg-bgColorLight font-sans text-textColor outline-none placeholder:text-textColorLight"
+        className="w-5/6 resize-none bg-bgColorLight font-sans text-textColor outline-none placeholder:text-textColorLight"
         value={userRequest}
         onChange={(e) => setUserRequest(e.target.value)}
         ref={inputEl}

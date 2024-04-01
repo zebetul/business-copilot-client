@@ -20,18 +20,18 @@ function MainNav() {
         </li>
 
         <li>
-          <CustomNavLink to="/documents" type="primary">
-            <ClipboardDocumentListIcon className="h-5 w-5 text-accentColor" />
-
-            <span>Documents</span>
-          </CustomNavLink>
-        </li>
-
-        <li>
           <CustomNavLink to="/company" type="primary">
             <BuildingOfficeIcon className="h-5 w-5 text-accentColor" />
 
             <span>Company</span>
+          </CustomNavLink>
+        </li>
+
+        <li>
+          <CustomNavLink to="/documents" type="primary">
+            <ClipboardDocumentListIcon className="h-5 w-5 text-accentColor" />
+
+            <span>Documents</span>
           </CustomNavLink>
         </li>
 
