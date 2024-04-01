@@ -7,16 +7,14 @@ import useKey from "../../hooks/useKey";
 function PromptInput({ sendRequest, isSending }) {
   const inputEl = useRef(null);
   const [userRequest, setUserRequest] = useState("");
-  const [isFocused, setIsFocused] = useState(false);
 
   const handleRequest = async () => {
     sendRequest({ title: "Default", userRequest });
-
     setUserRequest("");
   };
 
+  // When Enter key is pressed focus the input if is not already focused, otherwise send the request
   useKey("Enter", function () {
-    // Focus the input if it's not already focused
     if (document.activeElement !== inputEl.current)
       return inputEl.current.focus();
 
@@ -25,19 +23,17 @@ function PromptInput({ sendRequest, isSending }) {
 
   return (
     <div
-      className={`absolute bottom-2 left-1/2 flex w-full max-w-md -translate-x-1/2 flex-row rounded-full border bg-bgColorLight p-2 pl-5 md:max-w-2xl ${isFocused ? "border-textColorLight" : "border-bgColorHighlight"} transition-colors duration-300`}
+      className={`absolute bottom-2 left-1/2 flex w-full max-w-md -translate-x-1/2 flex-row rounded-full border border-bgColorHighlight bg-bgColorLight p-2 pl-5 transition-colors duration-300 md:max-w-2xl [&:has(textarea:focus)]:border-textColorLight`}
     >
       <textarea
-        type="text"
+        rows={1}
         placeholder="Input your request here..."
         autoComplete="off"
-        className="w-5/6 resize-none bg-bgColorLight font-sans text-textColor outline-none placeholder:text-textColorLight"
+        className="my-auto w-5/6 resize-none bg-bgColorLight font-sans text-textColor outline-none placeholder:text-textColorLight"
         value={userRequest}
         onChange={(e) => setUserRequest(e.target.value)}
         ref={inputEl}
         disabled={isSending}
-        onFocus={() => setIsFocused(true)}
-        onBlur={() => setIsFocused(false)}
       />
 
       <button
