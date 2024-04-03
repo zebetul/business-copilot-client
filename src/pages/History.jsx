@@ -1,21 +1,18 @@
 import { RectangleStackIcon } from "@heroicons/react/24/outline";
 import HistoryList from "../features/history/HistoryList";
-import Header1 from "../ui/Header1";
 import Section from "../ui/Section";
-import Header2 from "../ui/Header2";
+import PageHeader from "../ui/PageHeader";
 
 function History() {
   return (
     <Section>
-      <Header1>
-        <RectangleStackIcon className="my-auto h-8 w-8 text-accentColor" />
+      <PageHeader>
+        <PageHeader.Title>
+          <RectangleStackIcon className="my-auto h-8 w-8 text-accentColor" />
 
-        <span>History</span>
-      </Header1>
-
-      <Header2 className="text-accent-3 text-center text-lg">
-        Most recent interactions
-      </Header2>
+          <span>History</span>
+        </PageHeader.Title>
+      </PageHeader>
 
       <HistoryList />
     </Section>

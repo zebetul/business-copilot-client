@@ -1,10 +1,7 @@
-import { PlusIcon } from "@heroicons/react/24/outline";
-
 import { useDocuments } from "./useDocuments";
 import Error from "../../ui/Error";
 import Loading from "../../ui/Loading";
 import DocumentRow from "./DocumentRow";
-import DocumentsHeader from "./DocumentsHeader";
 import UploadDocument from "./UploadDocument";
 
 function DocumentsTable() {
@@ -16,7 +13,11 @@ function DocumentsTable() {
 
   return (
     <div className="w-full">
-      <DocumentsHeader />
+      <header className="table_header grid h-10 grid-cols-3 items-center justify-center gap-3 border-b border-bgColorDark pb-4 text-sm font-bold text-textColorLight">
+        <p>Title</p>
+
+        <p>Type</p>
+      </header>
 
       <ul className="h-full">
         <>
@@ -27,15 +28,12 @@ function DocumentsTable() {
         </>
 
         {documents.length === 0 && (
-          <div className="flex flex-col items-center justify-center">
-            <p className="mt-40 text-center text-3xl text-textColorLight">
+          <div className="mt-10 flex flex-col items-center justify-center gap-5">
+            <p className="text-center text-xl text-textColorLight">
               No documents added yet
             </p>
 
-            <UploadDocument className="mx-auto mt-5 gap-2">
-              <PlusIcon className="h-5 w-5" />
-              <span className="text-nowrap">Add new</span>
-            </UploadDocument>
+            <UploadDocument />
           </div>
         )}
       </ul>
