@@ -19,7 +19,7 @@ function CompanyForm({ companyId }) {
     if (
       !newValue ||
       newValue === company[field] ||
-      // Needed for the caen field, as it's a number
+      // Needed for the caen field, as it is a number
       +newValue === company[field]
     )
       return;

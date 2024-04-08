@@ -35,7 +35,9 @@ function Company() {
       {currentCompany ? (
         <CompanyForm companyId={currentCompany.value} />
       ) : (
-        <p>Alege o companie</p>
+        <div className="flex flex-col items-center justify-center text-2xl">
+          No company selected
+        </div>
       )}
     </Section>
   );

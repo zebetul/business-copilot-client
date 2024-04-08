@@ -13,13 +13,14 @@ export async function apiGetDocuments() {
 }
 
 // Upload document to API to be processed before saving it to supabase
-export async function apiUploadDocument(file) {
+export async function apiUploadDocument({ file, companyId }) {
   try {
     // Data validation
     if (!file) throw new Error("No file provided");
 
     const formData = new FormData();
     formData.append("file", file);
+    formData.append("companyId", companyId);
 
     const response = await fetch(`${import.meta.env.VITE_API_URL}/documents`, {
       method: "POST",

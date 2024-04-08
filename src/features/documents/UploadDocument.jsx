@@ -1,8 +1,12 @@
 import PropTypes from "prop-types";
 import { useUploadDocument } from "./useUploadDocument";
 import { PlusIcon } from "@heroicons/react/24/outline";
+import { useCompany } from "../../contexts/CompanyContext";
 
 function UploadDocument({ className }) {
+  const { currentCompany } = useCompany();
+  const companyId = currentCompany?.value;
+
   const { isUploading, uploadDocument } = useUploadDocument();
 
   return (
@@ -21,7 +25,9 @@ function UploadDocument({ className }) {
         type="file"
         aria-label="File browser"
         disabled={isUploading}
-        onChange={(event) => uploadDocument(event.target.files[0])}
+        onChange={(event) =>
+          uploadDocument({ file: event.target.files[0], companyId })
+        }
       />
     </label>
   );
