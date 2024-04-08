@@ -8,7 +8,7 @@ function History() {
     <Section>
       <PageHeader>
         <PageHeader.Title>
-          <RectangleStackIcon className="my-auto h-8 w-8 text-accentColor" />
+          <RectangleStackIcon className="h-8 w-8 text-accentColor" />
 
           <span>History</span>
         </PageHeader.Title>

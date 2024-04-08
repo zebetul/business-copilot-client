@@ -1,12 +1,12 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import toast from "react-hot-toast";
-import { apiUpdateCompanyData } from "../../services/apiCompanyData";
+import { apiUpdateCompany } from "../../services/apiCompany";
 
-function useUpdateCompanyData() {
+function useUpdateCompany() {
   const queryClient = useQueryClient();
 
-  const { isPending: isUpdating, mutate: updateCompanyData } = useMutation({
-    mutationFn: apiUpdateCompanyData,
+  const { isPending: isUpdating, mutate: updateCompany } = useMutation({
+    mutationFn: apiUpdateCompany,
     onSuccess: () => {
       queryClient.invalidateQueries("company");
       toast.success("Company data updated successfully");
@@ -16,7 +16,7 @@ function useUpdateCompanyData() {
     },
   });
 
-  return { updateCompanyData, isUpdating };
+  return { updateCompany, isUpdating };
 }
 
-export default useUpdateCompanyData;
+export default useUpdateCompany;

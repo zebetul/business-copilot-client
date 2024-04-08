@@ -3,31 +3,36 @@ import PropTypes from "prop-types";
 function Select({
   name,
   label,
+  className,
   options,
   defaultValue,
+  value,
+  onChange,
   disabled,
-  onBlur = () => {},
 }) {
   return (
     <div className="w-full">
-      <label
-        htmlFor={name}
-        className="mb-2 block text-sm font-bold text-textColorLight"
-      >
-        {label}
-      </label>
+      {label && (
+        <label
+          htmlFor={name}
+          className="mb-2 block text-sm font-bold text-textColorLight"
+        >
+          {label}
+        </label>
+      )}
 
       <select
-        className="w-full rounded-lg bg-bgColorDark px-3 py-2.5 text-textColor transition duration-300 ease-in-out placeholder:text-textColorLight focus:border-transparent focus:outline-none focus:ring-1 focus:ring-textColorLight"
+        className={`w-full rounded-lg bg-bgColorDark p-2 text-textColor transition duration-300 ease-in-out placeholder:text-textColorLight focus:border-transparent focus:outline-none focus:ring-1 focus:ring-accentColorLight ${className}`}
         id={name}
         name={name}
+        value={value}
+        onChange={onChange}
         defaultValue={defaultValue}
         disabled={disabled}
-        onBlur={onBlur}
       >
         {options.map((option) => (
-          <option key={option} value={option} className="py-2">
-            {option}
+          <option key={option.value} value={option.value} className="py-2">
+            {option.label}
           </option>
         ))}
       </select>
@@ -37,11 +42,13 @@ function Select({
 
 Select.propTypes = {
   name: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
-  options: PropTypes.arrayOf(PropTypes.string).isRequired,
-  defaultValue: PropTypes.string,
+  label: PropTypes.string,
+  options: PropTypes.arrayOf(PropTypes.object).isRequired,
+  value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  defaultValue: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   disabled: PropTypes.bool,
-  onBlur: PropTypes.func,
+  onChange: PropTypes.func,
+  className: PropTypes.string,
 };
 
 export default Select;

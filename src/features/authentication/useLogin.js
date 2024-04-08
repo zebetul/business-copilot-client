@@ -14,7 +14,7 @@ export function useLogin() {
       queryClient.setQueryData(["user"], user.user);
 
       // Redirect to the assistant page and replace the current history entry
-      navigate("/assistant", { replace: true });
+      navigate("/company", { replace: true });
     },
     onError: (error) => {
       console.log(error.message);

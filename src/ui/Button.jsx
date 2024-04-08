@@ -6,7 +6,11 @@ function Button({
   disabled,
   className,
   variant = "primary",
+  size = "md",
 }) {
+  const baseStyles =
+    "flex items-center h-min justify-center gap-2 text-nowrap rounded-md transition-colors duration-300";
+
   const types = {
     primary: `bg-bgColorDark text-textColor ${disabled ? "opacity-30" : "hover:bg-bgColorHighlight"}`,
     // secondary: "bg-bgColor",
@@ -14,9 +18,15 @@ function Button({
     // danger: "bg-dangerColor",
   };
 
+  const sizeOptions = {
+    sm: "py-2 px-2 text-xs",
+    md: "py-2 px-4 text-sm",
+    lg: "py-3 px-6 text-base",
+  };
+
   return (
     <button
-      className={`flex flex-col items-center justify-center text-nowrap rounded-md p-2 text-sm transition-colors duration-300 ${types[variant]} ${className}`}
+      className={`${baseStyles} ${types[variant]} ${sizeOptions[size]} ${className}`}
       onClick={onClick}
       disabled={disabled}
     >
@@ -31,6 +41,7 @@ Button.propTypes = {
   disabled: PropTypes.bool,
   className: PropTypes.string,
   variant: PropTypes.oneOf(["primary", "secondary", "accent", "danger"]),
+  size: PropTypes.oneOf(["sm", "md", "lg"]),
 };
 
 export default Button;

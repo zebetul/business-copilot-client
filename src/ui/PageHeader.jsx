@@ -9,11 +9,13 @@ function PageHeader({ children }) {
 }
 
 function Title({ children }) {
-  return <h1 className="flex gap-3 text-4xl">{children}</h1>;
+  return <h1 className="flex items-center gap-3 text-4xl">{children}</h1>;
 }
 
 function Buttons({ children }) {
-  return <div className="flex gap-2">{children}</div>;
+  return (
+    <div className="flex items-center justify-center gap-4">{children}</div>
+  );
 }
 
 PageHeader.Title = Title;

@@ -11,6 +11,7 @@ function useLogout() {
     mutationFn: apiLogout,
     onSuccess: () => {
       queryClient.removeQueries();
+
       navigate("/login", { replace: true });
     },
     onError: (error) => {

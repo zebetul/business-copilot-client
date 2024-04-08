@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 import LogoDark from "../assets/logo/logo_dark.svg";
 import LogoLight from "../assets/logo/logo_light.svg";
-import { useDarkMode } from "../context/DarkModeContext";
+import { useDarkMode } from "../contexts/DarkModeContext";
 
 function Logo({ size = "small", className }) {
   const { isDarkMode } = useDarkMode();

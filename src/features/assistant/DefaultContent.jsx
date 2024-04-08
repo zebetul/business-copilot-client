@@ -10,7 +10,7 @@ function DefaultContent({ sendRequest }) {
     <>
       <PageHeader>
         <PageHeader.Title>
-          <ChatBubbleBottomCenterTextIcon className="my-auto h-8 w-8 text-accentColor" />
+          <ChatBubbleBottomCenterTextIcon className="h-8 w-8 text-accentColor" />
 
           <span>Assistant</span>
         </PageHeader.Title>

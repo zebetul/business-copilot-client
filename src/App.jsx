@@ -2,7 +2,8 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
-import { DarkModeProvider } from "./context/DarkModeContext";
+import { DarkModeProvider } from "./contexts/DarkModeContext";
+import { CompanyProvider } from "./contexts/CompanyContext";
 import ProtectedRoute from "./pages/ProtectedRoute";
 import ErrorBoundaryLayout from "./ui/ErrorBoundaryLayout";
 import CustomToaster from "./ui/CustomToaster";
@@ -20,8 +21,9 @@ function App() {
   const queryClient = new QueryClient({
     defaultOptions: {
       queries: {
-        refetchOnWindowFocus: false,
+        // refetchOnWindowFocus: false
         staleTime: 0,
+        retry: false,
       },
     },
   });
@@ -44,7 +46,11 @@ function App() {
           children: [
             {
               path: "/",
-              element: <Assistant />,
+              element: <Company />,
+            },
+            {
+              path: "/company",
+              element: <Company />,
             },
             {
               path: "/assistant",
@@ -54,10 +60,7 @@ function App() {
               path: "/documents",
               element: <Documents />,
             },
-            {
-              path: "/company",
-              element: <Company />,
-            },
+
             {
               path: "/history",
               element: <History />,
@@ -79,10 +82,12 @@ function App() {
   return (
     <DarkModeProvider>
       <QueryClientProvider client={queryClient}>
-        <ReactQueryDevtools />
+        <CompanyProvider>
+          <ReactQueryDevtools />
 
-        <RouterProvider router={router} />
-        <CustomToaster />
+          <RouterProvider router={router} />
+          <CustomToaster />
+        </CompanyProvider>
       </QueryClientProvider>
     </DarkModeProvider>
   );

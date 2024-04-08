@@ -12,18 +12,18 @@ function MainNav() {
     <nav className="navigation text-md font-semibold text-textColorLight">
       <ul className="nav_links flex flex-col gap-1">
         <li>
-          <CustomNavLink to="/assistant" type="primary">
-            <ChatBubbleBottomCenterTextIcon className="h-5 w-5 text-accentColor" />
-
-            <span>Assistant</span>
-          </CustomNavLink>
-        </li>
-
-        <li>
           <CustomNavLink to="/company" type="primary">
             <BuildingOfficeIcon className="h-5 w-5 text-accentColor" />
 
             <span>Company</span>
+          </CustomNavLink>
+        </li>
+
+        <li>
+          <CustomNavLink to="/assistant" type="primary">
+            <ChatBubbleBottomCenterTextIcon className="h-5 w-5 text-accentColor" />
+
+            <span>Assistant</span>
           </CustomNavLink>
         </li>
 

@@ -9,7 +9,7 @@ function Documents() {
     <Section>
       <PageHeader>
         <PageHeader.Title>
-          <ClipboardDocumentListIcon className="my-auto h-8 w-8 text-accentColor" />
+          <ClipboardDocumentListIcon className="h-8 w-8 text-accentColor" />
 
           <span>Documents</span>
         </PageHeader.Title>

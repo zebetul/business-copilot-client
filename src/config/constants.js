@@ -153,12 +153,15 @@ export const DEFAULT_REQUESTS = [
 ];
 
 export const ARII_GEOGRAFICE = [
-  "Regiunea Bucuresti",
-  "Regiunea de Centru",
-  "Regiunea de Nord-Est",
-  "Regiunea de Nord-Vest",
-  "Regiunea de Sud-Est",
-  "Regiunea de Sud-Vest Oltenita",
-  "Regiunea de Sud Muntenia",
-  "Regiunea de Vest",
+  { value: "Regiunea Bucuresti", label: "Regiunea Bucuresti" },
+  { value: "Regiunea de Centru", label: "Regiunea de Centru" },
+  { value: "Regiunea de Nord-Est", label: "Regiunea de Nord-Est" },
+  { value: "Regiunea de Nord-Vest", label: "Regiunea de Nord-Vest" },
+  { value: "Regiunea de Sud-Est", label: "Regiunea de Sud-Est" },
+  {
+    value: "Regiunea de Sud-Vest Oltenita",
+    label: "Regiunea de Sud-Vest Oltenita",
+  },
+  { value: "Regiunea de Sud Muntenia", label: "Regiunea de Sud Muntenia" },
+  { value: "Regiunea de Vest", label: "Regiunea de Vest" },
 ];
