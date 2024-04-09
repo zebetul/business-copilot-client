@@ -12,7 +12,7 @@ function PromptInput({ sendRequest, isSending }) {
   const [userRequest, setUserRequest] = useState("");
 
   const handleRequest = async () => {
-    sendRequest({ title: "Default", userRequest });
+    sendRequest({ title: "Default", userRequest, companyId });
     setUserRequest("");
   };
 

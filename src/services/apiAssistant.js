@@ -4,6 +4,8 @@ export async function apiSendRequest(request) {
     if (request.userRequest === "")
       return console.log("No user request provided");
 
+    if (!request.companyId) return console.log("No company ID provided");
+
     const response = await fetch(`${import.meta.env.VITE_API_URL}/assistant`, {
       method: "POST",
       credentials: "include",
