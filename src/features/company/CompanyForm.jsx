@@ -40,18 +40,20 @@ function CompanyForm({ companyId }) {
           name="cui"
           type="text"
           label="CUI"
-          value={cui || ""}
+          defaultValue={cui || ""}
           disabled={isUpdating}
-          onChange={(event) => handleUpdate(event, "cui")}
+          onBlur={(event) => handleUpdate(event, "cui")}
+          key={cui}
         />
 
         <Input
           name="piataTinta"
           type="text"
           label="Piata tinta"
-          value={piataTinta || ""}
+          defaultValue={piataTinta || ""}
           disabled={isUpdating}
-          onChange={(event) => handleUpdate(event, "piataTinta")}
+          onBlur={(event) => handleUpdate(event, "piataTinta")}
+          key={piataTinta}
         />
 
         <Select
@@ -68,18 +70,20 @@ function CompanyForm({ companyId }) {
           name="caen"
           type="number"
           label="CAEN"
-          value={caen || ""}
+          defaultValue={caen || ""}
           disabled={isUpdating}
-          onChange={(event) => handleUpdate(event, "caen")}
+          onBlur={(event) => handleUpdate(event, "caen")}
+          key={caen}
         />
 
         <Input
           name="prccode"
           type="text"
-          label="prccode"
-          value={prccode || ""}
+          label="PRODCOM"
+          defaultValue={prccode || ""}
           disabled={isUpdating}
-          onChange={(event) => handleUpdate(event, "prccode")}
+          onBlur={(event) => handleUpdate(event, "prccode")}
+          key={prccode}
         />
       </form>
     </>

@@ -5,8 +5,7 @@ import { useCompany } from "../../contexts/CompanyContext";
 
 function UploadDocument({ className }) {
   const { currentCompany } = useCompany();
-  const companyId = currentCompany?.value;
-
+  const companyId = currentCompany?.id;
   const { isUploading, uploadDocument } = useUploadDocument();
 
   return (

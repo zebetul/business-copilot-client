@@ -1,8 +1,11 @@
 import supabase from "./supabase.js";
 
 // Get documents from supabase
-export async function apiGetDocuments() {
-  const { data, error } = await supabase.from("documents").select("*");
+export async function apiGetDocuments(companyId) {
+  const { data, error } = await supabase
+    .from("documents")
+    .select("*")
+    .eq("companyId", companyId);
 
   if (error) {
     console.log(error);

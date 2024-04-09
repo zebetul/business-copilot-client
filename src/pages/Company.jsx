@@ -8,6 +8,7 @@ import Button from "../ui/Button";
 
 import SelectCompany from "../features/company/SelectCompany";
 import { useCompany } from "../contexts/CompanyContext";
+import NoCompanySelected from "../ui/NoCompanySelected";
 
 function Company() {
   const { currentCompany } = useCompany();
@@ -33,11 +34,9 @@ function Company() {
       </PageHeader>
 
       {currentCompany ? (
-        <CompanyForm companyId={currentCompany.value} />
+        <CompanyForm companyId={currentCompany.id} />
       ) : (
-        <div className="flex flex-col items-center justify-center text-2xl">
-          No company selected
-        </div>
+        <NoCompanySelected />
       )}
     </Section>
   );

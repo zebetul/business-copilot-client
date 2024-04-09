@@ -1,11 +1,13 @@
+import PropTypes from "prop-types";
+
 import { useDocuments } from "./useDocuments";
 import Error from "../../ui/Error";
 import Loading from "../../ui/Loading";
 import DocumentRow from "./DocumentRow";
 import UploadDocument from "./UploadDocument";
 
-function DocumentsTable() {
-  const { documents, isLoading, error } = useDocuments();
+function DocumentsTable({ companyId }) {
+  const { documents, isLoading, error } = useDocuments(companyId);
 
   if (isLoading) return <Loading />;
 
@@ -40,5 +42,9 @@ function DocumentsTable() {
     </div>
   );
 }
+
+DocumentsTable.propTypes = {
+  companyId: PropTypes.number.isRequired,
+};
 
 export default DocumentsTable;

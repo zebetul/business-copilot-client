@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-
 import { useCompany } from "../../contexts/CompanyContext";
 import useCompanies from "./useCompanies";
 
@@ -14,26 +12,22 @@ function SelectCompany() {
     label: company.title,
     value: company.id,
   }));
-
-  // Adding a default "Select company" option
+  // Add a default "Select company" option
   options?.unshift({ label: "Select company", value: "" });
-
-  // Set the first company as the current company when the companies are fetched
-  // useEffect(() => {
-  //   if (options?.length && !currentCompany) {
-  //     setCurrentCompany(options[0]);
-  //   }
-
-  // options are not needed in the dependency array given that they are derived from companies every time the companies are fetched and the component is re-rendered
-  // eslint-disable-next-line
-  // }, [currentCompany, setCurrentCompany]);
 
   const onSelectCompany = (event) => {
     const company = options.find(
       (option) => option.value === +event.target.value,
     );
 
-    setCurrentCompany(company);
+    setCurrentCompany(
+      company
+        ? {
+            title: company?.label,
+            id: company?.value,
+          }
+        : null,
+    );
   };
 
   if (isLoading) {
@@ -49,7 +43,7 @@ function SelectCompany() {
       name="title"
       className="p-2 text-sm"
       options={options}
-      value={currentCompany?.value}
+      value={currentCompany?.id}
       onChange={onSelectCompany}
       disabled={isLoading}
     />

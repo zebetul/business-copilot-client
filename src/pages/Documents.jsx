@@ -3,8 +3,12 @@ import DocumentsTable from "../features/documents/DocumentsTable";
 import Section from "../ui/Section";
 import PageHeader from "../ui/PageHeader";
 import UploadDocument from "../features/documents/UploadDocument";
+import { useCompany } from "../contexts/CompanyContext";
+import NoCompanySelected from "../ui/NoCompanySelected";
 
 function Documents() {
+  const { currentCompany } = useCompany();
+
   return (
     <Section>
       <PageHeader>
@@ -14,12 +18,18 @@ function Documents() {
           <span>Documents</span>
         </PageHeader.Title>
 
-        <PageHeader.Buttons>
-          <UploadDocument />
-        </PageHeader.Buttons>
+        {currentCompany ? (
+          <PageHeader.Buttons>
+            <UploadDocument />
+          </PageHeader.Buttons>
+        ) : null}
       </PageHeader>
 
-      <DocumentsTable />
+      {currentCompany ? (
+        <DocumentsTable companyId={currentCompany.id} />
+      ) : (
+        <NoCompanySelected />
+      )}
     </Section>
   );
 }
