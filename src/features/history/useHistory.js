@@ -1,14 +1,14 @@
 import { useQuery } from "@tanstack/react-query";
 import { apiGetHistory } from "../../services/apiHistory";
 
-export function useHistory() {
+export function useHistory(companyId) {
   const {
     isLoading,
     data: history,
     error,
   } = useQuery({
-    queryKey: ["history"],
-    queryFn: apiGetHistory,
+    queryKey: ["history", companyId],
+    queryFn: () => apiGetHistory(companyId),
   });
 
   return { history, isLoading, error };

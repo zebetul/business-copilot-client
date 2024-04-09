@@ -3,13 +3,18 @@ import Loading from "../../ui/Loading";
 import Error from "../../ui/Error";
 import HistoryNavRow from "./HistoryNavRow";
 import Menus from "../../ui/Menus";
+import { useCompany } from "../../contexts/CompanyContext";
 
 function HistoryNav() {
-  const { history, isLoading, error } = useHistory();
+  const { currentCompany } = useCompany();
+  const companyId = currentCompany?.id;
+  const { history, isLoading, error } = useHistory(companyId);
 
   if (isLoading) return <Loading />;
 
   if (error) return <Error error={error} />;
+
+  if (!history) return null;
 
   return (
     <Menus>

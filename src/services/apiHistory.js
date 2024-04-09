@@ -1,10 +1,13 @@
 import supabase from "./supabase";
 
-// Get the history supabaseClient table and arrange in descending order
-export async function apiGetHistory() {
+// Get the interactions history by company id from the history supabaseClient table
+export async function apiGetHistory(companyId) {
+  if (!companyId) return null;
+
   const { data, error } = await supabase
     .from("history")
     .select("title, id")
+    .eq("companyId", companyId)
     .order("id", { ascending: false });
 
   if (error) {
