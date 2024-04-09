@@ -1,5 +1,4 @@
 import PromptInput from "../features/assistant/PromptInput";
-
 import useSendRequest from "../features/assistant/useSendRequest";
 import DefaultContent from "../features/assistant/DefaultContent";
 import Loading from "../ui/Loading";
@@ -9,7 +8,6 @@ import ClipboardCopy from "../ui/ClipboardCopy";
 
 function Assistant() {
   const { isSending, sendRequest, data } = useSendRequest();
-
   const { assistantResponse, tables } = data || {};
 
   if (isSending) return <Loading />;

@@ -2,9 +2,12 @@ import { useRef, useState } from "react";
 import PropTypes from "prop-types";
 import { ArrowUpIcon } from "@heroicons/react/24/outline";
 
+import { useCompany } from "../../contexts/CompanyContext";
 import useKey from "../../hooks/useKey";
 
 function PromptInput({ sendRequest, isSending }) {
+  const { currentCompany } = useCompany();
+  const companyId = currentCompany?.id;
   const inputEl = useRef(null);
   const [userRequest, setUserRequest] = useState("");
 
@@ -20,6 +23,8 @@ function PromptInput({ sendRequest, isSending }) {
 
     handleRequest();
   });
+
+  if (!companyId) return null;
 
   return (
     <div

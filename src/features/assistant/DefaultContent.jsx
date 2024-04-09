@@ -1,11 +1,16 @@
 import PropTypes from "prop-types";
 import { ChatBubbleBottomCenterTextIcon } from "@heroicons/react/24/outline";
 
+import { useCompany } from "../../contexts/CompanyContext";
 import { DEFAULT_REQUESTS } from "../../config/constants";
 import Chapter from "./Chapter";
 import PageHeader from "../../ui/PageHeader";
+import NoCompanySelected from "../../ui/NoCompanySelected";
 
 function DefaultContent({ sendRequest }) {
+  const { currentCompany } = useCompany();
+  const companyId = currentCompany?.id;
+
   return (
     <>
       <PageHeader>
@@ -16,15 +21,19 @@ function DefaultContent({ sendRequest }) {
         </PageHeader.Title>
       </PageHeader>
 
-      <div className="chapters_container flex flex-wrap justify-center gap-10 pb-32">
-        {DEFAULT_REQUESTS.map((chapter) => (
-          <Chapter
-            key={chapter.title}
-            chapter={chapter}
-            sendRequest={sendRequest}
-          />
-        ))}
-      </div>
+      {companyId ? (
+        <div className="chapters_container flex flex-wrap justify-center gap-10 pb-32">
+          {DEFAULT_REQUESTS.map((chapter) => (
+            <Chapter
+              key={chapter.title}
+              chapter={chapter}
+              sendRequest={sendRequest}
+            />
+          ))}
+        </div>
+      ) : (
+        <NoCompanySelected />
+      )}
     </>
   );
 }
