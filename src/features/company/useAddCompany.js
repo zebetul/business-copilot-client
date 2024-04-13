@@ -8,22 +8,24 @@ function useAddCompany() {
   const {
     mutate: addCompany,
     isPending,
-    data,
+    data: newCompany,
   } = useMutation({
     mutationFn: apiAddCompany,
+
     onSuccess: () => {
       queryClient.invalidateQueries({
-        queryKey: ["company"],
+        queryKey: ["companies"],
       });
 
       toast.success("Company added successfully");
     },
+
     onError: (error) => {
       toast.error(error.message);
     },
   });
 
-  return { addCompany, isPending, data };
+  return { addCompany, isPending, newCompany };
 }
 
 export default useAddCompany;
