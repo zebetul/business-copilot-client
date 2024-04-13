@@ -34,7 +34,7 @@ function Window({ children, name }) {
   if (openName !== name) return null;
 
   return createPortal(
-    <div className="overlay fixed inset-0 z-50 backdrop-blur-sm transition-all">
+    <div className="overlay fixed inset-0 z-50 backdrop-blur-md transition-all">
       <div
         className="modal fixed left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col rounded-lg bg-bgColorLight p-5 drop-shadow-xl transition-all"
         ref={ref}

@@ -1,28 +1,29 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import toast from "react-hot-toast";
-import { apiSendRequest } from "../../services/apiAssistant";
+import { apiAddCompany } from "../../services/apiCompany";
 
-function useSendRequest() {
+function useAddCompany() {
   const queryClient = useQueryClient();
 
   const {
-    isPending: isSending,
-    mutate: sendRequest,
+    mutate: addCompany,
+    isPending,
     data,
   } = useMutation({
-    mutationFn: apiSendRequest,
+    mutationFn: apiAddCompany,
     onSuccess: () => {
       queryClient.invalidateQueries({
-        queryKey: ["history"],
+        queryKey: ["company"],
       });
+
+      toast.success("Company added successfully");
     },
     onError: (error) => {
-      console.log(error);
       toast.error(error.message);
     },
   });
 
-  return { isSending, sendRequest, data };
+  return { addCompany, isPending, data };
 }
 
-export default useSendRequest;
+export default useAddCompany;

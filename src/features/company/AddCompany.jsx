@@ -1,47 +1,22 @@
-import Button from "../../ui/Button";
+import { useState } from "react";
 import { PlusIcon } from "@heroicons/react/24/outline";
+
+import Button from "../../ui/Button";
 import Modal from "../../ui/Modal";
 import Input from "../../ui/Input";
-import { useState } from "react";
+import useAddCompany from "./useAddCompany";
+import Loader from "../../ui/Loader";
 
 function AddCompany() {
   const [cui, setCui] = useState("");
+  const { addCompany, isPending } = useAddCompany();
 
   const onAddCompany = async () => {
-    console.log(cui);
-
-    // 1. Call M. Finante API to get company details with a POST request to https://webservicesp.anaf.ro/PlatitorTvaRest/api/v8/ws/tva with the following body: [
-    // 	{
-    // 		"cui": _Numar_, "data":"_Data interogarii_"
-    // 	},
-    // 	{
-    //     	"cui": _Numar_, "data":"_Data interogarii_"
-    // 	}
-    // ]
-
-    const response = await fetch(
-      "https://webservicesp.anaf.ro/PlatitorTvaRest/api/v8/ws/tva",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify([
-          {
-            cui: cui,
-            data: new Date().toISOString(),
-          },
-        ]),
+    addCompany(cui, {
+      onSuccess: () => {
+        setCui("");
       },
-    );
-
-    const data = await response.json();
-
-    console.log(data);
-
-    // 2. Save company details in the database
-
-    // 3. On succes invalidate companies query
+    });
   };
 
   return (
@@ -67,7 +42,7 @@ function AddCompany() {
           />
 
           <Button variant="accent" onClick={onAddCompany}>
-            Import
+            {isPending ? <Loader size="small" /> : "Import"}
           </Button>
         </div>
       </Modal.Window>

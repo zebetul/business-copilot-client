@@ -41,3 +41,28 @@ export const apiUpdateCompany = async (companyData) => {
     throw new Error("Failed updating the company data");
   }
 };
+
+export const apiAddCompany = async (cui) => {
+  // Input validation
+  if (!cui) throw new Error("CUI is required");
+
+  const response = await fetch(`${import.meta.env.VITE_API_URL}/company`, {
+    method: "POST",
+    credentials: "include",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      cui,
+    }),
+  });
+
+  if (!response.ok) {
+    const error = await response.json();
+    throw new Error(error.message);
+  }
+
+  const data = await response.json();
+
+  return data;
+};

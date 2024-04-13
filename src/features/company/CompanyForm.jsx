@@ -43,7 +43,7 @@ function CompanyForm({ companyId }) {
           defaultValue={cui || ""}
           disabled={isUpdating}
           onBlur={(event) => handleUpdate(event, "cui")}
-          key={cui}
+          key={cui || Math.random()}
         />
 
         <Input
@@ -53,7 +53,7 @@ function CompanyForm({ companyId }) {
           defaultValue={piataTinta || ""}
           disabled={isUpdating}
           onBlur={(event) => handleUpdate(event, "piataTinta")}
-          key={piataTinta}
+          key={piataTinta || Math.random()}
         />
 
         <Select
@@ -73,7 +73,7 @@ function CompanyForm({ companyId }) {
           defaultValue={caen || ""}
           disabled={isUpdating}
           onBlur={(event) => handleUpdate(event, "caen")}
-          key={caen}
+          key={caen || Math.random()}
         />
 
         <Input
@@ -83,7 +83,7 @@ function CompanyForm({ companyId }) {
           defaultValue={prccode || ""}
           disabled={isUpdating}
           onBlur={(event) => handleUpdate(event, "prccode")}
-          key={prccode}
+          key={prccode || Math.random()}
         />
       </form>
     </>
