@@ -16,10 +16,7 @@ function Input({
 }) {
   return (
     <div className="w-full">
-      <label
-        htmlFor={name}
-        className="mb-2 block text-sm font-bold text-textColorLight"
-      >
+      <label htmlFor={name} className="mb-2 block text-sm">
         {label}
         {required && <span className="text-red-500"> *</span>}
       </label>

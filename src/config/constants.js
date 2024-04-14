@@ -148,20 +148,28 @@ export const DEFAULT_REQUESTS = [
         DOMENIUL DE ACTIVITATE:`,
         resource: "piataTinta",
       },
+      {
+        title: "Principalii clienți",
+        userRequest: `1. Caută în baza de date care sunt principalii noștri clienți. 2. Caută pe internet clienții pe care i-ai găsit la pasul 1 și fă-mi un raport detaliat.`,
+      },
     ],
   },
 ];
 
 export const ARII_GEOGRAFICE = [
-  { value: "Regiunea Bucuresti", label: "Regiunea Bucuresti" },
+  { value: "Selectează aria geografică", label: "Selectează aria geografică" },
+  { value: "Regiunea București", label: "Regiunea București" },
   { value: "Regiunea de Centru", label: "Regiunea de Centru" },
   { value: "Regiunea de Nord-Est", label: "Regiunea de Nord-Est" },
   { value: "Regiunea de Nord-Vest", label: "Regiunea de Nord-Vest" },
   { value: "Regiunea de Sud-Est", label: "Regiunea de Sud-Est" },
   {
-    value: "Regiunea de Sud-Vest Oltenita",
-    label: "Regiunea de Sud-Vest Oltenita",
+    value: "Regiunea de Sud-Vest Oltenița",
+    label: "Regiunea de Sud-Vest Oltenița",
   },
   { value: "Regiunea de Sud Muntenia", label: "Regiunea de Sud Muntenia" },
   { value: "Regiunea de Vest", label: "Regiunea de Vest" },
+  { value: "România", label: "România" },
+  { value: "Europa", label: "Europa" },
+  { value: "Global", label: "Global" },
 ];

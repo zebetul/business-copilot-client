@@ -10,7 +10,16 @@ import Select from "../../ui/Select";
 
 function CompanyForm({ companyId }) {
   const { company = {}, isLoading, error } = useCompanyData(companyId);
-  const { title, cui, piataTinta, ariaGeografica, caen, prccode } = company;
+  const {
+    title,
+    cui,
+    piataTinta,
+    ariaGeografica,
+    caen,
+    prccode,
+    adress,
+    nrRegCom,
+  } = company;
   const { updateCompany, isUpdating } = useUpdateCompany();
 
   function handleUpdate(event, field) {
@@ -33,19 +42,19 @@ function CompanyForm({ companyId }) {
 
   return (
     <>
-      <h2 className="mb-10 text-2xl">{title}</h2>
+      <div className="mb-10">
+        <h2 className="m-0 mb-2 text-2xl">{title}</h2>
+
+        <p className="mb-1 text-sm text-textColorLight">CUI: {cui}</p>
+
+        <p className="mb-1 text-sm text-textColorLight">
+          Nr. Reg. Com.: {nrRegCom}
+        </p>
+
+        <p className="mb-1 text-sm text-textColorLight">{adress}</p>
+      </div>
 
       <form className="grid grid-cols-1 gap-5 md:grid-cols-2">
-        <Input
-          name="cui"
-          type="text"
-          label="CUI"
-          defaultValue={cui || ""}
-          disabled={isUpdating}
-          onBlur={(event) => handleUpdate(event, "cui")}
-          key={cui || Math.random()}
-        />
-
         <Input
           name="piataTinta"
           type="text"
@@ -60,7 +69,7 @@ function CompanyForm({ companyId }) {
           name="ariaGeografica"
           label="Aria geografica de acoperire a pietei tinta"
           options={ARII_GEOGRAFICE}
-          value={ariaGeografica || ""}
+          value={ariaGeografica || "Selecteaza aria geografica"}
           disabled={isUpdating}
           onChange={(event) => handleUpdate(event, "ariaGeografica")}
           className="p-2.5"
