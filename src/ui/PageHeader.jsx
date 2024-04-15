@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 function PageHeader({ children }) {
   return (
-    <div className="page_header mb-20 mt-5 flex items-center justify-between">
+    <div className="page_header mb-28 mt-5 flex items-center justify-between">
       {children}
     </div>
   );

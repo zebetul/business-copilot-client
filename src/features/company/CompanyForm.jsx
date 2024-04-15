@@ -42,7 +42,7 @@ function CompanyForm({ companyId }) {
 
   return (
     <>
-      <div className="mb-10">
+      <div className="mb-16">
         <h2 className="m-0 mb-2 text-2xl">{title}</h2>
 
         <p className="mb-1 text-sm text-textColorLight">CUI: {cui}</p>

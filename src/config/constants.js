@@ -28,9 +28,10 @@ export const DEFAULT_REQUESTS = [
 
       {
         title: "Analiza Eurostat",
-        userRequest: `Mai jos vei găsi un TABEL. Creează o analiză detaliată a evoluției datelor aflate în TABEL. NU accesa nici o unealtă, folosește doar datele primite. NU reda datele din tabel, ci analizează-le și oferă o perspectivă asupra evoluției acestora. Tonul tău va fi pozitiv și optimist, oferind argumente pentru oportunitatea de a investi în această piață.
+        userRequest: `Mai jos vei găsi un TABEL in format HTML, extras de pe EUROSTAT. Creează o analiză detaliată a evoluției datelor aflate în TABEL. NU reda datele din tabel mot-a-mot, ci analizează-le și oferă o perspectivă asupra evoluției acestora. NU ACCESA NICI O UNEALTA! Dacă tabelul este GOL răspunde că nu ai suficiente informații.
+        Tonul tău va fi pozitiv și optimist, in ceea ce privește evoluția acestei piețe.
         
-        TABEL:`,
+        TABEL:\n\n`,
         resource: "prccode",
       },
 
