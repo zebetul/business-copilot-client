@@ -4,7 +4,7 @@ export const DEFAULT_REQUESTS = [
     requests: [
       {
         title: "Mărimea pieței și tendințele de evoluție",
-        userRequest: `Mai jos vei găsi PIATA ȚINTĂ la care te vei referi în raportul tău. Caută pe internet informații relevante și fă un raport detaliat despre "Mărimea pieței și tendințele de evoluție ale acesteia". Nu omite nici o informație relevantă din cele găsite prin căutare. Menționează în raport linkurile la surse, în următorul format [Named Link](http://www.google.ro/ "Named link title"). Raportul tău va fi detaliat și descriptiv, va fi împărțit pe paragrafe. Raportul trebuie să dezvolte următoarele topicuri:
+        userRequest: `Mai jos vei găsi PIATA ȚINTĂ la care te vei referi în raportul tău. Caută pe internet informații relevante și fă un raport detaliat despre "Mărimea pieței și tendințele de evoluție ale acesteia". Nu accesa nici o altă unealtă inafară de cea dedicată căutării pe internet. Nu omite nici o informație relevantă din cele găsite prin căutare. Menționează în raport linkurile la surse, în următorul format [Named Link](http://www.google.ro/ "Named link title"). Raportul tău va fi detaliat și descriptiv, va fi împărțit pe paragrafe. Raportul trebuie să dezvolte următoarele topicuri:
         
         Care este mărimea și tendințele pieței. Unde vei discuta despre evaluarea cifrei de afaceri a pieței țintă în contextul economiei românești, analiza creșterii cifrei de afaceri în ultimii ani și perspectivele de dezvoltare pe termen scurt și mediu, tendințe recente în consum pe piața țintă și impactul schimbărilor în comportamentul consumatorilor asupra pieței.
                             

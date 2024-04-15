@@ -152,11 +152,11 @@ body {
 
 .markdown_content a {
   text-decoration: underline;
-  color: rgb(var(--accentColor));
+  color: rgb(var(--accentColorLight));
 }
 
 .markdown_content a:hover {
-  color: rgb(var(--accentColorLight));
+  color: rgb(var(--accentColor));
 }
 
 .markdown_content h1,
