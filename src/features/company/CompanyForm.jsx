@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import useCompanyData from "./useCompany";
 import useUpdateCompany from "./useUpdateCompany";
 
-import { ARII_GEOGRAFICE } from "../../config/constants";
+import { ARII_GEOGRAFICE, CLIENTI_TINTA } from "../../config/constants";
 import Input from "../../ui/Input";
 import Loading from "../../ui/Loading";
 import Select from "../../ui/Select";
@@ -19,6 +19,8 @@ function CompanyForm({ companyId }) {
     prccode,
     adress,
     nrRegCom,
+    clientiTinta,
+    produsulServiciul,
   } = company;
   const { updateCompany, isUpdating } = useUpdateCompany();
 
@@ -56,26 +58,6 @@ function CompanyForm({ companyId }) {
 
       <form className="grid grid-cols-1 gap-5 md:grid-cols-2">
         <Input
-          name="piataTinta"
-          type="text"
-          label="Piata tinta"
-          defaultValue={piataTinta || ""}
-          disabled={isUpdating}
-          onBlur={(event) => handleUpdate(event, "piataTinta")}
-          key={piataTinta || Math.random()}
-        />
-
-        <Select
-          name="ariaGeografica"
-          label="Aria geografica de acoperire a pietei tinta"
-          options={ARII_GEOGRAFICE}
-          value={ariaGeografica || "Selecteaza aria geografica"}
-          disabled={isUpdating}
-          onChange={(event) => handleUpdate(event, "ariaGeografica")}
-          className="p-2.5"
-        />
-
-        <Input
           name="caen"
           type="number"
           label="CAEN"
@@ -93,6 +75,46 @@ function CompanyForm({ companyId }) {
           disabled={isUpdating}
           onBlur={(event) => handleUpdate(event, "prccode")}
           key={prccode || Math.random()}
+        />
+
+        <Input
+          name="produsulServiciul"
+          type="text"
+          label="PRODUSUL / SERVICIUL"
+          defaultValue={produsulServiciul || ""}
+          disabled={isUpdating}
+          onBlur={(event) => handleUpdate(event, "produsulServiciul")}
+          key={produsulServiciul || Math.random()}
+        />
+
+        <Input
+          name="piataTinta"
+          type="text"
+          label="PIAȚA ȚINTĂ"
+          defaultValue={piataTinta || ""}
+          disabled={isUpdating}
+          onBlur={(event) => handleUpdate(event, "piataTinta")}
+          key={piataTinta || Math.random()}
+        />
+
+        <Select
+          name="ariaGeografica"
+          label="ARIA GEOGRAFICĂ DE ACOPEIRE A PIEȚEI ȚINTĂ"
+          options={ARII_GEOGRAFICE}
+          value={ariaGeografica || "Selecteaza aria geografica"}
+          disabled={isUpdating}
+          onChange={(event) => handleUpdate(event, "ariaGeografica")}
+          className="p-2.5"
+        />
+
+        <Select
+          name="clientiTinta"
+          label="CLIENȚII ȚINTĂ"
+          options={CLIENTI_TINTA}
+          value={clientiTinta || "Selectează clienții țintă"}
+          disabled={isUpdating}
+          onChange={(event) => handleUpdate(event, "clientiTinta")}
+          className="p-2.5"
         />
       </form>
     </>

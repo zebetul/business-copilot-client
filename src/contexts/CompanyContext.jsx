@@ -1,10 +1,14 @@
 import PropTypes from "prop-types";
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext } from "react";
+import useLocalStorageState from "../hooks/useLocalStorageState";
 
 const CompanyContext = createContext();
 
 function CompanyProvider({ children }) {
-  const [currentCompany, setCurrentCompany] = useState(null);
+  const [currentCompany, setCurrentCompany] = useLocalStorageState(
+    null,
+    "currentCompany",
+  );
 
   return (
     <CompanyContext.Provider value={{ currentCompany, setCurrentCompany }}>

@@ -174,3 +174,11 @@ export const ARII_GEOGRAFICE = [
   { value: "Europa", label: "Europa" },
   { value: "Global", label: "Global" },
 ];
+
+export const CLIENTI_TINTA = [
+  { value: "Selectează clienții țintă", label: "Selectează clienții țintă" },
+  { value: "Persoane fizice", label: "Persoane fizice" },
+  { value: "Persoane juridice", label: "Persoane juridice" },
+  { value: "Instituții publice", label: "Instituții publice" },
+  { value: "Mixt", label: "Mixt" },
+];

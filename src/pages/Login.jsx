@@ -4,7 +4,7 @@ import Logo from "../ui/Logo";
 
 function Login() {
   return (
-    <main className="flex h-screen w-screen flex-col items-center justify-center gap-10">
+    <main className="flex h-screen w-screen flex-col items-center justify-center">
       <Logo size="large" />
 
       <LoginForm />

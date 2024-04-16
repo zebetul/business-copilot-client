@@ -8,8 +8,8 @@ function Logo({ size = "small", className }) {
   const { isDarkMode } = useDarkMode();
 
   const type = {
-    small: "w-32",
-    large: "w-60",
+    small: "w-28",
+    large: "w-48",
   };
 
   return (
