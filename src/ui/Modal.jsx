@@ -36,14 +36,14 @@ function Window({ children, name }) {
   return createPortal(
     <div className="overlay fixed inset-0 z-50 backdrop-blur-md backdrop-brightness-50 transition-all">
       <div
-        className="modal fixed left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col rounded-lg bg-bgColorLight p-10 drop-shadow-md transition-all"
+        className="modal fixed left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col rounded-lg bg-bgColorLight p-2 drop-shadow-md transition-all"
         ref={ref}
       >
         <button className="ms-auto" onClick={close}>
           <XMarkIcon className="h-5 w-5" />
         </button>
 
-        <div>
+        <div className="px-10 pb-7 pt-1">
           {cloneElement(children, {
             onCloseModal: close,
           })}

@@ -15,7 +15,7 @@ function ConfirmDelete({ resourceName, onConfirm, disabled, onCloseModal }) {
       <div className="flex justify-between">
         <Button onClick={onCloseModal}>Cancel</Button>
 
-        <Button onClick={onConfirm} disabled={disabled}>
+        <Button onClick={onConfirm} disabled={disabled} variant="danger">
           {disabled ? <Loader size="small" /> : "Delete"}
         </Button>
       </div>

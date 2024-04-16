@@ -15,7 +15,7 @@ function Button({
     primary: `bg-bgColorDark text-textColor ${disabled ? "opacity-30" : "hover:bg-bgColorHighlight"}`,
     // secondary: "bg-bgColor",
     accent: `bg-accentColor text-bgColor ${disabled ? "opacity-30" : "hover:bg-accentColorLight"}`,
-    // danger: "bg-dangerColor",
+    danger: `bg-red-500 text-bgColor ${disabled ? "opacity-30" : "hover:bg-red-600"}`,
   };
 
   const sizeOptions = {
@@ -40,7 +40,7 @@ Button.propTypes = {
   onClick: PropTypes.func,
   disabled: PropTypes.bool,
   className: PropTypes.string,
-  variant: PropTypes.oneOf(["primary", "secondary", "accent", "danger"]),
+  variant: PropTypes.oneOf(["primary", "accent", "danger"]),
   size: PropTypes.oneOf(["sm", "md", "lg"]),
 };
 

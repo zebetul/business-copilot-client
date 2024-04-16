@@ -28,6 +28,12 @@ function HistoryNavRow({ record }) {
             <Menus.Toggle id={record.id} />
 
             <Menus.List id={record.id}>
+              <Menus.Button className="w-full" onClick={openRename}>
+                <PencilIcon className="h-4 w-4" />
+
+                <span>Rename</span>
+              </Menus.Button>
+
               <Menus.Button
                 className="w-full"
                 onClick={handleDelete}
@@ -36,12 +42,6 @@ function HistoryNavRow({ record }) {
                 <TrashIcon className="h-4 w-4" />
 
                 <span>Delete</span>
-              </Menus.Button>
-
-              <Menus.Button className="w-full" onClick={openRename}>
-                <PencilIcon className="h-4 w-4" />
-
-                <span>Rename</span>
               </Menus.Button>
             </Menus.List>
           </Menus.Menu>
