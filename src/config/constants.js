@@ -140,7 +140,7 @@ export const DEFAULT_REQUESTS = [
       {
         title: "Resurse umane",
         userRequest:
-          "Caută în baza de date, extrage datele despre personalul firmei, redă-le și fă o analiză a resurselor umane din companie.",
+          "Caută o singura data in baza de date, extrage datele despre personalul din firma si fa o prezentare a acestuia incepand prin al enumera.",
       },
       {
         title: "Competiția pe domeniul de activitate",

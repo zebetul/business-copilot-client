@@ -3,7 +3,7 @@ import supabase from "./supabase";
 export const apiGetCompanies = async () => {
   // Select only the title and id columns and rename title to label and id to value
   const { data: companies, error } = await supabase
-    .from("company")
+    .from("companies")
     .select("title, id")
     .order("id", { ascending: true });
 
@@ -17,7 +17,7 @@ export const apiGetCompanies = async () => {
 
 export const apiGetCompany = async (id) => {
   const { data: company, error } = await supabase
-    .from("company")
+    .from("companies")
     .select("*")
     .eq("id", id)
     .single();
@@ -32,7 +32,7 @@ export const apiGetCompany = async (id) => {
 
 export const apiUpdateCompany = async (companyData) => {
   const { error } = await supabase
-    .from("company")
+    .from("companies")
     .update(companyData)
     .eq("id", companyData.id);
 
