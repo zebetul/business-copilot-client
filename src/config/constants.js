@@ -42,13 +42,13 @@ export const DEFAULT_REQUESTS = [
 
       {
         title: "Aria geografică de acoperire",
-        userRequest: `Caută pe internet și creează un raport cu privire la aria geografică care este specificată mai jos, care să cuprindă următoarele capitole:
+        userRequest: `Foloseste exclusiv unealta web_search_and_summarize, caută cu acesta pe internet O SINGURA DATA și creează un raport cu privire la aria geografică care este specificată mai jos, care să aiba următoarea structura:
         
-        - Descriere localități, județe
-        - Populație - număr, etnie, ocuparea forței de muncă, șomajul (recensământ)
-        - Activități economice principale și evoluția acestora
-        - Infrastructură de transport
-        - Concluzie: principalele beneficii
+        - O descriere a localităților, județelor sau regiunilor care fac parte din aria geografică
+        - O descriere a populației - număr, etnie, ocuparea forței de muncă, șomajul (recensământ)
+        - O descriere a activităților economice principale și evoluția acestora
+        - O descriere a infrastructurii de transport și accesibilitate
+        - O incheiere cu o concluzie care sa enumere principalele beneficii ale acestei arii geografice pentru implementarea proiectului.
         
         Mai jos găsești un exemplu după care să te ghidezi:
         
