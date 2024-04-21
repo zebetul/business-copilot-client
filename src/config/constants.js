@@ -19,21 +19,52 @@ export const DEFAULT_REQUESTS = [
       },
 
       {
-        title: "Distributia pietei si principalii actori",
-        userRequest: `
-        Cine sunt principalii actori și care este distribuția pieței. Aici vei identifica și analiza principalii jucători din piața țintă în România, poți să continui cu evaluarea poziției de lider a retailerilor și producătorilor în piața țintă, distribuția cifrei de afaceri și a cotei de piață între companiile de top și care sunt tendințele în creșterea și consolidarea pieței.`,
-        resources: ["piataTinta", "ariaGeografica"],
+        title: "Distribuția pieței și principalii actori",
+        userRequest: `Mai jos vei găsi piataTinta si ariaGeografica a acesteia, la care ne vom referi în continuare.
+        1. Caută pe internet informații despre principalii actori în piataTinta si ariaGeografica.
+        2. Citește rezultatele căutării cu atenție.
+        3. Folosește informațiile acumulate și fă un raport descriptiv și detaliat care să cuprindă principalii actori din piața țintă, evaluarea poziției de lider a retailerilor și producătorilor în piața țintă, distribuția cifrei de afaceri și a cotei de piață între companiile de top, care sunt tendințele în creșterea și consolidarea pieței și orice altă informație relevantă pe care ai găsit-o.
+        
+        - Accesează căutarea pe internet O SINGURĂ DATĂ.
+        - NU accesa nicio altă unealtă în afară de cea dedicată căutării pe internet.
+        - NU omite nicio informație relevantă din cele găsite prin căutare.
+        - Dacă consideri că e util poți să citezi mot-a-mot unele din informațiile găsite.
+        - Raportul să fie format din paragrafe, fără titluri, fără liste, să fie coerent, acesta urmând a fi integrat într-un plan de marketing.
+        - NU uita să incluzi în raport, alături de fiecare paragraf în parte, sursa de unde ai extras informațiile pentru acesta, în următorul format markdown: [www.google.ro](https://www.google.ro/).`,
+        resources: ["piațaȚintă", "ariaGeografică"],
       },
 
       {
         title: "Comportamentul și preferințele consumatorilor",
-        userRequest: `Comportamentul Consumatorilor și Preferințele. Aici discuți despre eventualele schimbări în preferințele și obiceiurile de consum ale populației românești, faci o analiză a impactului factorilor socio-economici și demografici asupra comportamentului de cumpărare și poți continua cu percepția și importanța prețurilor în deciziile de cumpărare.`,
+        userRequest: `Mai jos vei găsi piataTinta si ariaGeografica a acesteia, la care ne vom referi în continuare.
+        1. Caută pe internet informații despre comportamentul consumatorilor din piataTinta si ariaGeografica.
+        2. Citește rezultatele căutării cu atenție.
+        3. Folosește informațiile acumulate și fă un raport descriptiv și detaliat care să cuprindă eventualele schimbări în preferințele și obiceiurile de consum ale consumatorilor, faci o analiză a impactului factorilor socio-economici și demografici asupra comportamentului de cumpărare, percepția și importanța prețurilor în deciziile de cumpărare și orice altă informație relevantă pe care ai găsit-o.
+        
+        - Accesează căutarea pe internet O SINGURĂ DATĂ.
+        - NU accesa nicio altă unealtă în afară de cea dedicată căutării pe internet.
+        - NU omite nicio informație relevantă din cele găsite prin căutare.
+        - Dacă consideri că e util poți să citezi mot-a-mot unele din informațiile găsite.
+        - Raportul să fie format din paragrafe, fără titluri, fără liste, să fie coerent, acesta urmând a fi integrat într-un plan de marketing.
+        - NU uita să incluzi în raport, alături de fiecare paragraf în parte, sursa de unde ai extras informațiile pentru acesta, în următorul format markdown: [www.google.ro](https://www.google.ro/).`,
         resources: ["piataTinta", "ariaGeografica"],
       },
 
       {
         title: "Factori Externi și Perspective de Viitor",
-        userRequest: `Ultimul topic va fi despre factori externi și perspective de viitor. Aici discuți despre evaluarea influenței factorilor macroeconomici asupra pieței țintă, despre impactul reglementărilor guvernamentale și a politicilor fiscale asupra pieței, proiecții și previziuni pentru dezvoltarea pieței țintă pe termen lung și perspectivele investiționale și inovațiile tehnologice care pot influența piața țintă.`,
+        userRequest: `Mai jos vei găsi piataTinta si ariaGeografica a acesteia, la care ne vom referi în continuare.
+        1. Caută pe internet informații despre factori externi și perspective de viitor in piataTinta si ariaGeografica.
+        2. Citește rezultatele căutării cu atenție.
+        3. Folosește informațiile acumulate și fă un raport descriptiv și detaliat care să cuprindă evaluarea influenței factorilor macroeconomici asupra pieței țintă, impactul reglementărilor guvernamentale și a politicilor fiscale asupra pieței, proiecții și previziuni pentru dezvoltarea pieței țintă pe termen lung și perspectivele investiționale și inovațiile tehnologice care pot influența piața țintă precum și orice altă informație relevantă pe care ai găsit-o.
+        
+        - Accesează căutarea pe internet O SINGURĂ DATĂ.
+        - NU accesa nicio altă unealtă în afară de cea dedicată căutării pe internet.
+        - NU omite nicio informație relevantă din cele găsite prin căutare.
+        - Dacă consideri că e util poți să citezi mot-a-mot unele din informațiile găsite.
+        - Raportul să fie format din paragrafe, fără titluri, fără liste, să fie coerent, acesta urmând a fi integrat într-un plan de marketing.
+        - NU uita să incluzi în raport, alături de fiecare paragraf în parte, sursa de unde ai extras informațiile pentru acesta, în următorul format markdown: [www.google.ro](https://www.google.ro/).
+        
+        `,
         resources: ["piataTinta", "ariaGeografica"],
       },
 
