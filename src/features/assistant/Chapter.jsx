@@ -9,7 +9,7 @@ function Chapter({ chapter: { title, requests }, sendRequest }) {
       <Dropdown.Header>
         <BookOpenIcon className="my-auto h-5 w-5" />
 
-        <span className="text-textColor">{title}</span>
+        <span className="text-sm text-textColor">{title}</span>
       </Dropdown.Header>
 
       <Dropdown.Content>

@@ -1,21 +1,40 @@
 export const DEFAULT_REQUESTS = [
   {
-    title: "4.1.2 Dimensiunea pieței țintă",
+    title: "4.1.2 DIMENSIUNEA PIETEI TINTA",
     requests: [
       {
-        title: "Mărimea pieței și tendințele de evoluție",
-        userRequest: `Mai jos vei găsi PIATA ȚINTĂ la care te vei referi în raportul tău. Caută pe internet informații relevante și fă un raport detaliat despre "Mărimea pieței și tendințele de evoluție ale acesteia". Nu accesa nici o altă unealtă inafară de cea dedicată căutării pe internet. Nu omite nici o informație relevantă din cele găsite prin căutare. Raportul tău va fi detaliat și descriptiv, va fi împărțit pe paragrafe. Raportul trebuie să dezvolte următoarele subiecte:
+        title: "Mărimea pieței",
+        userRequest: `Mai jos vei găsi piataTinta si ariaGeografica a acesteia, la care ne vom referi în continuare.
+        1. Caută pe internet informații despre cifra de afaceri în piataTinta raportată la ariaGeografica.
+        2. Citește rezultatele căutării cu atenție.
+        3. Folosește informațiile acumulate și fă un raport descriptiv și detaliat care să cuprindă evaluarea cifrei de afaceri a pieței țintă, analiza creșterii cifrei de afaceri în ultimii ani, perspectivele de dezvoltare pe termen scurt și mediu și orice altă informație relevantă pe care ai găsit-o.
         
-        Care este mărimea și tendințele pieței. Unde vei discuta despre evaluarea cifrei de afaceri a pieței țintă în contextul economiei românești, analiza creșterii cifrei de afaceri în ultimii ani și perspectivele de dezvoltare pe termen scurt și mediu, tendințe recente în consum pe piața țintă și impactul schimbărilor în comportamentul consumatorilor asupra pieței.
-                            
-        Cine sunt principalii actori și care este distribuția pieței. Aici vei identifica și analiza principalii jucători din piața țintă în România, poți să continui cu evaluarea poziției de lider a retailerilor și producătorilor în piața țintă, distribuția cifrei de afaceri și a cotei de piață între companiile de top și care sunt tendințele în creșterea și consolidarea pieței.
-                            
-        Comportamentul Consumatorilor și Preferințele. Aici discuți despre eventualele schimbări în preferințele și obiceiurile de consum ale populației românești, faci o analiză a impactului factorilor socio-economici și demografici asupra comportamentului de cumpărare și poți continua cu percepția și importanța prețurilor în deciziile de cumpărare.
+        - Accesează căutarea pe internet O SINGURĂ DATĂ.
+        - NU accesa nicio altă unealtă în afară de cea dedicată căutării pe internet.
+        - NU omite nicio informație relevantă din cele găsite prin căutare.
+        - Dacă consideri că e util poți să citezi mot-a-mot unele din informațiile găsite.
+        - Raportul să fie format din paragrafe, fără titluri, fără liste, să fie coerent, acesta urmând a fi integrat într-un plan de marketing.
+        - NU uita să incluzi în raport, alaturi de fiecare paragraf in parte, sursa de unde ai extras informațiile pentru acesta, în următorul format markdown: [www.google.ro](https://www.google.ro/).`,
+        resources: ["piataTinta", "ariaGeografica"],
+      },
 
-        Ultimul topic va fi despre factori externi și perspective de viitor. Aici discuți despre evaluarea influenței factorilor macroeconomici asupra pieței țintă, despre impactul reglementărilor guvernamentale și a politicilor fiscale asupra pieței, proiecții și previziuni pentru dezvoltarea pieței țintă pe termen lung și perspectivele investiționale și inovațiile tehnologice care pot influența piața țintă.
-    
-        PIATA ȚINTĂ:`,
-        resource: "piataTinta",
+      {
+        title: "Distributia pietei si principalii actori",
+        userRequest: `
+        Cine sunt principalii actori și care este distribuția pieței. Aici vei identifica și analiza principalii jucători din piața țintă în România, poți să continui cu evaluarea poziției de lider a retailerilor și producătorilor în piața țintă, distribuția cifrei de afaceri și a cotei de piață între companiile de top și care sunt tendințele în creșterea și consolidarea pieței.`,
+        resources: ["piataTinta", "ariaGeografica"],
+      },
+
+      {
+        title: "Comportamentul și preferințele consumatorilor",
+        userRequest: `Comportamentul Consumatorilor și Preferințele. Aici discuți despre eventualele schimbări în preferințele și obiceiurile de consum ale populației românești, faci o analiză a impactului factorilor socio-economici și demografici asupra comportamentului de cumpărare și poți continua cu percepția și importanța prețurilor în deciziile de cumpărare.`,
+        resources: ["piataTinta", "ariaGeografica"],
+      },
+
+      {
+        title: "Factori Externi și Perspective de Viitor",
+        userRequest: `Ultimul topic va fi despre factori externi și perspective de viitor. Aici discuți despre evaluarea influenței factorilor macroeconomici asupra pieței țintă, despre impactul reglementărilor guvernamentale și a politicilor fiscale asupra pieței, proiecții și previziuni pentru dezvoltarea pieței țintă pe termen lung și perspectivele investiționale și inovațiile tehnologice care pot influența piața țintă.`,
+        resources: ["piataTinta", "ariaGeografica"],
       },
 
       {
@@ -23,16 +42,17 @@ export const DEFAULT_REQUESTS = [
         userRequest: `Folosește top_firme_tool și importă datele de pe topfirme.com utilizând codul CAEN de mai jos și creează o analiză detaliată a acestora.
         
         CAEN:`,
-        resource: "caen",
+        resources: ["caen"],
       },
 
       {
         title: "Analiza Eurostat",
-        userRequest: `Mai jos vei găsi un TABEL in format HTML, extras de pe EUROSTAT. Creează o analiză detaliată a evoluției datelor aflate în TABEL. NU reda datele din tabel mot-a-mot, ci analizează-le și oferă o perspectivă asupra evoluției acestora. NU ACCESA NICI O UNEALTA! Dacă tabelul este GOL răspunde că nu ai suficiente informații.
-        Tonul tău va fi pozitiv și optimist, in ceea ce privește evoluția acestei piețe.
+        userRequest: `Mai jos vei găsi un TABEL in format HTML, extras de pe EUROSTAT.
+        Creează o analiză detaliată a evoluției datelor aflate în TABEL. NU reda datele din tabel mot-a-mot, ci analizează-le și oferă o perspectivă asupra evoluției acestora. Tonul tău va fi pozitiv și optimist, in ceea ce privește evoluția acestei piețe.
+        ATENTIE! NU ACCESA NICI O UNEALTA! Dacă tabelul este GOL răspunde că nu ai suficiente informații!
         
         TABEL:\n\n`,
-        resource: "prccode",
+        resources: ["prccode"],
       },
 
       {
@@ -69,13 +89,13 @@ export const DEFAULT_REQUESTS = [
         </Exemplu>
 
         Aria Geografică:`,
-        resource: "ariaGeografica",
+        resources: ["ariaGeografica"],
       },
     ],
   },
 
   {
-    title: "4.1.3. Stadiul actual, nevoi și tendințe",
+    title: "4.1.3. STADIUL ACTUAL, NEVOI SI TENDINTE",
     requests: [
       {
         title: "Analiza mărimea pieței pe CAEN",
@@ -95,7 +115,7 @@ export const DEFAULT_REQUESTS = [
   },
 
   {
-    title: "4.1.4. Analiza potențialului de creștere",
+    title: "4.1.4. ANALIZA POTENȚIALULUI DE CREȘTERE",
     requests: [
       {
         title: "Analiza potențial de creștere",
@@ -135,7 +155,7 @@ export const DEFAULT_REQUESTS = [
   },
 
   {
-    title: "0.0.1 Testing requests",
+    title: "0.0.1 TESTING REQUESTS",
     requests: [
       {
         title: "Resurse umane",
@@ -147,7 +167,7 @@ export const DEFAULT_REQUESTS = [
         userRequest: `Caută pe internet date despre principalii competitori din România în DOMENIUL DE ACTIVITATE specificat mai jos.
         
         DOMENIUL DE ACTIVITATE:`,
-        resource: "piataTinta",
+        resources: ["piataTinta"],
       },
       {
         title: "Principalii clienți",
