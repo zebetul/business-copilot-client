@@ -31,7 +31,7 @@ export const DEFAULT_REQUESTS = [
         - Dacă consideri că e util poți să citezi mot-a-mot unele din informațiile găsite.
         - Raportul să fie format din paragrafe, fără titluri, fără liste, să fie coerent, acesta urmând a fi integrat într-un plan de marketing.
         - NU uita să incluzi în raport, alături de fiecare paragraf în parte, sursa de unde ai extras informațiile pentru acesta, în următorul format markdown: [www.google.ro](https://www.google.ro/).`,
-        resources: ["piațaȚintă", "ariaGeografică"],
+        resources: ["piataTinta", "ariaGeografica"],
       },
 
       {
@@ -62,9 +62,7 @@ export const DEFAULT_REQUESTS = [
         - NU omite nicio informație relevantă din cele găsite prin căutare.
         - Dacă consideri că e util poți să citezi mot-a-mot unele din informațiile găsite.
         - Raportul să fie format din paragrafe, fără titluri, fără liste, să fie coerent, acesta urmând a fi integrat într-un plan de marketing.
-        - NU uita să incluzi în raport, alături de fiecare paragraf în parte, sursa de unde ai extras informațiile pentru acesta, în următorul format markdown: [www.google.ro](https://www.google.ro/).
-        
-        `,
+        - NU uita să incluzi în raport, alături de fiecare paragraf în parte, sursa de unde ai extras informațiile pentru acesta, în următorul format markdown: [www.google.ro](https://www.google.ro/).`,
         resources: ["piataTinta", "ariaGeografica"],
       },
 
