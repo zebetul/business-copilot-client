@@ -14,6 +14,9 @@ const config = {
 
         accentColor: "rgb(var(--accentColor))",
         accentColorLight: "rgb(var(--accentColorLight))",
+
+        dangerColor: "rgb(var(--dangerColor))",
+        dangerColorLight: "rgb(var(--dangerColorLight))",
       },
 
       fontFamily: {

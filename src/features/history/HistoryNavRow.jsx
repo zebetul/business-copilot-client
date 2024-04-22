@@ -39,9 +39,9 @@ function HistoryNavRow({ record }) {
                 onClick={handleDelete}
                 disabled={isDeleting}
               >
-                <TrashIcon className="h-4 w-4" />
+                <TrashIcon className="text-dangerColorLight h-4 w-4" />
 
-                <span>Delete</span>
+                <span className="text-dangerColorLight">Delete</span>
               </Menus.Button>
             </Menus.List>
           </Menus.Menu>

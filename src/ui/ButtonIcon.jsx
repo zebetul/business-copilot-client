@@ -14,7 +14,7 @@ function ButtonIcon({
     primary:
       baseStyles + " w-min p-2 hover:bg-bgColorDark hover:text-textColor",
     withText:
-      baseStyles + " flex items-center text-sm p-2 hover:bg-bgColorDark gap-2",
+      baseStyles + " flex items-center text-xs p-2 hover:bg-bgColorDark gap-2",
     withoutBg: baseStyles + " w-min hover:text-textColor",
   };
 

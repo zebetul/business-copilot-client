@@ -3,9 +3,12 @@ import {
   ChatBubbleBottomCenterTextIcon,
   ClipboardDocumentListIcon,
   RectangleStackIcon,
+  // PencilSquareIcon,
 } from "@heroicons/react/24/outline";
 
 import CustomNavLink from "./CustomNavLink";
+import ButtonIcon from "./ButtonIcon";
+import { NavLink } from "react-router-dom";
 
 function MainNav() {
   return (
@@ -24,6 +27,12 @@ function MainNav() {
             <ChatBubbleBottomCenterTextIcon className="h-5 w-5 text-accentColor" />
 
             <span>Assistant</span>
+
+            {/* <NavLink to="/assistant" className="ms-auto">
+              <ButtonIcon>
+                <PencilSquareIcon className="h-5 w-5" />
+              </ButtonIcon>
+            </NavLink> */}
           </CustomNavLink>
         </li>
 

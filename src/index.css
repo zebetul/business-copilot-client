@@ -14,6 +14,9 @@
 
   --accentColor: 4, 178, 176; /* #04b2b0 */
   --accentColorLight: 0, 140, 140; /* #008c8c */
+
+  --dangerColorLight: 255, 0, 0; /* #ff0000 */
+  --dangerColor: 255, 70, 70; /* #ff4646 */
 }
 
 .dark {
@@ -27,6 +30,9 @@
 
   --accentColor: 0, 254, 251; /* #00fefb */
   --accentColorLight: 0, 180, 180; /* #00b4b4 */
+
+  --dangerColor: 255, 0, 0; /* #ff0000 */
+  --dangerColorLight: 255, 70, 70; /* #ff4646 */
 }
 
 /* ------ SCROLLBAR STYLES ------- */

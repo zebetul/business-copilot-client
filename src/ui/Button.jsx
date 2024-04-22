@@ -15,7 +15,7 @@ function Button({
     primary: `bg-bgColorDark text-textColor ${disabled ? "opacity-30" : "hover:bg-bgColorHighlight"}`,
     // secondary: "bg-bgColor",
     accent: `bg-accentColor text-bgColor ${disabled ? "opacity-30" : "hover:bg-accentColorLight"}`,
-    danger: `bg-red-500 text-bgColor ${disabled ? "opacity-30" : "hover:bg-red-600"}`,
+    danger: `bg-dangerColor text-bgColor ${disabled ? "opacity-30" : "hover:bg-dangerColorLight"}`,
   };
 
   const sizeOptions = {
