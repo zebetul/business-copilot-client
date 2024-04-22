@@ -13,6 +13,7 @@ function Input({
   onBlur,
   value,
   onChange = () => {},
+  placeholder,
 }) {
   return (
     <div className="w-full">
@@ -32,6 +33,7 @@ function Input({
         onBlur={onBlur}
         value={value}
         onChange={onChange}
+        placeholder={placeholder}
       />
 
       <div className="mt-1 h-4">
@@ -56,6 +58,7 @@ Input.propTypes = {
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
   value: PropTypes.any,
+  placeholder: PropTypes.string,
 };
 
 export default Input;

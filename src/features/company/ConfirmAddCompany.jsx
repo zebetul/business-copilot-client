@@ -24,12 +24,14 @@ function ConfirmAddCompany({ onCloseModal }) {
 
   return (
     <div className="flex flex-col gap-5">
+      <h2 className="m-2 text-lg">Import company data from ANAF</h2>
+
       <Input
         name="cui"
         type="text"
         label="CUI"
         required
-        placeholder="CUI"
+        placeholder="ex: 12345678"
         value={cui}
         onChange={(e) => setCui(e.target.value)}
       />

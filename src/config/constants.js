@@ -7,13 +7,14 @@ export const DEFAULT_REQUESTS = [
         userRequest: `Mai jos vei găsi piataTinta si ariaGeografica a acesteia, la care ne vom referi în continuare.
         1. Caută pe internet informații despre cifra de afaceri în piataTinta raportată la ariaGeografica.
         2. Citește rezultatele căutării cu atenție.
-        3. Folosește informațiile acumulate și fă un raport descriptiv și detaliat care să cuprindă evaluarea cifrei de afaceri a pieței țintă, analiza creșterii cifrei de afaceri în ultimii ani, perspectivele de dezvoltare pe termen scurt și mediu și orice altă informație relevantă pe care ai găsit-o.
+        3. Folosește informațiile acumulate și genereaza o descriere detaliata care să cuprindă evaluarea cifrei de afaceri a pieței țintă, analiza creșterii cifrei de afaceri în ultimii ani, perspectivele de dezvoltare pe termen scurt și mediu și orice altă informație relevantă pe care ai găsit-o.
         
         - Accesează căutarea pe internet O SINGURĂ DATĂ.
         - NU accesa nicio altă unealtă în afară de cea dedicată căutării pe internet.
         - NU omite nicio informație relevantă din cele găsite prin căutare.
         - Dacă consideri că e util poți să citezi mot-a-mot unele din informațiile găsite.
-        - Raportul să fie format din paragrafe, fără titluri, fără liste, să fie coerent, acesta urmând a fi integrat într-un plan de marketing.
+        - Raspunsul să fie format din paragrafe, fără titluri, fără liste. 
+        - Raspunsul să fie coerent, acesta urmând a fi integrat într-un plan de marketing.
         - NU uita să incluzi în raport, lista cu resurse, conform indicatiilor anterioare.`,
         resources: ["piataTinta", "ariaGeografica"],
       },
@@ -23,14 +24,15 @@ export const DEFAULT_REQUESTS = [
         userRequest: `Mai jos vei găsi piataTinta si ariaGeografica a acesteia, la care ne vom referi în continuare.
         1. Caută pe internet informații despre principalii actori în piataTinta si ariaGeografica.
         2. Citește rezultatele căutării cu atenție.
-        3. Folosește informațiile acumulate și fă un raport descriptiv și detaliat care să cuprindă principalii actori din piața țintă, evaluarea poziției de lider a retailerilor și producătorilor în piața țintă, distribuția cifrei de afaceri și a cotei de piață între companiile de top, care sunt tendințele în creșterea și consolidarea pieței și orice altă informație relevantă pe care ai găsit-o.
+        3. Folosește informațiile acumulate și genereaza o descriere detaliata care să cuprindă principalii actori din piața țintă, evaluarea poziției de lider a retailerilor și producătorilor în piața țintă, distribuția cifrei de afaceri și a cotei de piață între companiile de top, care sunt tendințele în creșterea și consolidarea pieței și orice altă informație relevantă pe care ai găsit-o.
         
         - Accesează căutarea pe internet O SINGURĂ DATĂ.
         - NU accesa nicio altă unealtă în afară de cea dedicată căutării pe internet.
         - NU omite nicio informație relevantă din cele găsite prin căutare.
         - Dacă consideri că e util poți să citezi mot-a-mot unele din informațiile găsite.
-        - Raportul să fie format din paragrafe, fără titluri, fără liste, să fie coerent, acesta urmând a fi integrat într-un plan de marketing.
-       - NU uita să incluzi în raport, lista cu resurse, conform indicatiilor anterioare.`,
+        - Raspunsul să fie format din paragrafe, fără titluri, fără liste. 
+        - Raspunsul să fie coerent, acesta urmând a fi integrat într-un plan de marketing.
+        - NU uita să incluzi în raport, lista cu resurse, conform indicatiilor anterioare.`,
         resources: ["piataTinta", "ariaGeografica"],
       },
 
@@ -39,14 +41,15 @@ export const DEFAULT_REQUESTS = [
         userRequest: `Mai jos vei găsi piataTinta si ariaGeografica a acesteia, la care ne vom referi în continuare.
         1. Caută pe internet informații despre comportamentul consumatorilor din piataTinta si ariaGeografica.
         2. Citește rezultatele căutării cu atenție.
-        3. Folosește informațiile acumulate și fă un raport descriptiv și detaliat care să cuprindă eventualele schimbări în preferințele și obiceiurile de consum ale consumatorilor, faci o analiză a impactului factorilor socio-economici și demografici asupra comportamentului de cumpărare, percepția și importanța prețurilor în deciziile de cumpărare și orice altă informație relevantă pe care ai găsit-o.
+        3. Folosește informațiile acumulate și genereaza o descriere detaliata care să cuprindă eventualele schimbări în preferințele și obiceiurile de consum ale consumatorilor, faci o analiză a impactului factorilor socio-economici și demografici asupra comportamentului de cumpărare, percepția și importanța prețurilor în deciziile de cumpărare și orice altă informație relevantă pe care ai găsit-o.
         
         - Accesează căutarea pe internet O SINGURĂ DATĂ.
         - NU accesa nicio altă unealtă în afară de cea dedicată căutării pe internet.
         - NU omite nicio informație relevantă din cele găsite prin căutare.
         - Dacă consideri că e util poți să citezi mot-a-mot unele din informațiile găsite.
-        - Raportul să fie format din paragrafe, fără titluri, fără liste, să fie coerent, acesta urmând a fi integrat într-un plan de marketing.
-       - NU uita să incluzi în raport, lista cu resurse, conform indicatiilor anterioare.`,
+        - Raspunsul să fie format din paragrafe, fără titluri, fără liste. 
+        - Raspunsul să fie coerent, acesta urmând a fi integrat într-un plan de marketing.
+        - NU uita să incluzi în raport, lista cu resurse, conform indicatiilor anterioare.`,
         resources: ["piataTinta", "ariaGeografica"],
       },
 
@@ -55,14 +58,15 @@ export const DEFAULT_REQUESTS = [
         userRequest: `Mai jos vei găsi piataTinta si ariaGeografica a acesteia, la care ne vom referi în continuare.
         1. Caută pe internet informații despre factori externi și perspective de viitor in piataTinta si ariaGeografica.
         2. Citește rezultatele căutării cu atenție.
-        3. Folosește informațiile acumulate și fă un raport descriptiv și detaliat care să cuprindă evaluarea influenței factorilor macroeconomici asupra pieței țintă, impactul reglementărilor guvernamentale și a politicilor fiscale asupra pieței, proiecții și previziuni pentru dezvoltarea pieței țintă pe termen lung și perspectivele investiționale și inovațiile tehnologice care pot influența piața țintă precum și orice altă informație relevantă pe care ai găsit-o.
+        3. Folosește informațiile acumulate și genereaza o descriere detaliata care să cuprindă evaluarea influenței factorilor macroeconomici asupra pieței țintă, impactul reglementărilor guvernamentale și a politicilor fiscale asupra pieței, proiecții și previziuni pentru dezvoltarea pieței țintă pe termen lung și perspectivele investiționale și inovațiile tehnologice care pot influența piața țintă precum și orice altă informație relevantă pe care ai găsit-o.
         
         - Accesează căutarea pe internet O SINGURĂ DATĂ.
         - NU accesa nicio altă unealtă în afară de cea dedicată căutării pe internet.
         - NU omite nicio informație relevantă din cele găsite prin căutare.
         - Dacă consideri că e util poți să citezi mot-a-mot unele din informațiile găsite.
-        - Raportul să fie format din paragrafe, fără titluri, fără liste, să fie coerent, acesta urmând a fi integrat într-un plan de marketing.
-       - NU uita să incluzi în raport, lista cu resurse, conform indicatiilor anterioare.`,
+        - Raspunsul să fie format din paragrafe, fără titluri, fără liste. 
+        - Raspunsul să fie coerent, acesta urmând a fi integrat într-un plan de marketing.
+        - NU uita să incluzi în raport, lista cu resurse, conform indicatiilor anterioare.`,
         resources: ["piataTinta", "ariaGeografica"],
       },
 
@@ -124,21 +128,80 @@ export const DEFAULT_REQUESTS = [
   },
 
   {
-    title: "4.1.3. STADIUL ACTUAL, NEVOI SI TENDINTE",
+    title: "4.1.3. STADIUL ACTUAL AL PIEȚEI",
     requests: [
       {
-        title: "Analiza mărimea pieței pe CAEN",
-        userRequest: "",
+        title: "Caracteristici specifice",
+        userRequest: `Mai jos vei găsi piataTinta si ariaGeografica a acesteia, la care ne vom referi în continuare.
+        1. Caută pe internet informații despre stadiul actual al pietei tinta in ariaGeografica.
+        2. Citește rezultatele căutării cu atenție.
+        3. Folosește informațiile acumulate și genereaza o descriere detaliata care să cuprindă care sunt caracteristicile specifice ale pietei tinta, nevoile consumatorilor, oportunitati si provocari, sau orice altă informație relevantă pe care ai găsit-o.
+        
+        - Accesează căutarea pe internet O SINGURĂ DATĂ.
+        - NU accesa nicio altă unealtă în afară de cea dedicată căutării pe internet.
+        - NU omite nicio informație relevantă din cele găsite prin căutare.
+        - Dacă consideri că e util poți să citezi mot-a-mot unele din informațiile găsite.
+        - Raspunsul să fie format din paragrafe, fără titluri, fără liste. 
+        - Raspunsul să fie coerent, acesta urmând a fi integrat într-un plan de marketing.
+        - NU uita să incluzi în raport, lista cu resurse, conform indicatiilor anterioare.`,
+        resources: ["piataTinta", "ariaGeografica"],
       },
 
       {
-        title: "Principalele nevoi identificate",
+        title: "Analiza Eurostat dupa CAEN",
         userRequest: "",
+        resources: ["caen"],
+      },
+
+      {
+        title: "Principalele nevoi ale consumatorilor",
+        userRequest: `Mai jos vei găsi piataTinta si ariaGeografica a acesteia, la care ne vom referi în continuare.
+        1. Caută pe internet informații despre nevoile consumatorilor din piataTinta in ariaGeografica.
+        2. Citește rezultatele căutării cu atenție.
+        3. Folosește informațiile acumulate și genereaza o descriere detaliata despre nevoile consumatorilor din piata tinta, sau orice altă informație relevantă pe care ai găsit-o.
+        
+        - Accesează căutarea pe internet O SINGURĂ DATĂ.
+        - NU accesa nicio altă unealtă în afară de cea dedicată căutării pe internet.
+        - NU omite nicio informație relevantă din cele găsite prin căutare.
+        - Dacă consideri că e util poți să citezi mot-a-mot unele din informațiile găsite.
+        - Raspunsul să fie format din paragrafe, fără titluri, fără liste. 
+        - Raspunsul să fie coerent, acesta urmând a fi integrat într-un plan de marketing.
+        - NU uita să incluzi în raport, lista cu resurse, conform indicatiilor anterioare.`,
+        resources: ["piataTinta", "ariaGeografica"],
+      },
+
+      {
+        title: "Principalele nevoi ale producatorilor",
+        userRequest: `Mai jos vei găsi piataTinta si ariaGeografica a acesteia, la care ne vom referi în continuare.
+        1. Caută pe internet informații despre nevoile producatorilor din piataTinta in ariaGeografica.
+        2. Citește rezultatele căutării cu atenție.
+        3. Folosește informațiile acumulate și genereaza o descriere detaliata despre nevoile producatorilor din piata tinta, sau orice altă informație relevantă pe care ai găsit-o.
+        
+        - Accesează căutarea pe internet O SINGURĂ DATĂ.
+        - NU accesa nicio altă unealtă în afară de cea dedicată căutării pe internet.
+        - NU omite nicio informație relevantă din cele găsite prin căutare.
+        - Dacă consideri că e util poți să citezi mot-a-mot unele din informațiile găsite.
+        - Raspunsul să fie format din paragrafe, fără titluri, fără liste. 
+        - Raspunsul să fie coerent, acesta urmând a fi integrat într-un plan de marketing.
+        - NU uita să incluzi în raport, lista cu resurse, conform indicatiilor anterioare.`,
+        resources: ["piataTinta", "ariaGeografica"],
       },
 
       {
         title: "Principalele tendințe identificate",
-        userRequest: "",
+        userRequest: `Mai jos vei găsi piataTinta si ariaGeografica a acesteia, la care ne vom referi în continuare.
+        1. Caută pe internet informații despre tendinte in piataTinta in ariaGeografica.
+        2. Citește rezultatele căutării cu atenție.
+        3. Folosește informațiile acumulate și genereaza o descriere detaliata despre tendintele din piata tinta, sau orice altă informație relevantă pe care ai găsit-o.
+        
+        - Accesează căutarea pe internet O SINGURĂ DATĂ.
+        - NU accesa nicio altă unealtă în afară de cea dedicată căutării pe internet.
+        - NU omite nicio informație relevantă din cele găsite prin căutare.
+        - Dacă consideri că e util poți să citezi mot-a-mot unele din informațiile găsite.
+        - Raspunsul să fie format din paragrafe, fără titluri, fără liste. 
+        - Raspunsul să fie coerent, acesta urmând a fi integrat într-un plan de marketing.
+        - NU uita să incluzi în raport, lista cu resurse, conform indicatiilor anterioare.`,
+        resources: ["piataTinta", "ariaGeografica"],
       },
     ],
   },

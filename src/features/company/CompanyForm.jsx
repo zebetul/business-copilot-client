@@ -56,7 +56,7 @@ function CompanyForm({ companyId }) {
         <p className="mb-1 text-sm text-textColorLight">{adress}</p>
       </div>
 
-      <form className="grid grid-cols-1 gap-5 md:grid-cols-2">
+      <form className="flex flex-col gap-5">
         <Input
           name="caen"
           type="number"
@@ -104,7 +104,7 @@ function CompanyForm({ companyId }) {
           value={ariaGeografica || "Selecteaza aria geografica"}
           disabled={isUpdating}
           onChange={(event) => handleUpdate(event, "ariaGeografica")}
-          className="p-2.5"
+          className="mb-5 p-2.5"
         />
 
         <Select

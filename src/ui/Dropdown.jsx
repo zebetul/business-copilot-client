@@ -15,7 +15,7 @@ function Dropdown({ children }) {
         toggleOpen,
       }}
     >
-      <div className="h-min w-full max-w-md rounded-lg border border-bgColorDark">
+      <div className="h-min w-full rounded-lg border border-bgColorDark">
         {children}
       </div>
     </DropdownContext.Provider>
