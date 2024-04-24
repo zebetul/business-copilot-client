@@ -17,12 +17,14 @@ export async function apiSendRequest(request) {
       }),
     });
 
+    if (!response.ok) throw new Error("Failed sending the prompt");
+
     const assistantResponse = await response.json();
 
     return assistantResponse;
   } catch (error) {
     console.error("Error sending prompt:", error);
 
-    throw error;
+    throw new Error(error.message);
   }
 }

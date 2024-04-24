@@ -56,7 +56,7 @@ function CompanyForm({ companyId }) {
         <p className="mb-1 text-sm text-textColorLight">{adress}</p>
       </div>
 
-      <form className="flex flex-col gap-5">
+      <form className="flex flex-col gap-5 pb-32">
         <Input
           name="caen"
           type="number"

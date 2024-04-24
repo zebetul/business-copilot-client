@@ -72,20 +72,23 @@ export const DEFAULT_REQUESTS = [
 
       {
         title: "Top Firme după CAEN",
-        userRequest: `Folosește top_firme_tool și importă datele de pe topfirme.com utilizând codul CAEN de mai jos și creează o analiză detaliată a acestora.
+        userRequest: `
+        1. Folosește top_firme_tool și importă datele de pe topfirme.com utilizând codul CAEN de mai jos.
+        2. Raspunde cu o analiză detaliată a acestor date.
         
         CAEN:`,
         resources: ["caen"],
       },
 
       {
-        title: "Analiza Eurostat",
+        title: "Analiza Eurostat PRODCOM",
         userRequest: `Mai jos vei găsi un TABEL in format HTML, extras de pe EUROSTAT.
         Creează o analiză detaliată a evoluției datelor aflate în TABEL. NU reda datele din tabel mot-a-mot, ci analizează-le și oferă o perspectivă asupra evoluției acestora. Tonul tău va fi pozitiv și optimist, in ceea ce privește evoluția acestei piețe.
         ATENTIE! NU ACCESA NICI O UNEALTA! Dacă tabelul este GOL răspunde că nu ai suficiente informații!
         
         TABEL:\n\n`,
         resources: ["prccode"],
+        type: "eurostat",
       },
 
       {
@@ -149,8 +152,15 @@ export const DEFAULT_REQUESTS = [
 
       {
         title: "Analiza Eurostat dupa CAEN",
-        userRequest: "",
+        userRequest: `Mai jos vei găsi un TABEL in format HTML, extras de pe EUROSTAT.
+        Creează o analiză detaliată a evoluției datelor aflate în TABEL. NU reda datele din tabel mot-a-mot, ci analizează-le și oferă o perspectivă asupra evoluției acestora. Tonul tău va fi pozitiv și optimist, in ceea ce privește evoluția acestei piețe.
+
+         - NU ACCESA NICI O UNEALTA!
+         - Dacă in tabel nu ai informatii răspunde ca atare!
+        
+        TABEL:\n\n`,
         resources: ["caen"],
+        type: "eurostat",
       },
 
       {
