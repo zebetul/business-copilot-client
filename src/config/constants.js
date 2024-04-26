@@ -79,6 +79,7 @@ export const DEFAULT_REQUESTS = [
         
         CAEN:`,
         resources: ["caen"],
+        type: "topFirme",
       },
 
       {
@@ -213,6 +214,11 @@ export const DEFAULT_REQUESTS = [
         - Răspunsul să fie coerent, acesta urmând a fi integrat într-un plan de marketing.
         - NU uita să incluzi în raport, lista cu resurse, conform indicațiilor anterioare.`,
         resources: ["piataTinta", "ariaGeografica"],
+      },
+
+      {
+        title: "Analiza SWOT",
+        userRequest: ``,
       },
     ],
   },

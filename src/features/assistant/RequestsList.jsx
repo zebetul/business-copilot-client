@@ -1,3 +1,4 @@
+import { TableCellsIcon } from "@heroicons/react/24/outline";
 import { useCompany } from "../../contexts/CompanyContext";
 import Button from "../../ui/Button";
 import PropTypes from "prop-types";
@@ -9,7 +10,7 @@ function RequestsList({ requests, sendRequest }) {
   return (
     <ul className="flex flex-col gap-2">
       {requests.map((request) => {
-        const { title, userRequest } = request;
+        const { title, userRequest, type } = request;
 
         return (
           <li key={title} className="w-full">
@@ -18,6 +19,10 @@ function RequestsList({ requests, sendRequest }) {
               onClick={() => sendRequest({ ...request, companyId })}
               disabled={!userRequest}
             >
+              {(type === "eurostat" || type === "topFirme") && (
+                <TableCellsIcon className="mr-2 h-5 w-5" />
+              )}
+
               {title}
             </Button>
           </li>
