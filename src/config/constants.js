@@ -3,7 +3,7 @@ export const DEFAULT_REQUESTS = [
     title: "4.1.2 DIMENSIUNEA PIETEI TINTA",
     requests: [
       {
-        title: "Mărimea pieței",
+        title: "Mărimea pieței țintă",
         userRequest: `Mai jos vei găsi piataTinta si ariaGeografica a acesteia, la care ne vom referi în continuare.
         1. Caută pe internet informații despre cifra de afaceri în piataTinta raportată la ariaGeografica.
         2. Citește rezultatele căutării cu atenție.
@@ -13,9 +13,9 @@ export const DEFAULT_REQUESTS = [
         - NU accesa nicio altă unealtă în afară de cea dedicată căutării pe internet.
         - NU omite nicio informație relevantă din cele găsite prin căutare.
         - Dacă consideri că e util poți să citezi mot-a-mot unele din informațiile găsite.
-        - Raspunsul să fie format din paragrafe, fără titluri, fără liste. 
-        - Raspunsul să fie coerent, acesta urmând a fi integrat într-un plan de marketing.
-        - NU uita să incluzi în raport, lista cu resurse, conform indicatiilor anterioare.`,
+        - Răspunsul să fie format din paragrafe, fără titluri, fără liste. 
+        - Răspunsul să fie coerent, acesta urmând a fi integrat într-un plan de marketing.
+        - NU uita să incluzi în raport, lista cu resurse, conform indicațiilor anterioare.`,
         resources: ["piataTinta", "ariaGeografica"],
       },
 
@@ -30,9 +30,9 @@ export const DEFAULT_REQUESTS = [
         - NU accesa nicio altă unealtă în afară de cea dedicată căutării pe internet.
         - NU omite nicio informație relevantă din cele găsite prin căutare.
         - Dacă consideri că e util poți să citezi mot-a-mot unele din informațiile găsite.
-        - Raspunsul să fie format din paragrafe, fără titluri, fără liste. 
-        - Raspunsul să fie coerent, acesta urmând a fi integrat într-un plan de marketing.
-        - NU uita să incluzi în raport, lista cu resurse, conform indicatiilor anterioare.`,
+        - Răspunsul să fie format din paragrafe, fără titluri, fără liste. 
+        - Răspunsul să fie coerent, acesta urmând a fi integrat într-un plan de marketing.
+        - NU uita să incluzi în raport, lista cu resurse, conform indicațiilor anterioare.`,
         resources: ["piataTinta", "ariaGeografica"],
       },
 
@@ -47,9 +47,9 @@ export const DEFAULT_REQUESTS = [
         - NU accesa nicio altă unealtă în afară de cea dedicată căutării pe internet.
         - NU omite nicio informație relevantă din cele găsite prin căutare.
         - Dacă consideri că e util poți să citezi mot-a-mot unele din informațiile găsite.
-        - Raspunsul să fie format din paragrafe, fără titluri, fără liste. 
-        - Raspunsul să fie coerent, acesta urmând a fi integrat într-un plan de marketing.
-        - NU uita să incluzi în raport, lista cu resurse, conform indicatiilor anterioare.`,
+        - Răspunsul să fie format din paragrafe, fără titluri, fără liste. 
+        - Răspunsul să fie coerent, acesta urmând a fi integrat într-un plan de marketing.
+        - NU uita să incluzi în raport, lista cu resurse, conform indicațiilor anterioare.`,
         resources: ["piataTinta", "ariaGeografica"],
       },
 
@@ -64,14 +64,14 @@ export const DEFAULT_REQUESTS = [
         - NU accesa nicio altă unealtă în afară de cea dedicată căutării pe internet.
         - NU omite nicio informație relevantă din cele găsite prin căutare.
         - Dacă consideri că e util poți să citezi mot-a-mot unele din informațiile găsite.
-        - Raspunsul să fie format din paragrafe, fără titluri, fără liste. 
-        - Raspunsul să fie coerent, acesta urmând a fi integrat într-un plan de marketing.
-        - NU uita să incluzi în raport, lista cu resurse, conform indicatiilor anterioare.`,
+        - Răspunsul să fie format din paragrafe, fără titluri, fără liste. 
+        - Răspunsul să fie coerent, acesta urmând a fi integrat într-un plan de marketing.
+        - NU uita să incluzi în raport, lista cu resurse, conform indicațiilor anterioare.`,
         resources: ["piataTinta", "ariaGeografica"],
       },
 
       {
-        title: "Top Firme după CAEN",
+        title: "Top Firme CAEN",
         userRequest: `
         1. Folosește top_firme_tool și importă datele de pe topfirme.com utilizând codul CAEN de mai jos.
         2. Raspunde cu o analiză detaliată a acestor date.
@@ -81,7 +81,7 @@ export const DEFAULT_REQUESTS = [
       },
 
       {
-        title: "Analiza Eurostat PRODCOM",
+        title: "Analiză Eurostat PRODCOM",
         userRequest: `Mai jos vei găsi un TABEL in format HTML, extras de pe EUROSTAT.
         Creează o analiză detaliată a evoluției datelor aflate în TABEL. NU reda datele din tabel mot-a-mot, ci analizează-le și oferă o perspectivă asupra evoluției acestora. Tonul tău va fi pozitiv și optimist, in ceea ce privește evoluția acestei piețe.
         ATENTIE! NU ACCESA NICI O UNEALTA! Dacă tabelul este GOL răspunde că nu ai suficiente informații!
@@ -92,12 +92,12 @@ export const DEFAULT_REQUESTS = [
       },
 
       {
-        title: "Tendințe de evoluție pe orizontul de operare",
+        title: "Tendințe de evoluție pe orizontul de operare al obiectivului",
         userRequest: "",
       },
 
       {
-        title: "Aria geografică de acoperire",
+        title: "Aria geografică de acoperire a pieței țintă",
         userRequest: `Foloseste exclusiv unealta web_search_and_summarize, caută cu acesta pe internet O SINGURA DATA și creează un raport cu privire la aria geografică care este specificată mai jos, care să aiba următoarea structura:
         
         - O descriere a localităților, județelor sau regiunilor care fac parte din aria geografică
@@ -134,7 +134,7 @@ export const DEFAULT_REQUESTS = [
     title: "4.1.3. STADIUL ACTUAL AL PIEȚEI",
     requests: [
       {
-        title: "Caracteristici specifice",
+        title: "Caracteristici specifice ale pieței țintă",
         userRequest: `Mai jos vei găsi piataTinta si ariaGeografica a acesteia, la care ne vom referi în continuare.
         1. Caută pe internet informații despre stadiul actual al pietei tinta in ariaGeografica.
         2. Citește rezultatele căutării cu atenție.
@@ -144,14 +144,14 @@ export const DEFAULT_REQUESTS = [
         - NU accesa nicio altă unealtă în afară de cea dedicată căutării pe internet.
         - NU omite nicio informație relevantă din cele găsite prin căutare.
         - Dacă consideri că e util poți să citezi mot-a-mot unele din informațiile găsite.
-        - Raspunsul să fie format din paragrafe, fără titluri, fără liste. 
-        - Raspunsul să fie coerent, acesta urmând a fi integrat într-un plan de marketing.
-        - NU uita să incluzi în raport, lista cu resurse, conform indicatiilor anterioare.`,
+        - Răspunsul să fie format din paragrafe, fără titluri, fără liste. 
+        - Răspunsul să fie coerent, acesta urmând a fi integrat într-un plan de marketing.
+        - NU uita să incluzi în raport, lista cu resurse, conform indicațiilor anterioare.`,
         resources: ["piataTinta", "ariaGeografica"],
       },
 
       {
-        title: "Analiza Eurostat dupa CAEN",
+        title: "Analiză Eurostat CAEN",
         userRequest: `Mai jos vei găsi un TABEL in format HTML, extras de pe EUROSTAT.
         Creează o analiză detaliată a evoluției datelor aflate în TABEL. NU reda datele din tabel mot-a-mot, ci analizează-le și oferă o perspectivă asupra evoluției acestora. Tonul tău va fi pozitiv și optimist, in ceea ce privește evoluția acestei piețe.
 
@@ -174,14 +174,14 @@ export const DEFAULT_REQUESTS = [
         - NU accesa nicio altă unealtă în afară de cea dedicată căutării pe internet.
         - NU omite nicio informație relevantă din cele găsite prin căutare.
         - Dacă consideri că e util poți să citezi mot-a-mot unele din informațiile găsite.
-        - Raspunsul să fie format din paragrafe, fără titluri, fără liste. 
-        - Raspunsul să fie coerent, acesta urmând a fi integrat într-un plan de marketing.
-        - NU uita să incluzi în raport, lista cu resurse, conform indicatiilor anterioare.`,
+        - Răspunsul să fie format din paragrafe, fără titluri, fără liste. 
+        - Răspunsul să fie coerent, acesta urmând a fi integrat într-un plan de marketing.
+        - NU uita să incluzi în raport, lista cu resurse, conform indicațiilor anterioare.`,
         resources: ["piataTinta", "ariaGeografica"],
       },
 
       {
-        title: "Principalele nevoi ale producatorilor",
+        title: "Principalele nevoi ale producătorilor",
         userRequest: `Mai jos vei găsi piataTinta si ariaGeografica a acesteia, la care ne vom referi în continuare.
         1. Caută pe internet informații despre nevoile producatorilor din piataTinta in ariaGeografica.
         2. Citește rezultatele căutării cu atenție.
@@ -191,9 +191,9 @@ export const DEFAULT_REQUESTS = [
         - NU accesa nicio altă unealtă în afară de cea dedicată căutării pe internet.
         - NU omite nicio informație relevantă din cele găsite prin căutare.
         - Dacă consideri că e util poți să citezi mot-a-mot unele din informațiile găsite.
-        - Raspunsul să fie format din paragrafe, fără titluri, fără liste. 
-        - Raspunsul să fie coerent, acesta urmând a fi integrat într-un plan de marketing.
-        - NU uita să incluzi în raport, lista cu resurse, conform indicatiilor anterioare.`,
+        - Răspunsul să fie format din paragrafe, fără titluri, fără liste. 
+        - Răspunsul să fie coerent, acesta urmând a fi integrat într-un plan de marketing.
+        - NU uita să incluzi în raport, lista cu resurse, conform indicațiilor anterioare.`,
         resources: ["piataTinta", "ariaGeografica"],
       },
 
@@ -208,9 +208,9 @@ export const DEFAULT_REQUESTS = [
         - NU accesa nicio altă unealtă în afară de cea dedicată căutării pe internet.
         - NU omite nicio informație relevantă din cele găsite prin căutare.
         - Dacă consideri că e util poți să citezi mot-a-mot unele din informațiile găsite.
-        - Raspunsul să fie format din paragrafe, fără titluri, fără liste. 
-        - Raspunsul să fie coerent, acesta urmând a fi integrat într-un plan de marketing.
-        - NU uita să incluzi în raport, lista cu resurse, conform indicatiilor anterioare.`,
+        - Răspunsul să fie format din paragrafe, fără titluri, fără liste. 
+        - Răspunsul să fie coerent, acesta urmând a fi integrat într-un plan de marketing.
+        - NU uita să incluzi în raport, lista cu resurse, conform indicațiilor anterioare.`,
         resources: ["piataTinta", "ariaGeografica"],
       },
     ],

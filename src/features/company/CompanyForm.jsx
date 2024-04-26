@@ -44,7 +44,7 @@ function CompanyForm({ companyId }) {
 
   return (
     <>
-      <div className="mb-16">
+      <div className="mb-10">
         <h2 className="m-0 mb-2 text-2xl">{title}</h2>
 
         <p className="mb-1 text-sm text-textColorLight">CUI: {cui}</p>
@@ -56,7 +56,7 @@ function CompanyForm({ companyId }) {
         <p className="mb-1 text-sm text-textColorLight">{adress}</p>
       </div>
 
-      <form className="flex flex-col gap-5 pb-32">
+      <form className="flex flex-col gap-3 pb-32">
         <Input
           name="caen"
           type="number"
@@ -80,7 +80,7 @@ function CompanyForm({ companyId }) {
         <Input
           name="produsulServiciul"
           type="text"
-          label="PRODUSUL / SERVICIUL"
+          label="Produsul / Serviciul"
           defaultValue={produsulServiciul || ""}
           disabled={isUpdating}
           onBlur={(event) => handleUpdate(event, "produsulServiciul")}
@@ -90,7 +90,7 @@ function CompanyForm({ companyId }) {
         <Input
           name="piataTinta"
           type="text"
-          label="PIAȚA ȚINTĂ"
+          label="Piața țintă"
           defaultValue={piataTinta || ""}
           disabled={isUpdating}
           onBlur={(event) => handleUpdate(event, "piataTinta")}
@@ -99,7 +99,7 @@ function CompanyForm({ companyId }) {
 
         <Select
           name="ariaGeografica"
-          label="ARIA GEOGRAFICĂ DE ACOPEIRE A PIEȚEI ȚINTĂ"
+          label="Aria geografică de acoperire a pieței țintă"
           options={ARII_GEOGRAFICE}
           value={ariaGeografica || "Selecteaza aria geografica"}
           disabled={isUpdating}
@@ -109,7 +109,7 @@ function CompanyForm({ companyId }) {
 
         <Select
           name="clientiTinta"
-          label="CLIENȚII ȚINTĂ"
+          label="Clienții țintă"
           options={CLIENTI_TINTA}
           value={clientiTinta || "Selectează clienții țintă"}
           disabled={isUpdating}

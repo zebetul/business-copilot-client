@@ -13,7 +13,10 @@ function Select({
   return (
     <div className="w-full">
       {label && (
-        <label htmlFor={name} className="mb-2 block text-xs">
+        <label
+          htmlFor={name}
+          className="mb-2 block text-sm text-textColorLight"
+        >
           {label}
         </label>
       )}
