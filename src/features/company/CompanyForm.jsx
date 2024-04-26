@@ -7,6 +7,8 @@ import { ARII_GEOGRAFICE, CLIENTI_TINTA } from "../../config/constants";
 import Input from "../../ui/Input";
 import Loading from "../../ui/Loading";
 import Select from "../../ui/Select";
+import Error from "../../ui/Error";
+import CompanyTitle from "./CompanyTitle";
 
 function CompanyForm({ companyId }) {
   const { company = {}, isLoading, error } = useCompanyData(companyId);
@@ -16,11 +18,15 @@ function CompanyForm({ companyId }) {
     piataTinta,
     ariaGeografica,
     caen,
+    caenDescription,
     prccode,
     adress,
     nrRegCom,
     clientiTinta,
     produsulServiciul,
+    dataInfiintare,
+    formaJuridica,
+    platitorTVA,
   } = company;
   const { updateCompany, isUpdating } = useUpdateCompany();
 
@@ -40,21 +46,21 @@ function CompanyForm({ companyId }) {
 
   if (isLoading) return <Loading />;
 
-  if (error) return <p>Ups! A aparut o eroare. Incearca din nou.</p>;
+  if (error) return <Error error={error} />;
 
   return (
     <>
-      <div className="mb-10">
-        <h2 className="m-0 mb-2 text-2xl">{title}</h2>
-
-        <p className="mb-1 text-sm text-textColorLight">CUI: {cui}</p>
-
-        <p className="mb-1 text-sm text-textColorLight">
-          Nr. Reg. Com.: {nrRegCom}
-        </p>
-
-        <p className="mb-1 text-sm text-textColorLight">{adress}</p>
-      </div>
+      <CompanyTitle
+        title={title}
+        cui={cui}
+        platitorTVA={platitorTVA}
+        nrRegCom={nrRegCom}
+        dataInfiintare={dataInfiintare}
+        caen={caen}
+        caenDescription={caenDescription}
+        adress={adress}
+        formaJuridica={formaJuridica}
+      />
 
       <form className="flex flex-col gap-3 pb-32">
         <Input
