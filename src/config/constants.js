@@ -74,7 +74,8 @@ export const DEFAULT_REQUESTS = [
         title: "Top Firme CAEN",
         userRequest: `
         1. Folosește top_firme_tool și importă datele de pe topfirme.com utilizând codul CAEN de mai jos.
-        2. Raspunde cu o analiză detaliată a acestor date.
+        2. Structureaza datele obtinute intr-un tabel cu urmatoarele coloane: Romania, Ponderea in economia nationala si urmatoarele randuri: Numar agenti economici, Cifra de afaceri, Numar angajati, Profit.
+        3. Raspunde cu tabelul creat si cu o analiză detaliată a acestor date.
         
         CAEN:`,
         resources: ["caen"],
@@ -293,7 +294,7 @@ export const ARII_GEOGRAFICE = [
   { value: "Regiunea de Sud Muntenia", label: "Regiunea de Sud Muntenia" },
   { value: "Regiunea de Vest", label: "Regiunea de Vest" },
   { value: "România", label: "România" },
-  { value: "Europa", label: "Europa" },
+  { value: "Uniunea Europeană", label: "Uniunea Europeană" },
   { value: "Global", label: "Global" },
 ];
 
