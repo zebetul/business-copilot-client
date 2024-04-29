@@ -5,22 +5,25 @@ function ButtonIcon({
   onClick,
   disabled,
   className,
-  type = "primary",
+  variant = "primary",
 }) {
-  const baseStyles =
-    "rounded-md flex text-textColorLight transition-colors duration-300";
+  const baseStyles = "rounded-md flex transition-colors duration-300";
 
   const styles = {
     primary:
-      baseStyles + " w-min p-2 hover:bg-bgColorDark hover:text-textColor",
+      baseStyles +
+      " text-textColorLight w-min p-2 hover:bg-bgColorDark hover:text-textColor",
     withText:
-      baseStyles + " flex items-center text-xs p-2 hover:bg-bgColorDark gap-2",
-    withoutBg: baseStyles + " w-min hover:text-textColor",
+      baseStyles +
+      " text-textColorLight flex items-center text-xs p-2 hover:bg-bgColorDark gap-2",
+    withoutBg: baseStyles + " text-textColorLight w-min hover:text-textColor",
+    accent:
+      baseStyles + " text-accentColorLight w-min p-2 hover:text-accentColor",
   };
 
   return (
     <button
-      className={`${styles[type]} ${className}`}
+      className={`${styles[variant]} ${className}`}
       onClick={onClick}
       disabled={disabled}
     >
@@ -34,7 +37,7 @@ ButtonIcon.propTypes = {
   onClick: PropTypes.func,
   disabled: PropTypes.bool,
   className: PropTypes.string,
-  type: PropTypes.oneOf(["primary", "withoutBg", "withText"]),
+  variant: PropTypes.oneOf(["primary", "withoutBg", "withText", "accent"]),
 };
 
 export default ButtonIcon;

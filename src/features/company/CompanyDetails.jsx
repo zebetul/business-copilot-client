@@ -38,7 +38,7 @@ CompanyDetails.propTypes = {
   platitorTVA: PropTypes.bool,
   nrRegCom: PropTypes.string,
   dataInfiintare: PropTypes.string,
-  caen: PropTypes.string,
+  caen: PropTypes.number,
   caenDescription: PropTypes.string,
   adress: PropTypes.string,
   formaJuridica: PropTypes.string,

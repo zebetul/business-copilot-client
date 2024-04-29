@@ -87,3 +87,27 @@ export const apiUpdateCaen = async (caenData) => {
 
   return data;
 };
+
+export const apiGeneratePiataTinta = async (serviciulData) => {
+  // Make a post request to generatePiataTinta endpoint on the server to generate the piata tinta fom "produsul/serviciul" by an LLM
+  const response = await fetch(
+    `${import.meta.env.VITE_API_URL}/generatePiataTinta`,
+    {
+      method: "POST",
+      credentials: "include",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(serviciulData),
+    },
+  );
+
+  if (!response.ok) {
+    const error = await response.json();
+    throw new Error(error.message);
+  }
+
+  const data = await response.json();
+
+  return data;
+};

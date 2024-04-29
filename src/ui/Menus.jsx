@@ -53,7 +53,7 @@ function Toggle({ id }) {
   return (
     <ButtonIcon
       id={id}
-      type="withoutBg"
+      variant="withoutBg"
       className="menus_toggle"
       onClick={handleClick}
     >
@@ -92,7 +92,7 @@ function Button({ children, onClick, disabled, className }) {
   return (
     <li>
       <ButtonIcon
-        type="withText"
+        variant="withText"
         onClick={handleClick}
         disabled={disabled}
         className={className}
