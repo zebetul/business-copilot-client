@@ -1,10 +1,9 @@
 export async function apiSendRequest(request) {
   try {
     // Input validation
-    if (request.userRequest === "")
-      return console.log("No user request provided");
+    if (request.userRequest === "") throw new Error("No user request provided");
 
-    if (!request.companyId) return console.log("No company ID provided");
+    if (!request.companyId) throw new Error("No company ID provided");
 
     const response = await fetch(`${import.meta.env.VITE_API_URL}/assistant`, {
       method: "POST",
@@ -17,14 +16,16 @@ export async function apiSendRequest(request) {
       }),
     });
 
-    if (!response.ok) throw new Error("Failed sending the prompt");
+    if (!response.ok) {
+      const data = await response.json();
+      throw new Error(data.message);
+    }
 
     const assistantResponse = await response.json();
 
     return assistantResponse;
   } catch (error) {
     console.error("Error sending prompt:", error);
-
     throw new Error(error.message);
   }
 }

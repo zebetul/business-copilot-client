@@ -66,3 +66,24 @@ export const apiAddCompany = async (cui) => {
 
   return data;
 };
+
+export const apiUpdateCaen = async (caenData) => {
+  // Make a post request to updateCaen endpoint on the server to update the caen
+  const response = await fetch(`${import.meta.env.VITE_API_URL}/updateCaen`, {
+    method: "POST",
+    credentials: "include",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(caenData),
+  });
+
+  if (!response.ok) {
+    const error = await response.json();
+    throw new Error(error.message);
+  }
+
+  const data = await response.json();
+
+  return data;
+};

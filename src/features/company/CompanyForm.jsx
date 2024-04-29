@@ -8,7 +8,8 @@ import Input from "../../ui/Input";
 import Loading from "../../ui/Loading";
 import Select from "../../ui/Select";
 import Error from "../../ui/Error";
-import CompanyTitle from "./CompanyTitle";
+import CompanyDetails from "./CompanyDetails";
+import useUpdateCaen from "./useUpdateCaen";
 
 function CompanyForm({ companyId }) {
   const { company = {}, isLoading, error } = useCompanyData(companyId);
@@ -29,19 +30,22 @@ function CompanyForm({ companyId }) {
     platitorTVA,
   } = company;
   const { updateCompany, isUpdating } = useUpdateCompany();
+  const { updateCaen, isUpdatingCaen } = useUpdateCaen();
 
   function handleUpdate(event, field) {
     const newValue = event.target.value;
 
-    if (
-      !newValue ||
-      newValue === company[field] ||
-      // Needed for the caen field, as it is a number
-      +newValue === company[field]
-    )
-      return;
+    if (newValue === company[field]) return;
 
     updateCompany({ [field]: newValue, id: company.id });
+  }
+
+  function handleUpdateCaen(event) {
+    const newValue = event.target.value;
+
+    if (+newValue === caen) return;
+
+    updateCaen({ caen: +newValue, id: company.id });
   }
 
   if (isLoading) return <Loading />;
@@ -50,8 +54,9 @@ function CompanyForm({ companyId }) {
 
   return (
     <>
-      <CompanyTitle
-        title={title}
+      <h2 className="m-0 mb-3 text-2xl">{title}</h2>
+
+      <CompanyDetails
         cui={cui}
         platitorTVA={platitorTVA}
         nrRegCom={nrRegCom}
@@ -62,25 +67,15 @@ function CompanyForm({ companyId }) {
         formaJuridica={formaJuridica}
       />
 
-      <form className="flex flex-col gap-3 pb-32">
+      <form className="flex flex-col pb-32">
         <Input
           name="caen"
           type="number"
           label="CAEN"
           defaultValue={caen || ""}
-          disabled={isUpdating}
-          onBlur={(event) => handleUpdate(event, "caen")}
+          disabled={isUpdatingCaen}
+          onBlur={(event) => handleUpdateCaen(event)}
           key={caen || Math.random()}
-        />
-
-        <Input
-          name="prccode"
-          type="text"
-          label="PRODCOM"
-          defaultValue={prccode || ""}
-          disabled={isUpdating}
-          onBlur={(event) => handleUpdate(event, "prccode")}
-          key={prccode || Math.random()}
         />
 
         <Input
@@ -101,6 +96,16 @@ function CompanyForm({ companyId }) {
           disabled={isUpdating}
           onBlur={(event) => handleUpdate(event, "piataTinta")}
           key={piataTinta || Math.random()}
+        />
+
+        <Input
+          name="prccode"
+          type="text"
+          label="PRODCOM"
+          defaultValue={prccode || ""}
+          disabled={isUpdating}
+          onBlur={(event) => handleUpdate(event, "prccode")}
+          key={prccode || Math.random()}
         />
 
         <Select
