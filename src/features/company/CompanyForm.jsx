@@ -10,10 +10,7 @@ import Select from "../../ui/Select";
 import Error from "../../ui/Error";
 import CompanyDetails from "./CompanyDetails";
 import useUpdateCaen from "./useUpdateCaen";
-import ButtonIcon from "../../ui/ButtonIcon";
-import { SparklesIcon } from "@heroicons/react/24/outline";
-import toast from "react-hot-toast";
-import useGeneratePiataTinta from "./useGeneratePiataTinta";
+import AIGenerateCompanyPiataTinta from "./AIGenerateCompanyPiataTinta";
 
 function CompanyForm({ companyId }) {
   const { company = {}, isLoading, error } = useCompanyData(companyId);
@@ -35,7 +32,6 @@ function CompanyForm({ companyId }) {
   } = company;
   const { updateCompany, isUpdating } = useUpdateCompany();
   const { updateCaen, isUpdatingCaen } = useUpdateCaen();
-  const { generatePiataTinta, isUpdatingPiata } = useGeneratePiataTinta();
 
   function handleUpdate(event, field) {
     const newValue = event.target.value;
@@ -51,14 +47,6 @@ function CompanyForm({ companyId }) {
     if (+newValue === caen) return;
 
     updateCaen({ caen: +newValue, id: company.id });
-  }
-
-  function handleGeneratePiataTinta(event) {
-    event.preventDefault();
-
-    if (!produsulServiciul) return toast.error("Introdu produsul / serviciul");
-
-    generatePiataTinta({ produsulServiciul, id: company.id });
   }
 
   if (isLoading) return <Loading />;
@@ -101,27 +89,22 @@ function CompanyForm({ companyId }) {
           key={produsulServiciul || Math.random()}
         />
 
-        <div className="flex flex-row items-center gap-4">
+        <div className="relative flex flex-row items-center gap-4">
           <Input
             name="piataTinta"
             type="text"
             label="Piața țintă"
             defaultValue={piataTinta || ""}
-            disabled={isUpdating || isUpdatingPiata}
+            disabled={isUpdating}
             onBlur={(event) => handleUpdate(event, "piataTinta")}
             key={piataTinta || Math.random()}
           />
 
-          <ButtonIcon
-            className="mt-2"
-            variant="accent"
-            onClick={(event) => {
-              handleGeneratePiataTinta(event);
-            }}
-            disabled={isUpdating || isUpdatingPiata}
-          >
-            <SparklesIcon className="h-6 w-6" />
-          </ButtonIcon>
+          <AIGenerateCompanyPiataTinta
+            company={company}
+            isUpdating={isUpdating}
+            produsulServiciul={produsulServiciul}
+          />
         </div>
 
         <Input

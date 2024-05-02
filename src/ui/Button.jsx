@@ -14,7 +14,7 @@ function Button({
   const types = {
     primary: `bg-bgColorDark text-textColor ${disabled ? "opacity-30" : "hover:bg-bgColorHighlight"}`,
     // secondary: "bg-bgColor",
-    accent: `bg-accentColor text-bgColor ${disabled ? "opacity-30" : "hover:bg-accentColorLight"}`,
+    accent: `bg-bgColorDark text-textColor border border-accentColorLight ${disabled ? "opacity-30" : "hover:bg-bgColorHighlight hover:border-accentColor"}`,
     danger: `bg-dangerColor text-bgColor ${disabled ? "opacity-30" : "hover:bg-dangerColorLight"}`,
   };
 

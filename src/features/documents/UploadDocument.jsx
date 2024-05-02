@@ -11,7 +11,7 @@ function UploadDocument({ className }) {
   return (
     <label
       htmlFor="file"
-      className={`flex h-min w-min cursor-pointer items-center justify-center gap-1 rounded-md bg-accentColor p-2 text-sm text-bgColorLight transition-colors hover:bg-accentColorLight ${className}`}
+      className={`flex h-min w-min cursor-pointer items-center justify-center gap-1 rounded-md border border-accentColorLight bg-bgColorDark p-2 text-sm text-textColor transition-colors hover:border-accentColor hover:bg-bgColorHighlight ${className}`}
     >
       <PlusIcon className="h-4 w-4" />
 

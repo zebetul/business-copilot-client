@@ -3,7 +3,7 @@ import { Toaster } from "react-hot-toast";
 function CustomToaster() {
   return (
     <Toaster
-      position="top-center"
+      position="top-right"
       reverseOrder={false}
       gutter={12}
       containerStyle={{ margin: "8px" }}

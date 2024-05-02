@@ -8,14 +8,14 @@ function RequestsList({ requests, sendRequest }) {
   const companyId = currentCompany?.id;
 
   return (
-    <ul className="flex flex-col gap-2">
+    <div className="flex flex-col gap-2">
       {requests.map((request) => {
         const { title, userRequest, type } = request;
 
         return (
-          <li key={title} className="w-full">
+          <div key={title} className="">
             <Button
-              className="w-full overflow-hidden"
+              className="w-full items-start justify-start overflow-hidden"
               onClick={() => sendRequest({ ...request, companyId })}
               disabled={!userRequest}
             >
@@ -25,10 +25,10 @@ function RequestsList({ requests, sendRequest }) {
 
               {title}
             </Button>
-          </li>
+          </div>
         );
       })}
-    </ul>
+    </div>
   );
 }
 
