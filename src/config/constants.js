@@ -267,9 +267,9 @@ export const DEFAULT_REQUESTS = [
     title: "0.0.1 TESTING REQUESTS",
     requests: [
       {
-        title: "Resurse umane",
+        title: "Digitalizarea in producția alimentară",
         userRequest:
-          "Caută o singura data in baza de date, extrage datele despre personalul din firma si fa o prezentare a acestuia incepand prin al enumera.",
+          "Caută in cercetările de marketing si fă o analiză a digitalizării în producția alimentară.",
       },
       {
         title: "Competiția pe domeniul de activitate",
