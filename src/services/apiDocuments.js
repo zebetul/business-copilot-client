@@ -1,11 +1,8 @@
 import supabase from "./supabase.js";
 
 // Get documents from supabase
-export async function apiGetDocuments(companyId) {
-  const { data, error } = await supabase
-    .from("documents")
-    .select("*")
-    .eq("companyId", companyId);
+export async function apiGetDocuments() {
+  const { data, error } = await supabase.from("documents").select("*");
 
   if (error) {
     console.log(error);
@@ -16,14 +13,13 @@ export async function apiGetDocuments(companyId) {
 }
 
 // Upload document to API to be processed before saving it to supabase
-export async function apiUploadDocument({ file, companyId }) {
+export async function apiUploadDocument({ file }) {
   try {
     // Data validation
     if (!file) throw new Error("No file provided");
 
     const formData = new FormData();
     formData.append("file", file);
-    formData.append("companyId", companyId);
 
     const response = await fetch(`${import.meta.env.VITE_API_URL}/documents`, {
       method: "POST",
@@ -45,15 +41,13 @@ export async function apiUploadDocument({ file, companyId }) {
 export async function apiDeleteDocument(id) {
   const { error } = await supabase.from("documents").delete().match({ id });
 
+  if (error) throw new Error("Failed deleting the document");
+
   // Delete document chunks related to the document from supabase document_chunks table. The documentId is stored in the document_chunks metadata column
   const { error: errorChunks } = await supabase
     .from("document_chunks")
     .delete()
     .filter("metadata->documentId", "eq", id);
 
-  if (errorChunks) {
-    console.log(error);
-
-    throw new Error("Failed deleting the document");
-  }
+  if (errorChunks) throw new Error("Failed deleting the document");
 }
