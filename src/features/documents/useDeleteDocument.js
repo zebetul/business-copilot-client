@@ -9,7 +9,7 @@ export function useDeleteDocument() {
     mutationFn: apiDeleteDocument,
 
     onSuccess: () => {
-      toast.success("File deleted successfully");
+      toast.success("Document deleted successfully");
 
       queryClient.invalidateQueries({
         queryKey: ["documents"],
