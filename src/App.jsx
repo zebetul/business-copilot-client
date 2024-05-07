@@ -17,7 +17,11 @@ import InteractionRecord from "./pages/InteractionRecord";
 import PageNotFound from "./pages/PageNotFound";
 import Company from "./pages/Company";
 
+import useServerPing from "./hooks/useServerPing";
+
 function App() {
+  useServerPing();
+
   const queryClient = new QueryClient({
     defaultOptions: {
       queries: {
@@ -37,6 +41,7 @@ function App() {
           element: <Login />,
           index: true,
         },
+
         {
           element: (
             <ProtectedRoute>
@@ -48,14 +53,17 @@ function App() {
               path: "/",
               element: <Company />,
             },
+
             {
               path: "/company",
               element: <Company />,
             },
+
             {
               path: "/assistant",
               element: <Assistant />,
             },
+
             {
               path: "/documents",
               element: <Documents />,
@@ -65,6 +73,7 @@ function App() {
               path: "/history",
               element: <History />,
             },
+
             {
               path: "/history/:id",
               element: <InteractionRecord />,

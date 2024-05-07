@@ -4,6 +4,7 @@ export const DEFAULT_REQUESTS = [
     requests: [
       {
         title: "Mărimea pieței țintă",
+        // title: "Mărimea pieței țintă - WEB SEARCH",
         userRequest: `Mai jos vei găsi piataTinta si ariaGeografica a acesteia, la care ne vom referi în continuare.
         1. Caută pe internet informații despre cifra de afaceri în piataTinta raportată la ariaGeografica.
         2. Citește rezultatele căutării cu atenție.
@@ -18,6 +19,22 @@ export const DEFAULT_REQUESTS = [
         - NU uita să incluzi în raport, lista cu resurse, conform indicațiilor anterioare.`,
         resources: ["piataTinta", "ariaGeografica"],
       },
+
+      // {
+      //   title: "Mărimea pieței țintă - INTERNAL DOCUMENTS",
+      //   userRequest: `Mai jos vei găsi piataTinta si ariaGeografica a acesteia, la care ne vom referi în continuare.
+      //   1. Caută în documentele interne informații despre cifra de afaceri în piataTinta raportată la ariaGeografica.
+      //   2. Citește rezultatele căutării cu atenție.
+      //   3. Folosește informațiile acumulate și genereaza o descriere detaliată care să cuprindă evaluarea cifrei de afaceri a pieței țintă, analiza creșterii cifrei de afaceri în ultimii ani, perspectivele de dezvoltare pe termen scurt și mediu și orice altă informație relevantă pe care ai găsit-o.
+
+      //   - Accesează căutarea în documentele interne O SINGURĂ DATĂ.
+      //   - NU accesa nicio altă unealtă în afară de cea dedicată căutării în documentele interne.
+      //   - NU omite nicio informație relevantă din cele găsite prin căutare.
+      //   - Dacă consideri că e util poți să citezi mot-a-mot unele din informațiile găsite.
+      //   - Răspunsul să fie format din paragrafe, fără titluri, fără liste.
+      //   - Răspunsul să fie coerent, acesta urmând a fi integrat într-un plan de marketing.`,
+      //   resources: ["piataTinta", "ariaGeografica"],
+      // },
 
       {
         title: "Distribuția pieței și principalii actori",
@@ -263,27 +280,24 @@ export const DEFAULT_REQUESTS = [
     ],
   },
 
-  {
-    title: "0.0.1 TESTING REQUESTS",
-    requests: [
-      {
-        title: "Digitalizarea in producția alimentară",
-        userRequest:
-          "Caută in cercetările de marketing si fă o analiză a digitalizării în producția alimentară.",
-      },
-      {
-        title: "Competiția pe domeniul de activitate",
-        userRequest: `Caută pe internet date despre principalii competitori din România în DOMENIUL DE ACTIVITATE specificat mai jos.
-        
-        DOMENIUL DE ACTIVITATE:`,
-        resources: ["piataTinta"],
-      },
-      {
-        title: "Principalii clienți",
-        userRequest: `1. Caută în baza de date care sunt principalii noștri clienți. 2. Caută pe internet clienții pe care i-ai găsit la pasul 1 și fă-mi un raport detaliat.`,
-      },
-    ],
-  },
+  // {
+  //   title: "0.0.1 TESTING REQUESTS",
+  //   requests: [
+  //     {
+  //       title: "Digitalizarea in producția alimentară",
+  //       userRequest:
+  //         "Caută in cercetările de marketing si fă o analiză a digitalizării în producția alimentară.",
+  //     },
+  //     {
+  //       title: "PDF-uri despre PIATA TINTA",
+  //       userRequest: `Mai jos vei gasi piata tinta si aria geografica, la care ne vom referi in continuare.
+  //       Caută pe internet pdf-uri despre studii de marketing referitoare la piata tinta in aria geografica specificate. Returneaza toate linkurile găsite. Mentioneaza in cautare filetype:pdf. Foloseste un query in limba engleza dupa exemplul de mai jos:
+  //       EXEMPLU: Food market in Romania, marketing paper, filetype:pdf
+  //       `,
+  //       resources: ["piataTinta", "ariaGeografica"],
+  //     },
+  //   ],
+  // },
 ];
 
 export const ARII_GEOGRAFICE = [
