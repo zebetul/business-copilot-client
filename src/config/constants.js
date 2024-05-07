@@ -1,6 +1,6 @@
 export const DEFAULT_REQUESTS = [
   {
-    title: "4.1.2 DIMENSIUNEA PIETEI TINTA",
+    title: "4.1.2 DIMENSIUNEA PIEȚEI ȚINTĂ",
     requests: [
       {
         title: "Mărimea pieței țintă",
@@ -280,24 +280,24 @@ export const DEFAULT_REQUESTS = [
     ],
   },
 
-  // {
-  //   title: "0.0.1 TESTING REQUESTS",
-  //   requests: [
-  //     {
-  //       title: "Digitalizarea in producția alimentară",
-  //       userRequest:
-  //         "Caută in cercetările de marketing si fă o analiză a digitalizării în producția alimentară.",
-  //     },
-  //     {
-  //       title: "PDF-uri despre PIATA TINTA",
-  //       userRequest: `Mai jos vei gasi piata tinta si aria geografica, la care ne vom referi in continuare.
-  //       Caută pe internet pdf-uri despre studii de marketing referitoare la piata tinta in aria geografica specificate. Returneaza toate linkurile găsite. Mentioneaza in cautare filetype:pdf. Foloseste un query in limba engleza dupa exemplul de mai jos:
-  //       EXEMPLU: Food market in Romania, marketing paper, filetype:pdf
-  //       `,
-  //       resources: ["piataTinta", "ariaGeografica"],
-  //     },
-  //   ],
-  // },
+  {
+    title: "HELPERS",
+    requests: [
+      // {
+      //   title: "Digitalizarea in producția alimentară",
+      //   userRequest:
+      //     "Caută in cercetările de marketing si fă o analiză a digitalizării în producția alimentară.",
+      // },
+      {
+        title: "PDF-uri despre PIATA TINTA",
+        userRequest: `Mai jos vei gasi piata tinta si aria geografica, la care ne vom referi in continuare.
+        Caută pe internet pdf-uri despre studii de marketing referitoare la piata tinta in aria geografica specificate. Returneaza toate linkurile găsite. Mentioneaza in cautare filetype:pdf. Foloseste un query in limba engleza dupa exemplul de mai jos:
+        EXEMPLU: Food market in Romania, marketing paper, filetype:pdf
+        `,
+        resources: ["piataTinta", "ariaGeografica"],
+      },
+    ],
+  },
 ];
 
 export const ARII_GEOGRAFICE = [
