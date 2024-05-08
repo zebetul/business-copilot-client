@@ -7,7 +7,7 @@ function DocumentRow({ document }) {
   return (
     <li
       key={id}
-      className="flex flex-row justify-between gap-3 border-b border-bgColorDark py-5"
+      className="flex flex-row items-center justify-between gap-3 border-b border-bgColorDark py-5 text-sm"
     >
       <p className="basis-2/4">{title}</p>
 

@@ -15,9 +15,7 @@ function Dropdown({ children }) {
         toggleOpen,
       }}
     >
-      <div className="h-min w-full rounded-lg border border-bgColorDark">
-        {children}
-      </div>
+      <div className="h-min w-full">{children}</div>
     </DropdownContext.Provider>
   );
 }
@@ -27,16 +25,16 @@ function DropdownHeader({ children }) {
 
   return (
     <div
-      className="flex cursor-pointer flex-row items-center gap-3 p-4 text-textColorLight"
+      className="flex cursor-pointer flex-row items-center gap-2 p-2 text-textColorLight"
       onClick={toggleOpen}
     >
-      {children}
-
       {isOpen ? (
-        <ChevronUpIcon className="ml-auto h-5 w-5" />
+        <ChevronUpIcon className="mr-2 h-6 w-6" />
       ) : (
-        <ChevronDownIcon className="ml-auto h-5 w-5" />
+        <ChevronDownIcon className="mr-2 h-6 w-6" />
       )}
+
+      {children}
     </div>
   );
 }
@@ -44,7 +42,7 @@ function DropdownHeader({ children }) {
 function DropdownContent({ children }) {
   const { isOpen } = useContext(DropdownContext);
 
-  return isOpen ? <div className="p-4">{children}</div> : null;
+  return isOpen ? <div className="p-2">{children}</div> : null;
 }
 
 Dropdown.Header = DropdownHeader;

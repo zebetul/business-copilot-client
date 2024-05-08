@@ -22,7 +22,7 @@ function DefaultContent({ sendRequest }) {
       </PageHeader>
 
       {companyId ? (
-        <div className="chapters_container flex flex-col items-center gap-10 pb-32">
+        <div className="chapters_container flex flex-col items-center gap-5 pb-32">
           {DEFAULT_REQUESTS.map((chapter) => (
             <Chapter
               key={chapter.title}

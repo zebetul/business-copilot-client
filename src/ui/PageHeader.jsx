@@ -9,7 +9,7 @@ function PageHeader({ children }) {
 }
 
 function Title({ children }) {
-  return <h1 className="flex items-center gap-3 text-4xl">{children}</h1>;
+  return <h1 className="flex items-center gap-3 text-3xl">{children}</h1>;
 }
 
 function Buttons({ children }) {
