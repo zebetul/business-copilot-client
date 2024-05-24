@@ -224,11 +224,6 @@ export const DEFAULT_REQUESTS = [
         isWebSearch: true,
         isDocumentsSearch: true,
       },
-
-      {
-        title: "Analiza SWOT",
-        userRequest: ``,
-      },
     ],
   },
 
@@ -236,18 +231,90 @@ export const DEFAULT_REQUESTS = [
     title: "4.1.4. ANALIZA POTENȚIALULUI DE CREȘTERE",
     requests: [
       {
-        title: "Analiza potențial de creștere",
-        userRequest: "",
+        title: "Evolutia economiei - TERMEN SCURT",
+        userRequest: `
+        Suntem in anul 2024. Ai acces la documentul emis de Comisia Națională de Strategie și Prognoză privind evolutia indicatorilor macroeconomici din Romania 2024 - 2027.
+        1. Caută informații despre proiectia principalilor indicatori macroeconomici.
+        2. Citește rezultatele căutării cu atenție.
+        3. Folosește informatiile despre evolutia Produsului Intern Brut si a cererii interne a acestuia
+        4. Genereaza o descriere detaliata despre evoluția economiei din România pe termen scurt, folosind formatul din exemplul de mai jos. Avand in vedere ca este vorba de termen scurt, te vei referi in special la rezultatele din anul 2023 si la perspectivele pentru anul 2024.
+        
+        - NU omite nicio informație relevantă din cele găsite prin căutare
+        - Vei reda datele statistice relevante.
+        - Dacă consideri că e util poți să citezi mot-a-mot unele din informațiile găsite.
+        - Răspunsul să fie format din paragrafe, fără titluri, fără liste. 
+        - Răspunsul să fie coerent, acesta urmând a fi integrat într-un plan de marketing.
+
+        <EXEMPLU>
+        Pe termen scurt, în ceea ce privește situația României, Comisia Națională de Strategie și Prognoză estimează o reducere a economiei românești în anul 2023, când Produsul Intern Brut va scădea cu 2,5%. În perioada 2021-2027, România ar putea avea acces la o alocare de fonduri europene semnificativ superioară față de perioada anterioară de programare care vor avea un efect adițional asupra avansului economiei. Impactul asupra dinamicii valorii adăugate brute din industrie va fi de 2,2 puncte procentuale. Pe partea cererii, atât consumul privat cât și investițiile (formarea brută de capital fix) vor avea dinamici anuale mai mari în medie cu 3,4 și respectiv 5,4 puncte procentuale. 
+        </EXEMPLU>
+        `,
+        isDocumentsSearch: true,
       },
 
       {
-        title: "Tabel principalii indicatori macroeconomici",
-        userRequest: "",
+        title: "Evolutia economiei - TERMEN MEDIU",
+        userRequest: `
+        Suntem in anul 2024. Ai acces la documentul emis de Comisia Națională de Strategie și Prognoză privind evolutia indicatorilor macroeconomici din Romania 2024 - 2027
+        1. Caută informații despre evoluția economiei din România pe termen mediu.
+        2. Citește rezultatele căutării cu atenție.
+        3. Folosește informatiile despre evolutia Produsului Intern Brut si a cererii interne a acestuia
+        4. Genereaza o descriere detaliata despre evoluția economiei din România pe termen mediu, folosind formatul din exemplul de mai jos.
+        
+        - NU omite nicio informație relevantă din cele găsite prin căutare
+        - Vei reda datele statistice relevante.
+        - Dacă consideri că e util poți să citezi mot-a-mot unele din informațiile găsite.
+        - Răspunsul să fie format din paragrafe, fără titluri, fără liste. 
+        - Răspunsul să fie coerent, acesta urmând a fi integrat într-un plan de marketing.
+
+        <EXEMPLU>
+        Pe termen mediu, principala contribuție la creșterea economică a României va veni din partea productivității totale a factorilor (PTF), atâta timp cât se aplică în mod susținut politici ce urmăresc dezvoltarea capitalului uman, al infrastructurii fizice, consolidarea piețelor și ecosistemul de inovație (dinamismul firmelor și capacitățile de cercetare-dezvoltare-inovare).
+        Atât în vechea perioadă de programare cât și în cea curentă, România s-a aflat și se află sub media europeană în ceea ce privește rata de absorbție a fondurilor puse la dispoziție de către UE, aflându-se constant în rândul țărilor cu cel mai mic procent al fondurilor utilizate. Creșterea ratei de absorbție și utilizarea eficientă a fondurilor UE devin imperative, astfel încât România și cetățenii săi să poate beneficia pe deplin de avantajele statutului de membru al UE. Implementarea instrumentelor structurale și de coeziune trebuie să urmărească prioritar impactul pozitiv la nivel socio-economic al programelor și nu doar simpla utilizare a fondurilor nerambursabile.        
+        </EXEMPLU>
+        `,
+        isDocumentsSearch: true,
+      },
+
+      {
+        title: "Evolutia economiei - TERMEN LUNG",
+        userRequest: `
+        1. Cauta informatiile referitoare la PROIECŢIA PRINCIPALILOR INDICATORI MACROECONOMICI.
+        2. Genereaza un tabel cu aceste informatii care sa respecte urmatoarele reguli:
+        - coloanele tabelului vor fii anii 2023, 2024, 2025, 2026, 2027.
+        - randurile tabelului vor fi: Produsul Intern Brut - mld. lei, Produsul Intern Brut - crestere reala % , Consumul privat, Formarea Bruta de Capital Fix, Exporturi de bunuri si servicii, Importuri de bunuri si servicii, Indicele Preturilor de Consum (IPC) - medie anuala.
+        3. Reda tabelul generat alaturi de o analiza detaliata a acestor date respectand urmatoarele:
+        - Analiza să fie formata din paragrafe, fără titluri, fără liste. 
+        - Analiza să fie coerenta, aceasta urmând a fi integrata într-un plan de marketing.
+        - Datele se refera la o previziune a evolutiei economiei Romaniei pe termen lung, in perioada 2023 - 2027 asa ca referate la ele ca atare, nu ca si cum s-ar fi intamplat deja.
+        `,
+        isDocumentsSearch: true,
       },
 
       {
         title: "Principalii vectori care susțin creșterea",
-        userRequest: "",
+        userRequest: `
+        Mai jos vei găsi piataTinta si ariaGeografica a acesteia, la care ne vom referi în continuare.
+        1. Caută informații despre principalii vectori care sustin cresterea piataTinta raportată la ariaGeografica.
+        2. Citește rezultatele căutării cu atenție.
+        3. Folosește informațiile acumulate și genereaza o lista, cu principalii vectori care susțin creșterea pietei tinta din discutie, conform exemplului de mai jos.
+        
+        - NU omite nicio informație relevantă din cele găsite prin căutare.
+        - Dacă consideri că e util poți să citezi mot-a-mot unele din informațiile găsite.
+        - Răspunsul să fie format din paragrafe, fără titluri, fără liste. 
+        - Răspunsul să fie coerent, acesta urmând a fi integrat într-un plan de marketing.
+        - NU uita să incluzi în raport, lista cu resurse, conform indicațiilor anterioare.
+
+        <EXEMPLU>
+        Prin raportare la piața de interes a întreprinderii prognozele de creștere ale pieței sunt încurajatoare având în vedere următoarele aspecte:
+        -	Piața imobiliarelor este în creștere pe piața de interes a WEST CO IMPEX S.R.L.; la nivel național, creșterea nivelului de trai, precum și programele guvernamentale de susținere a dezvoltării fondului imobiliar , sugerează o traiectorie de creștere accelerată la nivelul pieței imobiliarelor, ceea ce se va traduce, în funcției de ciclul de construire a acestora, în formarea unei cereri solide pe piață pentru articolelor din material plastic pentru construcții;
+        -	Prognozele privind dezvoltarea pieței de interes susțin existența unor perioade de fluctuații generate de specificul sectorului care este direct dependent de ciclul de construcție a clădirilor;
+        -	Situația economică se va îmbunătăți ceea ce va încuraja investițiile în modernizarea locuințelor și a altor clădiri, inclusiv modernizări pentru creșterea eficienței confortului acestora, ceea ce va determina creșterea semnificativă a cererii pe piață;
+        -	Procesul de urbanizarea este în continuă desfășurare, ceea ce implică construirea de noi locuințe, canalizări, stații de epurare în zonele rurale, la rândul lor vor genera cereri pentru fose septice;        
+        </EXEMPLU>
+        `,
+        resources: ["piataTinta", "ariaGeografica"],
+        isWebSearch: true,
+        isDocumentsSearch: true,
       },
 
       {
